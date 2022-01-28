@@ -1,0 +1,589 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FF904DBF24EB943200DC0DE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF904DBE24EB943200DC0DE0 /* AppDelegate.swift */; };
+		FF904DC124EB943200DC0DE0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF904DC024EB943200DC0DE0 /* SceneDelegate.swift */; };
+		FF904DC324EB943200DC0DE0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF904DC224EB943200DC0DE0 /* ViewController.swift */; };
+		FF904DC624EB943200DC0DE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF904DC424EB943200DC0DE0 /* Main.storyboard */; };
+		FF904DC824EB943300DC0DE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF904DC724EB943300DC0DE0 /* Assets.xcassets */; };
+		FF904DCB24EB943300DC0DE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF904DC924EB943300DC0DE0 /* LaunchScreen.storyboard */; };
+		FF904DD624EB943300DC0DE0 /* kadai04Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF904DD524EB943300DC0DE0 /* kadai04Tests.swift */; };
+		FF904DE124EB943300DC0DE0 /* kadai04UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF904DE024EB943300DC0DE0 /* kadai04UITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FF904DD224EB943300DC0DE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF904DB324EB943200DC0DE0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FF904DBA24EB943200DC0DE0;
+			remoteInfo = kadai04;
+		};
+		FF904DDD24EB943300DC0DE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF904DB324EB943200DC0DE0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FF904DBA24EB943200DC0DE0;
+			remoteInfo = kadai04;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FF904DBB24EB943200DC0DE0 /* kadai04.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kadai04.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF904DBE24EB943200DC0DE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FF904DC024EB943200DC0DE0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FF904DC224EB943200DC0DE0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FF904DC524EB943200DC0DE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FF904DC724EB943300DC0DE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FF904DCA24EB943300DC0DE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FF904DCC24EB943300DC0DE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF904DD124EB943300DC0DE0 /* kadai04Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kadai04Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF904DD524EB943300DC0DE0 /* kadai04Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kadai04Tests.swift; sourceTree = "<group>"; };
+		FF904DD724EB943300DC0DE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF904DDC24EB943300DC0DE0 /* kadai04UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kadai04UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF904DE024EB943300DC0DE0 /* kadai04UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kadai04UITests.swift; sourceTree = "<group>"; };
+		FF904DE224EB943300DC0DE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FF904DB824EB943200DC0DE0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF904DCE24EB943300DC0DE0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF904DD924EB943300DC0DE0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FF904DB224EB943200DC0DE0 = {
+			isa = PBXGroup;
+			children = (
+				FF904DBD24EB943200DC0DE0 /* kadai04 */,
+				FF904DD424EB943300DC0DE0 /* kadai04Tests */,
+				FF904DDF24EB943300DC0DE0 /* kadai04UITests */,
+				FF904DBC24EB943200DC0DE0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FF904DBC24EB943200DC0DE0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FF904DBB24EB943200DC0DE0 /* kadai04.app */,
+				FF904DD124EB943300DC0DE0 /* kadai04Tests.xctest */,
+				FF904DDC24EB943300DC0DE0 /* kadai04UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FF904DBD24EB943200DC0DE0 /* kadai04 */ = {
+			isa = PBXGroup;
+			children = (
+				FF904DBE24EB943200DC0DE0 /* AppDelegate.swift */,
+				FF904DC024EB943200DC0DE0 /* SceneDelegate.swift */,
+				FF904DC224EB943200DC0DE0 /* ViewController.swift */,
+				FF904DC424EB943200DC0DE0 /* Main.storyboard */,
+				FF904DC724EB943300DC0DE0 /* Assets.xcassets */,
+				FF904DC924EB943300DC0DE0 /* LaunchScreen.storyboard */,
+				FF904DCC24EB943300DC0DE0 /* Info.plist */,
+			);
+			path = kadai04;
+			sourceTree = "<group>";
+		};
+		FF904DD424EB943300DC0DE0 /* kadai04Tests */ = {
+			isa = PBXGroup;
+			children = (
+				FF904DD524EB943300DC0DE0 /* kadai04Tests.swift */,
+				FF904DD724EB943300DC0DE0 /* Info.plist */,
+			);
+			path = kadai04Tests;
+			sourceTree = "<group>";
+		};
+		FF904DDF24EB943300DC0DE0 /* kadai04UITests */ = {
+			isa = PBXGroup;
+			children = (
+				FF904DE024EB943300DC0DE0 /* kadai04UITests.swift */,
+				FF904DE224EB943300DC0DE0 /* Info.plist */,
+			);
+			path = kadai04UITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FF904DBA24EB943200DC0DE0 /* kadai04 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF904DE524EB943300DC0DE0 /* Build configuration list for PBXNativeTarget "kadai04" */;
+			buildPhases = (
+				FF904DB724EB943200DC0DE0 /* Sources */,
+				FF904DB824EB943200DC0DE0 /* Frameworks */,
+				FF904DB924EB943200DC0DE0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = kadai04;
+			productName = kadai04;
+			productReference = FF904DBB24EB943200DC0DE0 /* kadai04.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FF904DD024EB943300DC0DE0 /* kadai04Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF904DE824EB943300DC0DE0 /* Build configuration list for PBXNativeTarget "kadai04Tests" */;
+			buildPhases = (
+				FF904DCD24EB943300DC0DE0 /* Sources */,
+				FF904DCE24EB943300DC0DE0 /* Frameworks */,
+				FF904DCF24EB943300DC0DE0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FF904DD324EB943300DC0DE0 /* PBXTargetDependency */,
+			);
+			name = kadai04Tests;
+			productName = kadai04Tests;
+			productReference = FF904DD124EB943300DC0DE0 /* kadai04Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FF904DDB24EB943300DC0DE0 /* kadai04UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF904DEB24EB943300DC0DE0 /* Build configuration list for PBXNativeTarget "kadai04UITests" */;
+			buildPhases = (
+				FF904DD824EB943300DC0DE0 /* Sources */,
+				FF904DD924EB943300DC0DE0 /* Frameworks */,
+				FF904DDA24EB943300DC0DE0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FF904DDE24EB943300DC0DE0 /* PBXTargetDependency */,
+			);
+			name = kadai04UITests;
+			productName = kadai04UITests;
+			productReference = FF904DDC24EB943300DC0DE0 /* kadai04UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FF904DB324EB943200DC0DE0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1160;
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = "shinonome, inc.";
+				TargetAttributes = {
+					FF904DBA24EB943200DC0DE0 = {
+						CreatedOnToolsVersion = 11.6;
+					};
+					FF904DD024EB943300DC0DE0 = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = FF904DBA24EB943200DC0DE0;
+					};
+					FF904DDB24EB943300DC0DE0 = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = FF904DBA24EB943200DC0DE0;
+					};
+				};
+			};
+			buildConfigurationList = FF904DB624EB943200DC0DE0 /* Build configuration list for PBXProject "kadai04" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FF904DB224EB943200DC0DE0;
+			productRefGroup = FF904DBC24EB943200DC0DE0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FF904DBA24EB943200DC0DE0 /* kadai04 */,
+				FF904DD024EB943300DC0DE0 /* kadai04Tests */,
+				FF904DDB24EB943300DC0DE0 /* kadai04UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FF904DB924EB943200DC0DE0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF904DCB24EB943300DC0DE0 /* LaunchScreen.storyboard in Resources */,
+				FF904DC824EB943300DC0DE0 /* Assets.xcassets in Resources */,
+				FF904DC624EB943200DC0DE0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF904DCF24EB943300DC0DE0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF904DDA24EB943300DC0DE0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FF904DB724EB943200DC0DE0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF904DC324EB943200DC0DE0 /* ViewController.swift in Sources */,
+				FF904DBF24EB943200DC0DE0 /* AppDelegate.swift in Sources */,
+				FF904DC124EB943200DC0DE0 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF904DCD24EB943300DC0DE0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF904DD624EB943300DC0DE0 /* kadai04Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF904DD824EB943300DC0DE0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF904DE124EB943300DC0DE0 /* kadai04UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FF904DD324EB943300DC0DE0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FF904DBA24EB943200DC0DE0 /* kadai04 */;
+			targetProxy = FF904DD224EB943300DC0DE0 /* PBXContainerItemProxy */;
+		};
+		FF904DDE24EB943300DC0DE0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FF904DBA24EB943200DC0DE0 /* kadai04 */;
+			targetProxy = FF904DDD24EB943300DC0DE0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FF904DC424EB943200DC0DE0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FF904DC524EB943200DC0DE0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FF904DC924EB943300DC0DE0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FF904DCA24EB943300DC0DE0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FF904DE324EB943300DC0DE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FF904DE424EB943300DC0DE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FF904DE624EB943300DC0DE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = kadai04/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.shinonome.playground.kadai04;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FF904DE724EB943300DC0DE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = kadai04/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.shinonome.playground.kadai04;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FF904DE924EB943300DC0DE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = kadai04Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.shinonome.playground.kadai04Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/kadai04.app/kadai04";
+			};
+			name = Debug;
+		};
+		FF904DEA24EB943300DC0DE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = kadai04Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.shinonome.playground.kadai04Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/kadai04.app/kadai04";
+			};
+			name = Release;
+		};
+		FF904DEC24EB943300DC0DE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = kadai04UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.shinonome.playground.kadai04UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = kadai04;
+			};
+			name = Debug;
+		};
+		FF904DED24EB943300DC0DE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = kadai04UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.shinonome.playground.kadai04UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = kadai04;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FF904DB624EB943200DC0DE0 /* Build configuration list for PBXProject "kadai04" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF904DE324EB943300DC0DE0 /* Debug */,
+				FF904DE424EB943300DC0DE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF904DE524EB943300DC0DE0 /* Build configuration list for PBXNativeTarget "kadai04" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF904DE624EB943300DC0DE0 /* Debug */,
+				FF904DE724EB943300DC0DE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF904DE824EB943300DC0DE0 /* Build configuration list for PBXNativeTarget "kadai04Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF904DE924EB943300DC0DE0 /* Debug */,
+				FF904DEA24EB943300DC0DE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF904DEB24EB943300DC0DE0 /* Build configuration list for PBXNativeTarget "kadai04UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF904DEC24EB943300DC0DE0 /* Debug */,
+				FF904DED24EB943300DC0DE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FF904DB324EB943200DC0DE0 /* Project object */;
+}
