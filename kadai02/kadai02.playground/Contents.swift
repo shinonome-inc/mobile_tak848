@@ -17,12 +17,9 @@ func janken(you: Hand) -> Void {
         return
     }
     let result: Result
-    print(you.rawValue)
-    print(cp.rawValue)
     if you == cp {
         result = .draw
     } else if (you.rawValue == cp.rawValue - 1) || (you.rawValue == cp.rawValue + 2) {
-        print("win")
         result = .win
     }else {
         result = .lose
