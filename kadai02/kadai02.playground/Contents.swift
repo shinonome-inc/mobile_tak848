@@ -2,8 +2,8 @@ import UIKit
 
 enum Hand: Int {
     case rock = 0
-    case scissors = 1
-    case paper = 2
+    case scissors
+    case paper
 }
 
 enum Result: String {
@@ -19,9 +19,9 @@ func janken(you: Hand) -> Void {
     let result: Result
     if you == cp {
         result = .draw
-    } else if (you.rawValue == cp.rawValue - 1) || (you.rawValue == cp.rawValue + 2) {
+    } else if (you == .rock && cp == .scissors) || (you == .scissors && cp == .paper) || (you == .paper && cp == .rock) {
         result = .win
-    }else {
+    } else {
         result = .lose
     }
     print("cp: \(cp). You \(result.rawValue)")
