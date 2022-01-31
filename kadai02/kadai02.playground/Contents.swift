@@ -1,7 +1,7 @@
 import UIKit
 
 enum Hand: Int {
-    case rock = 0
+    case rock
     case scissors
     case paper
 }
