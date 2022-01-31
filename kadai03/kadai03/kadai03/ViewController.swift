@@ -16,24 +16,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    func isLeap(year: Int) -> Bool {
-        if year % 400 == 0 {
-            return true
-        } else if year % 100 == 0 {
-            return false
-        } else if year % 4 == 0 {
-            return true
-        } else {
-            return false
-        }
-    }
-    
     @IBAction func runButton(_ sender: Any) {
-        if let inputString = inputYearField.text, let inputYear = Int(inputString) {
-            if isLeap(year: inputYear){
-                infoLabel.text = "\(inputYear) is leap year"
+        if let inputString = inputYearField.text, let inputNumber = Int(inputString) {
+            if inputNumber.isLeapYear {
+                infoLabel.text = "\(inputString) is leap year"
             } else {
-                infoLabel.text = "\(inputYear) is not leap year"
+                infoLabel.text = "\(inputString) is not leap year"
             }
         } else {
             infoLabel.text = "Input correct year."
