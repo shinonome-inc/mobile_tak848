@@ -6,10 +6,18 @@ enum Hand: Int {
     case paper
 }
 
-enum Result: String {
-    case win = "win!"
-    case draw = "draw"
-    case lose = "lose"
+enum Result {
+    case win
+    case draw
+    case lose
+    
+    var feedback: String {
+        switch self {
+        case .win: return "win!"
+        case .draw: return "draw"
+        case .lose: return "lose"
+        }
+    }
 }
 
 func janken(you: Hand) -> Void {
@@ -24,7 +32,7 @@ func janken(you: Hand) -> Void {
     } else {
         result = .lose
     }
-    print("cp: \(cp). You \(result.rawValue)")
+    print("cp: \(cp). You \(result.feedback)")
 }
 
 janken(you: .rock)
