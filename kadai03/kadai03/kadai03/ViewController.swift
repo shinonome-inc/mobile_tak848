@@ -12,10 +12,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var inputYearField: UITextField!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
     @IBAction func runButton(_ sender: Any) {
         if let inputString = inputYearField.text, let inputNumber = Int(inputString) {
             if inputNumber.isLeapYear {
