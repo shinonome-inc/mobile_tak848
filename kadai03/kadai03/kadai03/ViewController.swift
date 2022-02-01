@@ -9,12 +9,19 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    @IBOutlet weak var infoLabel: UILabel!
+    @IBOutlet weak var inputYearField: UITextField!
+    
+    @IBAction func runButton(_ sender: Any) {
+        if let inputString = inputYearField.text, let inputNumber = Int(inputString) {
+            if inputNumber.isLeapYear {
+                infoLabel.text = "\(inputString) is leap year"
+            } else {
+                infoLabel.text = "\(inputString) is not leap year"
+            }
+        } else {
+            infoLabel.text = "Input correct year."
+        }
     }
-
-
 }
 
