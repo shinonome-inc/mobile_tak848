@@ -1,24 +1,109 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="kadai04" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's janken!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GQ9-py-gPv">
+                                <rect key="frame" x="120.00000000000001" y="391" width="135.33333333333337" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="654-OU-Thn">
+                                <rect key="frame" x="47.666666666666657" y="491" width="80" height="80"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="rock-hand">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JBN-0b-lw1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Hd-Dj-ajm">
+                                <rect key="frame" x="147.66666666666666" y="491" width="80" height="80"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="scissors-hand">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PJ9-uT-RBz"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="enemy" translatesAutoresizingMaskIntoConstraints="NO" id="Pwi-mp-QIL">
+                                <rect key="frame" x="207.66666666666663" y="123" width="160" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="3QP-cS-UCQ"/>
+                                    <constraint firstAttribute="height" constant="160" id="m54-WG-4Gw"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Od-tj-SFX">
+                                <rect key="frame" x="247.66666666666663" y="491" width="80" height="80"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="paper-hand"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="I0P-O9-m8R"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rock-hand" translatesAutoresizingMaskIntoConstraints="NO" id="Y0l-0S-kcO">
+                                <rect key="frame" x="7.6666666666666714" y="123" width="160" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="1H2-et-WDw"/>
+                                    <constraint firstAttribute="height" constant="160" id="lP3-yg-981"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Pwi-mp-QIL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="100" id="0ht-qh-pDY"/>
+                            <constraint firstItem="1Od-tj-SFX" firstAttribute="top" secondItem="654-OU-Thn" secondAttribute="top" id="0wl-Xg-uVl"/>
+                            <constraint firstItem="6Hd-Dj-ajm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="25l-r4-Nmr"/>
+                            <constraint firstItem="GQ9-py-gPv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="7im-Uy-x18"/>
+                            <constraint firstItem="Y0l-0S-kcO" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1:2" id="Agl-F1-DU0"/>
+                            <constraint firstItem="Pwi-mp-QIL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1:2" id="NhN-dg-FDU"/>
+                            <constraint firstItem="6Hd-Dj-ajm" firstAttribute="top" secondItem="GQ9-py-gPv" secondAttribute="bottom" constant="70" id="ed8-KJ-aab"/>
+                            <constraint firstItem="GQ9-py-gPv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ife-hQ-gic"/>
+                            <constraint firstItem="6Hd-Dj-ajm" firstAttribute="leading" secondItem="654-OU-Thn" secondAttribute="trailing" constant="20" id="ix8-VT-nGl"/>
+                            <constraint firstItem="1Od-tj-SFX" firstAttribute="leading" secondItem="6Hd-Dj-ajm" secondAttribute="trailing" constant="20" id="trl-Lw-T4x"/>
+                            <constraint firstItem="Y0l-0S-kcO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-100" id="vFY-5N-NGg"/>
+                            <constraint firstItem="6Hd-Dj-ajm" firstAttribute="top" secondItem="654-OU-Thn" secondAttribute="top" id="zfw-qH-mbU"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="enemyHandImageView" destination="Y0l-0S-kcO" id="hT7-u7-G5N"/>
+                        <outlet property="jankenInfoLabel" destination="GQ9-py-gPv" id="Ukx-CM-Pmh"/>
+                        <outletCollection property="handButtons" destination="654-OU-Thn" collectionClass="NSMutableArray" id="Rp8-Ca-auH"/>
+                        <outletCollection property="handButtons" destination="1Od-tj-SFX" collectionClass="NSMutableArray" id="dM1-rz-o5x"/>
+                        <outletCollection property="handButtons" destination="6Hd-Dj-ajm" collectionClass="NSMutableArray" id="zRH-Tb-lz8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="enemy" width="160" height="160"/>
+        <image name="paper-hand" width="80" height="80"/>
+        <image name="rock-hand" width="80" height="80"/>
+        <image name="scissors-hand" width="80" height="80"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
