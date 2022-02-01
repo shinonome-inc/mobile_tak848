@@ -72,15 +72,12 @@ class ViewController: UIViewController {
         enemyHandImageView.image = cp.image
     }
     
-    @IBAction func buttonTapped(_ sender: Any) {
+    @IBAction func buttonTapped(_ sender: UIButton) {
         for button in handButtons {
             button.isEnabled = false
         }
         timer?.invalidate()
-        guard let button = sender as? UIButton,
-              let myHand = Hand(rawValue: button.tag),
-              let unwrappedCpHand = cpHand
-        else {
+        guard let myHand = Hand(rawValue: sender.tag), let unwrappedCpHand = cpHand else {
             return
         }
         
