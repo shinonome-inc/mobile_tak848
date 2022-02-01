@@ -23,11 +23,14 @@ class ViewController: UIViewController {
         case rock
         case scissors
         case paper
-        var image: UIImage? {
+        var image: UIImage {
             switch self {
-            case .rock: return UIImage(named: "rock-hand")
-            case .scissors: return UIImage(named: "scissors-hand")
-            case .paper: return UIImage(named: "paper-hand")
+            case .rock:
+                return #imageLiteral(resourceName: "rock-hand")
+            case .scissors:
+                return #imageLiteral(resourceName: "scissors-hand")
+            case .paper:
+                return #imageLiteral(resourceName: "paper-hand")
             }
         }
     }
@@ -39,9 +42,12 @@ class ViewController: UIViewController {
         
         var feedback: String {
             switch self {
-            case .draw: return "draw"
-            case .lose: return "lose"
-            case .win: return "win!"
+            case .draw:
+                return "draw"
+            case .lose:
+                return "lose"
+            case .win:
+                return "win!"
             }
         }
     }
@@ -59,11 +65,11 @@ class ViewController: UIViewController {
     }
     
     @objc func shuffleCpHand(_ sender: Timer) {
-        guard let cp = Hand(rawValue: Int.random(in: 0...2)), let cpImage = cp.image else {
+        guard let cp = Hand(rawValue: Int.random(in: 0...2)) else {
             return
         }
         cpHand = cp
-        enemyHandImageView.image = cpImage
+        enemyHandImageView.image = cp.image
     }
     
     @IBAction func buttonTapped(_ sender: Any) {
