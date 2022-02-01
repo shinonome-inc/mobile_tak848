@@ -64,7 +64,6 @@ class ViewController: UIViewController {
         }
         cpHand = cp
         enemyHandImageView.image = cpImage
-        jankenInfoLabel.text = "choose your hand"
     }
     
     @IBAction func buttonTapped(_ sender: Any) {
@@ -86,6 +85,7 @@ class ViewController: UIViewController {
             for button in self.handButtons {
                 button.isEnabled = true
             }
+            self.jankenInfoLabel.text = "choose your hand"
             self.timer = Timer.scheduledTimer(timeInterval: self.shuffleInterval, target: self, selector: #selector(self.shuffleCpHand(_:)), userInfo: nil, repeats: true)
         }
     }
