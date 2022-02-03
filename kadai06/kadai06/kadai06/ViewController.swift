@@ -7,14 +7,22 @@
 //
 
 import UIKit
+import Alamofire
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        AF.request("https://qiita.com/api/v2/items?page=1&per_page=20")
+            .responseString { response in
+                switch response.result {
+                case .success(let value):
+                    print(value)
+                case .failure(let error):
+                    print(error)
+                }
+            }
     }
-
-
+    
 }
 
