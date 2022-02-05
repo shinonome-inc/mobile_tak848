@@ -1,0 +1,6 @@
+framework module Pods_kadai06_kadai06UITests {
+  umbrella header "Pods-kadai06-kadai06UITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
