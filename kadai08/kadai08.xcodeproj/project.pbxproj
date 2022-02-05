@@ -13,6 +13,8 @@
 		3B515C3D27AE6C1400B767B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B515C3B27AE6C1400B767B9 /* Main.storyboard */; };
 		3B515C3F27AE6C1500B767B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B515C3E27AE6C1500B767B9 /* Assets.xcassets */; };
 		3B515C4227AE6C1500B767B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B515C4027AE6C1500B767B9 /* LaunchScreen.storyboard */; };
+		3BB69B5327AEA2F100B2C0F0 /* QiitaArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB69B5227AEA2F100B2C0F0 /* QiitaArticleCell.swift */; };
+		3BB69B5527AF27C200B2C0F0 /* QiitaArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB69B5427AF27C200B2C0F0 /* QiitaArticleViewController.swift */; };
 		4E45C82888847CB203CF9704 /* Pods_kadai08.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F936F45DE892205291A90197 /* Pods_kadai08.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +27,8 @@
 		3B515C3E27AE6C1500B767B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B515C4127AE6C1500B767B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B515C4327AE6C1500B767B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BB69B5227AEA2F100B2C0F0 /* QiitaArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaArticleCell.swift; sourceTree = "<group>"; };
+		3BB69B5427AF27C200B2C0F0 /* QiitaArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaArticleViewController.swift; sourceTree = "<group>"; };
 		4BF6E12E0099403AA86238B9 /* Pods-kadai08.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kadai08.release.xcconfig"; path = "Target Support Files/Pods-kadai08/Pods-kadai08.release.xcconfig"; sourceTree = "<group>"; };
 		6BF5EE16E4AB8B4076DB76D9 /* Pods-kadai08.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kadai08.debug.xcconfig"; path = "Target Support Files/Pods-kadai08/Pods-kadai08.debug.xcconfig"; sourceTree = "<group>"; };
 		F936F45DE892205291A90197 /* Pods_kadai08.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kadai08.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +79,8 @@
 				3B515C3727AE6C1400B767B9 /* SceneDelegate.swift */,
 				3B515C3927AE6C1400B767B9 /* ViewController.swift */,
 				3B515C3B27AE6C1400B767B9 /* Main.storyboard */,
+				3BB69B5427AF27C200B2C0F0 /* QiitaArticleViewController.swift */,
+				3BB69B5227AEA2F100B2C0F0 /* QiitaArticleCell.swift */,
 				3B515C3E27AE6C1500B767B9 /* Assets.xcassets */,
 				3B515C4027AE6C1500B767B9 /* LaunchScreen.storyboard */,
 				3B515C4327AE6C1500B767B9 /* Info.plist */,
@@ -88,7 +94,6 @@
 				6BF5EE16E4AB8B4076DB76D9 /* Pods-kadai08.debug.xcconfig */,
 				4BF6E12E0099403AA86238B9 /* Pods-kadai08.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -208,6 +213,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B515C3A27AE6C1400B767B9 /* ViewController.swift in Sources */,
+				3BB69B5327AEA2F100B2C0F0 /* QiitaArticleCell.swift in Sources */,
+				3BB69B5527AF27C200B2C0F0 /* QiitaArticleViewController.swift in Sources */,
 				3B515C3627AE6C1400B767B9 /* AppDelegate.swift in Sources */,
 				3B515C3827AE6C1400B767B9 /* SceneDelegate.swift in Sources */,
 			);
