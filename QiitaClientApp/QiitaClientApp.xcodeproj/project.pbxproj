@@ -88,7 +88,6 @@
 				5730C412B1F57479C5FB7D83 /* Pods-QiitaClientApp.debug.xcconfig */,
 				348E6EC010C5A31B6CFD057D /* Pods-QiitaClientApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -104,6 +103,7 @@
 				3BB69B5C27AF59A400B2C0F0 /* Frameworks */,
 				3BB69B5D27AF59A400B2C0F0 /* Resources */,
 				BEBBD8BFDAF9DA6CE25F93B7 /* [CP] Embed Pods Frameworks */,
+				3BB69B7627B23B5C00B2C0F0 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -161,6 +161,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3BB69B7627B23B5C00B2C0F0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat\" . --exclude Carthage,Pods --trimwhitespace nonblank-lines --stripunusedargs closure-only --disable strongOutlets,trailingCommas --swiftversion 5.5\n\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
 		BEBBD8BFDAF9DA6CE25F93B7 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
