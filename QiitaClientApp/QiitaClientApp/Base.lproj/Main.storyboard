@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20036.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20018.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -30,28 +30,31 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15" id="eFk-Rw-77V"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="ログインせずに利用する">
-                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="14"/>
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Start without Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="onTapWithoutLoginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MzS-01-MXC"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VYD-es-cS4">
                                 <rect key="frame" x="24" y="716" width="366" height="50"/>
+                                <color key="backgroundColor" name="PrimaryColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="crJ-qR-jXH"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="ログイン">
-                                    <backgroundConfiguration key="background" cornerRadius="25">
-                                        <color key="backgroundColor" name="PrimaryColor"/>
-                                    </backgroundConfiguration>
-                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="14"/>
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="onTapLoginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uv2-fy-jHP"/>
                                 </connections>
@@ -69,13 +72,6 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zc4-f6-4GO">
-                                <rect key="frame" x="324" y="321" width="0.0" height="0.0"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="0.0"/>
-                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -107,7 +103,7 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
-        <!--Item-->
+        <!--Tags-->
         <scene sceneID="OPI-4B-iIH">
             <objects>
                 <viewController id="91p-IC-CO4" sceneMemberID="viewController">
@@ -117,13 +113,13 @@
                         <viewLayoutGuide key="safeArea" id="Vli-fE-Z4L"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" image="Tag" id="tM3-7a-6Vc"/>
+                    <tabBarItem key="tabBarItem" title="Tags" image="Tag" id="tM3-7a-6Vc"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tK4-ag-GTf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2241" y="865"/>
         </scene>
-        <!--Item-->
+        <!--Mypage-->
         <scene sceneID="WGd-wG-jmq">
             <objects>
                 <viewController id="3OB-vE-MFP" sceneMemberID="viewController">
@@ -133,13 +129,13 @@
                         <viewLayoutGuide key="safeArea" id="yGH-zc-P0x"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" image="User" id="IEz-Z9-Egd"/>
+                    <tabBarItem key="tabBarItem" title="Mypage" image="User" id="IEz-Z9-Egd"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EBw-dt-QLr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2243" y="1629"/>
         </scene>
-        <!--Item-->
+        <!--Settings-->
         <scene sceneID="tal-nF-Zag">
             <objects>
                 <viewController id="gma-FY-b2o" sceneMemberID="viewController">
@@ -149,13 +145,13 @@
                         <viewLayoutGuide key="safeArea" id="h9a-FK-c64"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" image="Settings" id="Ela-ta-KuM"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="Settings" id="Ela-ta-KuM"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QA4-GG-tlA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2242" y="2413"/>
         </scene>
-        <!--Item-->
+        <!--Feed-->
         <scene sceneID="xJF-gG-Jc6">
             <objects>
                 <viewController id="gzU-wd-SIw" sceneMemberID="viewController">
@@ -165,7 +161,7 @@
                         <viewLayoutGuide key="safeArea" id="ryW-Tu-pmf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" image="List" id="J09-8D-NUh"/>
+                    <tabBarItem key="tabBarItem" title="Feed" image="List" id="J09-8D-NUh"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MfE-Cc-Nho" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
