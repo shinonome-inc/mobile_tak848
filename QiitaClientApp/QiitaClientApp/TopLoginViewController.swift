@@ -12,4 +12,12 @@ class TopLoginViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+
+    @IBAction func onTapLoginButton(_ sender: UIButton) {
+        performSegue(segue: .toMainTabController, sender: nil)
+    }
+
+    @IBAction func onTapWithoutLoginButton(_ sender: UIButton) {
+        performSegue(segue: .toMainTabController, sender: nil)
+    }
 }

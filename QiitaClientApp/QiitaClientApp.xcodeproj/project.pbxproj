@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3B1FD4B827B91AF900D01974 /* Pacifico-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3B1FD4B727B91AF800D01974 /* Pacifico-Regular.ttf */; };
+		3B6EC12C27B94EB900C02F65 /* SegueHandlerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6EC12B27B94EB900C02F65 /* SegueHandlerType.swift */; };
+		3B6EC12F27B94F6800C02F65 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6EC12E27B94F6800C02F65 /* Config.swift */; };
 		3BB69B6327AF59A400B2C0F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB69B6227AF59A400B2C0F0 /* AppDelegate.swift */; };
 		3BB69B6527AF59A400B2C0F0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB69B6427AF59A400B2C0F0 /* SceneDelegate.swift */; };
 		3BB69B6727AF59A400B2C0F0 /* TopLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB69B6627AF59A400B2C0F0 /* TopLoginViewController.swift */; };
@@ -20,6 +22,8 @@
 /* Begin PBXFileReference section */
 		348E6EC010C5A31B6CFD057D /* Pods-QiitaClientApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QiitaClientApp.release.xcconfig"; path = "Target Support Files/Pods-QiitaClientApp/Pods-QiitaClientApp.release.xcconfig"; sourceTree = "<group>"; };
 		3B1FD4B727B91AF800D01974 /* Pacifico-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pacifico-Regular.ttf"; sourceTree = "<group>"; };
+		3B6EC12B27B94EB900C02F65 /* SegueHandlerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueHandlerType.swift; sourceTree = "<group>"; };
+		3B6EC12E27B94F6800C02F65 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		3BB69B5F27AF59A400B2C0F0 /* QiitaClientApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QiitaClientApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BB69B6227AF59A400B2C0F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BB69B6427AF59A400B2C0F0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +72,22 @@
 			path = Pacifico;
 			sourceTree = "<group>";
 		};
+		3B6EC12A27B94E0E00C02F65 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				3B6EC12B27B94EB900C02F65 /* SegueHandlerType.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		3B6EC12D27B94F4E00C02F65 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				3B6EC12E27B94F6800C02F65 /* Config.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
 		3BB69B5627AF59A400B2C0F0 = {
 			isa = PBXGroup;
 			children = (
@@ -89,7 +109,9 @@
 		3BB69B6127AF59A400B2C0F0 /* QiitaClientApp */ = {
 			isa = PBXGroup;
 			children = (
+				3B6EC12D27B94F4E00C02F65 /* Config */,
 				3B1FD4B527B91A5800D01974 /* Fonts */,
+				3B6EC12A27B94E0E00C02F65 /* Utilities */,
 				3BB69B6227AF59A400B2C0F0 /* AppDelegate.swift */,
 				3BB69B6427AF59A400B2C0F0 /* SceneDelegate.swift */,
 				3BB69B6627AF59A400B2C0F0 /* TopLoginViewController.swift */,
@@ -246,6 +268,8 @@
 			files = (
 				3BB69B6727AF59A400B2C0F0 /* TopLoginViewController.swift in Sources */,
 				3BB69B6327AF59A400B2C0F0 /* AppDelegate.swift in Sources */,
+				3B6EC12F27B94F6800C02F65 /* Config.swift in Sources */,
+				3B6EC12C27B94EB900C02F65 /* SegueHandlerType.swift in Sources */,
 				3BB69B6527AF59A400B2C0F0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
