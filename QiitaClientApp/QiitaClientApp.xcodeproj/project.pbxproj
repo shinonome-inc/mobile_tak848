@@ -73,6 +73,8 @@
 				3BB69B6B27AF59A600B2C0F0 /* Assets.xcassets */,
 				3BB9417127B9D10500D1249D /* Font */,
 				3B6EC13727B9554A00C02F65 /* Localizable.strings */,
+				3BB69B6827AF59A500B2C0F0 /* Main.storyboard */,
+				3BB69B6D27AF59A600B2C0F0 /* LaunchScreen.storyboard */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -126,8 +128,6 @@
 				3BB69B6227AF59A400B2C0F0 /* AppDelegate.swift */,
 				3BB69B6427AF59A400B2C0F0 /* SceneDelegate.swift */,
 				3B1FD4B527B91A5800D01974 /* Resource */,
-				3BB69B6827AF59A500B2C0F0 /* Main.storyboard */,
-				3BB69B6D27AF59A600B2C0F0 /* LaunchScreen.storyboard */,
 				3B6EC12D27B94F4E00C02F65 /* Config */,
 				3B6EC12A27B94E0E00C02F65 /* Utility */,
 				3BB9417A27B9D9A100D1249D /* Extension */,
