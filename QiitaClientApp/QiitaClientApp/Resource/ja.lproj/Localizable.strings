@@ -8,6 +8,7 @@
 
 "-playground-" = "-PlayGround-";
 "login" = "ログイン";
+"start without login" = "ログインせずに利用する";
 
 "feed" = "フィード";
 "tags" = "タグ";

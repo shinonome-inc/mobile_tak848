@@ -284,7 +284,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\nfor file in `\\find . -name \\*.storyboard`; do\n    IFS=$'\\n'\n    for xmlKey in `\\grep 'keyPath=\"localizedKey\"' ${file}`; do\n        localizedKey=`echo $xmlKey | sed -e 's/.* keyPath=\"localizedKey\" value=\"\\([0-9a-zA-Z_-]*\\)\".*/\\1/g'`\n        for localizedStringFile in `\\find ${SRCROOT} -name Localizable.strings`; do\n            grep \"\\\"${localizedKey}\\\" =\" $localizedStringFile > /dev/null 2>&1\n            if [ $? != 0 ]; then\n                echo \"not exists key '${localizedKey}' in ${localizedStringFile}\"\n                exit 1\n            fi\n        done\n    done\ndone\n\n\"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat\" . --exclude Carthage,Pods --trimwhitespace nonblank-lines --stripunusedargs closure-only --disable strongOutlets,trailingCommas --swiftversion 5.5\n\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat\" . --exclude Carthage,Pods --trimwhitespace nonblank-lines --stripunusedargs closure-only --disable strongOutlets,trailingCommas --swiftversion 5.5\n\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
 		BEBBD8BFDAF9DA6CE25F93B7 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;

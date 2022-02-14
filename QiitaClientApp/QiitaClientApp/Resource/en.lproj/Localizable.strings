@@ -8,6 +8,7 @@
 
 "-playground-" = "-PlayGround-";
 "login" = "Login";
+"start without login" = "Start without Login";
 
 "feed" = "Feed";
 "tags" = "Tags";
