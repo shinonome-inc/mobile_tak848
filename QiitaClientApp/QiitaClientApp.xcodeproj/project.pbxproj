@@ -89,10 +89,6 @@
 			isa = PBXGroup;
 			children = (
 				3B6EC12B27B94EB900C02F65 /* SegueHandlerType.swift */,
-				3BB9417227B9D4F400D1249D /* String+localized.swift */,
-				3BB9417427B9D60200D1249D /* UILabel+localizedKey.swift */,
-				3BB9417627B9D61700D1249D /* UITabBarItem+localizedKey.swift */,
-				3BB9417827B9D62F00D1249D /* UIButton+localizedKey.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -134,6 +130,7 @@
 				3BB69B6827AF59A500B2C0F0 /* Main.storyboard */,
 				3B6EC12D27B94F4E00C02F65 /* Config */,
 				3B6EC12A27B94E0E00C02F65 /* Utility */,
+				3BB9417A27B9D9A100D1249D /* Extension */,
 				3BB69B6627AF59A400B2C0F0 /* TopLoginViewController.swift */,
 			);
 			path = QiitaClientApp;
@@ -145,6 +142,49 @@
 				3B1FD4B627B91A6600D01974 /* Pacifico */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		3BB9417A27B9D9A100D1249D /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				3BB9417B27B9D9D500D1249D /* String */,
+				3BB9417C27B9D9DC00D1249D /* UILabel */,
+				3BB9417E27B9D9EE00D1249D /* UIButton */,
+				3BB9417D27B9D9E400D1249D /* UITabBarItem */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		3BB9417B27B9D9D500D1249D /* String */ = {
+			isa = PBXGroup;
+			children = (
+				3BB9417227B9D4F400D1249D /* String+localized.swift */,
+			);
+			path = String;
+			sourceTree = "<group>";
+		};
+		3BB9417C27B9D9DC00D1249D /* UILabel */ = {
+			isa = PBXGroup;
+			children = (
+				3BB9417427B9D60200D1249D /* UILabel+localizedKey.swift */,
+			);
+			path = UILabel;
+			sourceTree = "<group>";
+		};
+		3BB9417D27B9D9E400D1249D /* UITabBarItem */ = {
+			isa = PBXGroup;
+			children = (
+				3BB9417627B9D61700D1249D /* UITabBarItem+localizedKey.swift */,
+			);
+			path = UITabBarItem;
+			sourceTree = "<group>";
+		};
+		3BB9417E27B9D9EE00D1249D /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				3BB9417827B9D62F00D1249D /* UIButton+localizedKey.swift */,
+			);
+			path = UIButton;
 			sourceTree = "<group>";
 		};
 		D04599CAF0CFB2047975301D /* Pods */ = {
