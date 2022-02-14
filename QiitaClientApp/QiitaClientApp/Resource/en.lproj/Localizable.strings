@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  QiitaClientApp
+
+  Created by 高橋拓也 on 2022/02/13.
+  
+*/
+
+"-playground-" = "-PlayGround-";
+"login" = "Login";
+
+"feed" = "Feed";
+"tags" = "Tags";
+"mypage" = "Mypage";
+"settings" = "Settings";

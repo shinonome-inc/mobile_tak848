@@ -17,6 +17,10 @@
 		3BB69B6A27AF59A500B2C0F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BB69B6827AF59A500B2C0F0 /* Main.storyboard */; };
 		3BB69B6C27AF59A600B2C0F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BB69B6B27AF59A600B2C0F0 /* Assets.xcassets */; };
 		3BB69B6F27AF59A600B2C0F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BB69B6D27AF59A600B2C0F0 /* LaunchScreen.storyboard */; };
+		3BB9417327B9D4F400D1249D /* String+localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB9417227B9D4F400D1249D /* String+localized.swift */; };
+		3BB9417527B9D60200D1249D /* UILabel+localizedKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB9417427B9D60200D1249D /* UILabel+localizedKey.swift */; };
+		3BB9417727B9D61700D1249D /* UITabBarItem+localizedKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB9417627B9D61700D1249D /* UITabBarItem+localizedKey.swift */; };
+		3BB9417927B9D62F00D1249D /* UIButton+localizedKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB9417827B9D62F00D1249D /* UIButton+localizedKey.swift */; };
 		5E4C686282BE82653A783F51 /* Pods_QiitaClientApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEC91BFED63ED92114497267 /* Pods_QiitaClientApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,7 +29,6 @@
 		3B1FD4B727B91AF800D01974 /* Pacifico-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pacifico-Regular.ttf"; sourceTree = "<group>"; };
 		3B6EC12B27B94EB900C02F65 /* SegueHandlerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueHandlerType.swift; sourceTree = "<group>"; };
 		3B6EC12E27B94F6800C02F65 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
-		3B6EC13127B9532C00C02F65 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		3B6EC13627B9554A00C02F65 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3BB69B5F27AF59A400B2C0F0 /* QiitaClientApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QiitaClientApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BB69B6227AF59A400B2C0F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -35,7 +38,11 @@
 		3BB69B6B27AF59A600B2C0F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3BB69B6E27AF59A600B2C0F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3BB69B7027AF59A600B2C0F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3BB9416D27B963E000D1249D /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		3BB9416F27B9C5EC00D1249D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3BB9417227B9D4F400D1249D /* String+localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+localized.swift"; sourceTree = "<group>"; };
+		3BB9417427B9D60200D1249D /* UILabel+localizedKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+localizedKey.swift"; sourceTree = "<group>"; };
+		3BB9417627B9D61700D1249D /* UITabBarItem+localizedKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBarItem+localizedKey.swift"; sourceTree = "<group>"; };
+		3BB9417827B9D62F00D1249D /* UIButton+localizedKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+localizedKey.swift"; sourceTree = "<group>"; };
 		5730C412B1F57479C5FB7D83 /* Pods-QiitaClientApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QiitaClientApp.debug.xcconfig"; path = "Target Support Files/Pods-QiitaClientApp/Pods-QiitaClientApp.debug.xcconfig"; sourceTree = "<group>"; };
 		FEC91BFED63ED92114497267 /* Pods_QiitaClientApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QiitaClientApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -60,12 +67,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		3B1FD4B527B91A5800D01974 /* Fonts */ = {
+		3B1FD4B527B91A5800D01974 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				3B1FD4B627B91A6600D01974 /* Pacifico */,
+				3BB69B6B27AF59A600B2C0F0 /* Assets.xcassets */,
+				3BB9417127B9D10500D1249D /* Font */,
+				3B6EC13727B9554A00C02F65 /* Localizable.strings */,
 			);
-			path = Fonts;
+			path = Resource;
 			sourceTree = "<group>";
 		};
 		3B1FD4B627B91A6600D01974 /* Pacifico */ = {
@@ -76,12 +85,16 @@
 			path = Pacifico;
 			sourceTree = "<group>";
 		};
-		3B6EC12A27B94E0E00C02F65 /* Utilities */ = {
+		3B6EC12A27B94E0E00C02F65 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
 				3B6EC12B27B94EB900C02F65 /* SegueHandlerType.swift */,
+				3BB9417227B9D4F400D1249D /* String+localized.swift */,
+				3BB9417427B9D60200D1249D /* UILabel+localizedKey.swift */,
+				3BB9417627B9D61700D1249D /* UITabBarItem+localizedKey.swift */,
+				3BB9417827B9D62F00D1249D /* UIButton+localizedKey.swift */,
 			);
-			path = Utilities;
+			path = Utility;
 			sourceTree = "<group>";
 		};
 		3B6EC12D27B94F4E00C02F65 /* Config */ = {
@@ -90,14 +103,6 @@
 				3B6EC12E27B94F6800C02F65 /* Config.swift */,
 			);
 			path = Config;
-			sourceTree = "<group>";
-		};
-		3B6EC13227B9539900C02F65 /* Locale */ = {
-			isa = PBXGroup;
-			children = (
-				3B6EC13727B9554A00C02F65 /* Localizable.strings */,
-			);
-			path = Locale;
 			sourceTree = "<group>";
 		};
 		3BB69B5627AF59A400B2C0F0 = {
@@ -121,19 +126,25 @@
 		3BB69B6127AF59A400B2C0F0 /* QiitaClientApp */ = {
 			isa = PBXGroup;
 			children = (
-				3B6EC12D27B94F4E00C02F65 /* Config */,
-				3B1FD4B527B91A5800D01974 /* Fonts */,
-				3B6EC13227B9539900C02F65 /* Locale */,
-				3B6EC12A27B94E0E00C02F65 /* Utilities */,
+				3BB69B7027AF59A600B2C0F0 /* Info.plist */,
 				3BB69B6227AF59A400B2C0F0 /* AppDelegate.swift */,
 				3BB69B6427AF59A400B2C0F0 /* SceneDelegate.swift */,
-				3BB69B6627AF59A400B2C0F0 /* TopLoginViewController.swift */,
-				3BB69B6827AF59A500B2C0F0 /* Main.storyboard */,
-				3BB69B6B27AF59A600B2C0F0 /* Assets.xcassets */,
 				3BB69B6D27AF59A600B2C0F0 /* LaunchScreen.storyboard */,
-				3BB69B7027AF59A600B2C0F0 /* Info.plist */,
+				3B1FD4B527B91A5800D01974 /* Resource */,
+				3BB69B6827AF59A500B2C0F0 /* Main.storyboard */,
+				3B6EC12D27B94F4E00C02F65 /* Config */,
+				3B6EC12A27B94E0E00C02F65 /* Utility */,
+				3BB69B6627AF59A400B2C0F0 /* TopLoginViewController.swift */,
 			);
 			path = QiitaClientApp;
+			sourceTree = "<group>";
+		};
+		3BB9417127B9D10500D1249D /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				3B1FD4B627B91A6600D01974 /* Pacifico */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 		D04599CAF0CFB2047975301D /* Pods */ = {
@@ -233,7 +244,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat\" . --exclude Carthage,Pods --trimwhitespace nonblank-lines --stripunusedargs closure-only --disable strongOutlets,trailingCommas --swiftversion 5.5\n\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\nfor file in `\\find . -name \\*.storyboard`; do\n    IFS=$'\\n'\n    for xmlKey in `\\grep 'keyPath=\"localizedKey\"' ${file}`; do\n        localizedKey=`echo $xmlKey | sed -e 's/.* keyPath=\"localizedKey\" value=\"\\([0-9a-zA-Z_-]*\\)\".*/\\1/g'`\n        for localizedStringFile in `\\find ${SRCROOT} -name Localizable.strings`; do\n            grep \"\\\"${localizedKey}\\\" =\" $localizedStringFile > /dev/null 2>&1\n            if [ $? != 0 ]; then\n                echo \"not exists key '${localizedKey}' in ${localizedStringFile}\"\n                exit 1\n            fi\n        done\n    done\ndone\n\n\"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat\" . --exclude Carthage,Pods --trimwhitespace nonblank-lines --stripunusedargs closure-only --disable strongOutlets,trailingCommas --swiftversion 5.5\n\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
 		BEBBD8BFDAF9DA6CE25F93B7 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -282,10 +293,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BB69B6727AF59A400B2C0F0 /* TopLoginViewController.swift in Sources */,
+				3BB9417527B9D60200D1249D /* UILabel+localizedKey.swift in Sources */,
 				3BB69B6327AF59A400B2C0F0 /* AppDelegate.swift in Sources */,
 				3B6EC12F27B94F6800C02F65 /* Config.swift in Sources */,
 				3B6EC12C27B94EB900C02F65 /* SegueHandlerType.swift in Sources */,
+				3BB9417927B9D62F00D1249D /* UIButton+localizedKey.swift in Sources */,
 				3BB69B6527AF59A400B2C0F0 /* SceneDelegate.swift in Sources */,
+				3BB9417727B9D61700D1249D /* UITabBarItem+localizedKey.swift in Sources */,
+				3BB9417327B9D4F400D1249D /* String+localized.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +311,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				3B6EC13627B9554A00C02F65 /* ja */,
+				3BB9416F27B9C5EC00D1249D /* en */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -304,7 +320,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				3BB69B6927AF59A500B2C0F0 /* Base */,
-				3BB9416D27B963E000D1249D /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -313,7 +328,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				3BB69B6E27AF59A600B2C0F0 /* Base */,
-				3B6EC13127B9532C00C02F65 /* ja */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";

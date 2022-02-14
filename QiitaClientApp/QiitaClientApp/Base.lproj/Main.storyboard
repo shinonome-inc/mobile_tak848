@@ -50,10 +50,14 @@
                                 <state key="normal" title="Login">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <attributedString key="userComments">
+                                    <fragment content="login button"/>
+                                </attributedString>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <real key="value" value="25"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="login"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="onTapLoginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uv2-fy-jHP"/>
@@ -73,6 +77,9 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="-playground-"/>
+                                </userDefinedRuntimeAttributes>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -113,7 +120,11 @@
                         <viewLayoutGuide key="safeArea" id="Vli-fE-Z4L"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Tags" image="Tag" id="tM3-7a-6Vc"/>
+                    <tabBarItem key="tabBarItem" title="Tags" image="Tag" id="tM3-7a-6Vc">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="tags"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tK4-ag-GTf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -129,7 +140,11 @@
                         <viewLayoutGuide key="safeArea" id="yGH-zc-P0x"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Mypage" image="User" id="IEz-Z9-Egd"/>
+                    <tabBarItem key="tabBarItem" title="Mypage" image="User" id="IEz-Z9-Egd">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="mypage"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EBw-dt-QLr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -145,7 +160,11 @@
                         <viewLayoutGuide key="safeArea" id="h9a-FK-c64"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" image="Settings" id="Ela-ta-KuM"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="Settings" id="Ela-ta-KuM">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="settings"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QA4-GG-tlA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -161,7 +180,11 @@
                         <viewLayoutGuide key="safeArea" id="ryW-Tu-pmf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Feed" image="List" id="J09-8D-NUh"/>
+                    <tabBarItem key="tabBarItem" title="Feed" image="List" id="J09-8D-NUh">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="feed"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MfE-Cc-Nho" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
