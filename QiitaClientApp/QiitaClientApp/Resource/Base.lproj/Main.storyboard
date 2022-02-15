@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Pacifico-Regular.ttf">
+            <string>Pacifico-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Top Login View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="TopLoginViewController" customModule="QiitaClientApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="bbK-O5-5OV">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fMa-mN-ekG">
+                                <rect key="frame" x="40" y="800" width="334" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="eFk-Rw-77V"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Start without Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="start without login"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onTapWithoutLoginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MzS-01-MXC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VYD-es-cS4">
+                                <rect key="frame" x="24" y="716" width="366" height="50"/>
+                                <color key="backgroundColor" name="PrimaryColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="crJ-qR-jXH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <attributedString key="userComments">
+                                    <fragment content="login button"/>
+                                </attributedString>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="login"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onTapLoginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uv2-fy-jHP"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Qiita Feed App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bM8-Kr-aQ1">
+                                <rect key="frame" x="92" y="220" width="230" height="63.5"/>
+                                <fontDescription key="fontDescription" name="Pacifico-Regular" family="Pacifico" pointSize="36"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-PlayGround-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rre-qo-jSd">
+                                <rect key="frame" x="160" y="291.5" width="94" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="hK4-rd-Veb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="-playground-"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fMa-mN-ekG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="0OX-i1-WQ3"/>
+                            <constraint firstItem="rre-qo-jSd" firstAttribute="top" secondItem="bM8-Kr-aQ1" secondAttribute="bottom" constant="8" id="NMB-3w-LmH"/>
+                            <constraint firstItem="bM8-Kr-aQ1" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="220" id="Nlb-7O-BXQ"/>
+                            <constraint firstItem="rre-qo-jSd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bK8-BY-r9R"/>
+                            <constraint firstAttribute="bottom" secondItem="bbK-O5-5OV" secondAttribute="bottom" id="gfX-kI-87x"/>
+                            <constraint firstAttribute="bottom" secondItem="fMa-mN-ekG" secondAttribute="bottom" constant="81" id="iLe-Rv-71S"/>
+                            <constraint firstItem="bbK-O5-5OV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ifa-lL-xRV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VYD-es-cS4" secondAttribute="trailing" constant="24" id="rSH-QS-hVz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fMa-mN-ekG" secondAttribute="trailing" constant="40" id="sgB-RZ-Mgx"/>
+                            <constraint firstItem="bM8-Kr-aQ1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uah-aU-hqB"/>
+                            <constraint firstItem="VYD-es-cS4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="xI7-zq-ExS"/>
+                            <constraint firstItem="bbK-O5-5OV" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="xae-qg-yDH"/>
+                            <constraint firstItem="fMa-mN-ekG" firstAttribute="top" secondItem="VYD-es-cS4" secondAttribute="bottom" constant="34" id="z8p-FF-Bdt"/>
+                            <constraint firstItem="bbK-O5-5OV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zR2-bA-OwM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="86s-Zn-XEW" kind="show" identifier="toMainTabController" id="3Pm-Cc-AIR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+        <!--Tags-->
+        <scene sceneID="OPI-4B-iIH">
+            <objects>
+                <viewController id="91p-IC-CO4" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="P95-ic-8qG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Vli-fE-Z4L"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Tags" image="Tag" id="tM3-7a-6Vc">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="tags"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tK4-ag-GTf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2241" y="865"/>
+        </scene>
+        <!--Mypage-->
+        <scene sceneID="WGd-wG-jmq">
+            <objects>
+                <viewController id="3OB-vE-MFP" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DRl-IU-DMH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="yGH-zc-P0x"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Mypage" image="User" id="IEz-Z9-Egd">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="mypage"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EBw-dt-QLr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2243" y="1629"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="tal-nF-Zag">
+            <objects>
+                <viewController id="gma-FY-b2o" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="D66-De-eIw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="h9a-FK-c64"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" image="Settings" id="Ela-ta-KuM">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="settings"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QA4-GG-tlA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2242" y="2413"/>
+        </scene>
+        <!--Feed-->
+        <scene sceneID="xJF-gG-Jc6">
+            <objects>
+                <viewController id="gzU-wd-SIw" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="S1b-35-hoA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ryW-Tu-pmf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Feed" image="List" id="J09-8D-NUh">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="feed"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MfE-Cc-Nho" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2244.927536231884" y="137.94642857142856"/>
+        </scene>
+        <!--MainTabBarController-->
+        <scene sceneID="FnD-T0-C7e">
+            <objects>
+                <tabBarController title="MainTabBarController" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="86s-Zn-XEW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Ruj-kr-rUX"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="idm-TM-tbJ">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" name="SecondaryColor"/>
+                        <color key="selectedImageTintColor" name="SecondaryColor"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="gzU-wd-SIw" kind="relationship" relationship="viewControllers" id="5Il-MB-3q4"/>
+                        <segue destination="91p-IC-CO4" kind="relationship" relationship="viewControllers" id="jNC-81-249"/>
+                        <segue destination="3OB-vE-MFP" kind="relationship" relationship="viewControllers" id="jok-6K-XvK"/>
+                        <segue destination="gma-FY-b2o" kind="relationship" relationship="viewControllers" id="zDQ-kQ-YLq"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IyJ-3s-9d7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1334.7826086956522" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="List" width="24" height="24"/>
+        <image name="Settings" width="24" height="24"/>
+        <image name="Tag" width="24" height="24"/>
+        <image name="User" width="24" height="24"/>
+        <image name="background" width="562.5" height="812"/>
+        <namedColor name="PrimaryColor">
+            <color red="0.27450980392156865" green="0.51372549019607838" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SecondaryColor">
+            <color red="0.45490196078431372" green="0.75686274509803919" blue="0.22745098039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

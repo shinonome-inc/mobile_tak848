@@ -7,9 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B1FD4B827B91AF900D01974 /* Pacifico-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3B1FD4B727B91AF800D01974 /* Pacifico-Regular.ttf */; };
+		3B35299F27BB401700497836 /* LocalizationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B35299E27BB401700497836 /* LocalizationExtensions.swift */; };
+		3B6EC12C27B94EB900C02F65 /* SegueHandlerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6EC12B27B94EB900C02F65 /* SegueHandlerType.swift */; };
+		3B6EC12F27B94F6800C02F65 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6EC12E27B94F6800C02F65 /* Config.swift */; };
+		3B6EC13527B9554A00C02F65 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B6EC13727B9554A00C02F65 /* Localizable.strings */; };
 		3BB69B6327AF59A400B2C0F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB69B6227AF59A400B2C0F0 /* AppDelegate.swift */; };
 		3BB69B6527AF59A400B2C0F0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB69B6427AF59A400B2C0F0 /* SceneDelegate.swift */; };
-		3BB69B6727AF59A400B2C0F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB69B6627AF59A400B2C0F0 /* ViewController.swift */; };
+		3BB69B6727AF59A400B2C0F0 /* TopLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB69B6627AF59A400B2C0F0 /* TopLoginViewController.swift */; };
 		3BB69B6A27AF59A500B2C0F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BB69B6827AF59A500B2C0F0 /* Main.storyboard */; };
 		3BB69B6C27AF59A600B2C0F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BB69B6B27AF59A600B2C0F0 /* Assets.xcassets */; };
 		3BB69B6F27AF59A600B2C0F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BB69B6D27AF59A600B2C0F0 /* LaunchScreen.storyboard */; };
@@ -18,14 +23,20 @@
 
 /* Begin PBXFileReference section */
 		348E6EC010C5A31B6CFD057D /* Pods-QiitaClientApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QiitaClientApp.release.xcconfig"; path = "Target Support Files/Pods-QiitaClientApp/Pods-QiitaClientApp.release.xcconfig"; sourceTree = "<group>"; };
+		3B1FD4B727B91AF800D01974 /* Pacifico-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pacifico-Regular.ttf"; sourceTree = "<group>"; };
+		3B35299E27BB401700497836 /* LocalizationExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationExtensions.swift; sourceTree = "<group>"; };
+		3B6EC12B27B94EB900C02F65 /* SegueHandlerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueHandlerType.swift; sourceTree = "<group>"; };
+		3B6EC12E27B94F6800C02F65 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		3B6EC13627B9554A00C02F65 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3BB69B5F27AF59A400B2C0F0 /* QiitaClientApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QiitaClientApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BB69B6227AF59A400B2C0F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BB69B6427AF59A400B2C0F0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3BB69B6627AF59A400B2C0F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3BB69B6627AF59A400B2C0F0 /* TopLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopLoginViewController.swift; sourceTree = "<group>"; };
 		3BB69B6927AF59A500B2C0F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3BB69B6B27AF59A600B2C0F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3BB69B6E27AF59A600B2C0F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3BB69B7027AF59A600B2C0F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BB9416F27B9C5EC00D1249D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5730C412B1F57479C5FB7D83 /* Pods-QiitaClientApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QiitaClientApp.debug.xcconfig"; path = "Target Support Files/Pods-QiitaClientApp/Pods-QiitaClientApp.debug.xcconfig"; sourceTree = "<group>"; };
 		FEC91BFED63ED92114497267 /* Pods_QiitaClientApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QiitaClientApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -50,6 +61,43 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		3B1FD4B527B91A5800D01974 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				3BB69B6B27AF59A600B2C0F0 /* Assets.xcassets */,
+				3BB9417127B9D10500D1249D /* Font */,
+				3B6EC13727B9554A00C02F65 /* Localizable.strings */,
+				3BB69B6827AF59A500B2C0F0 /* Main.storyboard */,
+				3BB69B6D27AF59A600B2C0F0 /* LaunchScreen.storyboard */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		3B1FD4B627B91A6600D01974 /* Pacifico */ = {
+			isa = PBXGroup;
+			children = (
+				3B1FD4B727B91AF800D01974 /* Pacifico-Regular.ttf */,
+			);
+			path = Pacifico;
+			sourceTree = "<group>";
+		};
+		3B6EC12A27B94E0E00C02F65 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				3B6EC12B27B94EB900C02F65 /* SegueHandlerType.swift */,
+				3B35299E27BB401700497836 /* LocalizationExtensions.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		3B6EC12D27B94F4E00C02F65 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				3B6EC12E27B94F6800C02F65 /* Config.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
 		3BB69B5627AF59A400B2C0F0 = {
 			isa = PBXGroup;
 			children = (
@@ -71,15 +119,23 @@
 		3BB69B6127AF59A400B2C0F0 /* QiitaClientApp */ = {
 			isa = PBXGroup;
 			children = (
+				3BB69B7027AF59A600B2C0F0 /* Info.plist */,
 				3BB69B6227AF59A400B2C0F0 /* AppDelegate.swift */,
 				3BB69B6427AF59A400B2C0F0 /* SceneDelegate.swift */,
-				3BB69B6627AF59A400B2C0F0 /* ViewController.swift */,
-				3BB69B6827AF59A500B2C0F0 /* Main.storyboard */,
-				3BB69B6B27AF59A600B2C0F0 /* Assets.xcassets */,
-				3BB69B6D27AF59A600B2C0F0 /* LaunchScreen.storyboard */,
-				3BB69B7027AF59A600B2C0F0 /* Info.plist */,
+				3B1FD4B527B91A5800D01974 /* Resource */,
+				3B6EC12D27B94F4E00C02F65 /* Config */,
+				3B6EC12A27B94E0E00C02F65 /* Utility */,
+				3BB69B6627AF59A400B2C0F0 /* TopLoginViewController.swift */,
 			);
 			path = QiitaClientApp;
+			sourceTree = "<group>";
+		};
+		3BB9417127B9D10500D1249D /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				3B1FD4B627B91A6600D01974 /* Pacifico */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 		D04599CAF0CFB2047975301D /* Pods */ = {
@@ -136,6 +192,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ja,
 			);
 			mainGroup = 3BB69B5627AF59A400B2C0F0;
 			productRefGroup = 3BB69B6027AF59A400B2C0F0 /* Products */;
@@ -152,7 +209,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B6EC13527B9554A00C02F65 /* Localizable.strings in Resources */,
 				3BB69B6F27AF59A600B2C0F0 /* LaunchScreen.storyboard in Resources */,
+				3B1FD4B827B91AF900D01974 /* Pacifico-Regular.ttf in Resources */,
 				3BB69B6C27AF59A600B2C0F0 /* Assets.xcassets in Resources */,
 				3BB69B6A27AF59A500B2C0F0 /* Main.storyboard in Resources */,
 			);
@@ -224,8 +283,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BB69B6727AF59A400B2C0F0 /* ViewController.swift in Sources */,
+				3BB69B6727AF59A400B2C0F0 /* TopLoginViewController.swift in Sources */,
 				3BB69B6327AF59A400B2C0F0 /* AppDelegate.swift in Sources */,
+				3B6EC12F27B94F6800C02F65 /* Config.swift in Sources */,
+				3B35299F27BB401700497836 /* LocalizationExtensions.swift in Sources */,
+				3B6EC12C27B94EB900C02F65 /* SegueHandlerType.swift in Sources */,
 				3BB69B6527AF59A400B2C0F0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -233,6 +295,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		3B6EC13727B9554A00C02F65 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B6EC13627B9554A00C02F65 /* ja */,
+				3BB9416F27B9C5EC00D1249D /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		3BB69B6827AF59A500B2C0F0 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -256,6 +327,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -317,6 +389,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
