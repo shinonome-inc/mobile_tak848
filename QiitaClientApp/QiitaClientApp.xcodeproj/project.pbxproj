@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3B1FD4B827B91AF900D01974 /* Pacifico-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3B1FD4B727B91AF800D01974 /* Pacifico-Regular.ttf */; };
 		3B35299F27BB401700497836 /* LocalizationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B35299E27BB401700497836 /* LocalizationExtensions.swift */; };
+		3B3529A127BBC13A00497836 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3529A027BBC13A00497836 /* FeedViewController.swift */; };
+		3B3529A327BBCF5900497836 /* QiitaArticleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B3529A227BBCF5900497836 /* QiitaArticleCell.xib */; };
 		3B6EC12C27B94EB900C02F65 /* SegueHandlerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6EC12B27B94EB900C02F65 /* SegueHandlerType.swift */; };
 		3B6EC12F27B94F6800C02F65 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6EC12E27B94F6800C02F65 /* Config.swift */; };
 		3B6EC13527B9554A00C02F65 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B6EC13727B9554A00C02F65 /* Localizable.strings */; };
@@ -25,6 +27,8 @@
 		348E6EC010C5A31B6CFD057D /* Pods-QiitaClientApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QiitaClientApp.release.xcconfig"; path = "Target Support Files/Pods-QiitaClientApp/Pods-QiitaClientApp.release.xcconfig"; sourceTree = "<group>"; };
 		3B1FD4B727B91AF800D01974 /* Pacifico-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pacifico-Regular.ttf"; sourceTree = "<group>"; };
 		3B35299E27BB401700497836 /* LocalizationExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationExtensions.swift; sourceTree = "<group>"; };
+		3B3529A027BBC13A00497836 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		3B3529A227BBCF5900497836 /* QiitaArticleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QiitaArticleCell.xib; sourceTree = "<group>"; };
 		3B6EC12B27B94EB900C02F65 /* SegueHandlerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueHandlerType.swift; sourceTree = "<group>"; };
 		3B6EC12E27B94F6800C02F65 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		3B6EC13627B9554A00C02F65 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -69,6 +73,7 @@
 				3B6EC13727B9554A00C02F65 /* Localizable.strings */,
 				3BB69B6827AF59A500B2C0F0 /* Main.storyboard */,
 				3BB69B6D27AF59A600B2C0F0 /* LaunchScreen.storyboard */,
+				3B3529A227BBCF5900497836 /* QiitaArticleCell.xib */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -126,6 +131,7 @@
 				3B6EC12D27B94F4E00C02F65 /* Config */,
 				3B6EC12A27B94E0E00C02F65 /* Utility */,
 				3BB69B6627AF59A400B2C0F0 /* TopLoginViewController.swift */,
+				3B3529A027BBC13A00497836 /* FeedViewController.swift */,
 			);
 			path = QiitaClientApp;
 			sourceTree = "<group>";
@@ -210,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B6EC13527B9554A00C02F65 /* Localizable.strings in Resources */,
+				3B3529A327BBCF5900497836 /* QiitaArticleCell.xib in Resources */,
 				3BB69B6F27AF59A600B2C0F0 /* LaunchScreen.storyboard in Resources */,
 				3B1FD4B827B91AF900D01974 /* Pacifico-Regular.ttf in Resources */,
 				3BB69B6C27AF59A600B2C0F0 /* Assets.xcassets in Resources */,
@@ -289,6 +296,7 @@
 				3B35299F27BB401700497836 /* LocalizationExtensions.swift in Sources */,
 				3B6EC12C27B94EB900C02F65 /* SegueHandlerType.swift in Sources */,
 				3BB69B6527AF59A400B2C0F0 /* SceneDelegate.swift in Sources */,
+				3B3529A127BBC13A00497836 /* FeedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -175,22 +175,45 @@
         <!--Feed-->
         <scene sceneID="xJF-gG-Jc6">
             <objects>
-                <viewController id="gzU-wd-SIw" sceneMemberID="viewController">
+                <viewController id="gzU-wd-SIw" customClass="FeedViewController" customModule="QiitaClientApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="S1b-35-hoA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="8Pb-Ac-TS8">
+                                <rect key="frame" x="0.0" y="56" width="414" height="51"/>
+                                <offsetWrapper key="searchFieldBackgroundPositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Dff-d6-aaD">
+                                <rect key="frame" x="0.0" y="107" width="414" height="706"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ryW-Tu-pmf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ryW-Tu-pmf" firstAttribute="bottom" secondItem="Dff-d6-aaD" secondAttribute="bottom" id="MQ6-4J-EVl"/>
+                            <constraint firstItem="Dff-d6-aaD" firstAttribute="leading" secondItem="ryW-Tu-pmf" secondAttribute="leading" id="Uvx-fJ-l93"/>
+                            <constraint firstItem="8Pb-Ac-TS8" firstAttribute="top" secondItem="ryW-Tu-pmf" secondAttribute="top" id="Z8e-H0-i9S"/>
+                            <constraint firstItem="Dff-d6-aaD" firstAttribute="top" secondItem="8Pb-Ac-TS8" secondAttribute="bottom" id="bqt-dQ-lTA"/>
+                            <constraint firstItem="ryW-Tu-pmf" firstAttribute="trailing" secondItem="Dff-d6-aaD" secondAttribute="trailing" id="cPd-Xd-UBc"/>
+                            <constraint firstItem="8Pb-Ac-TS8" firstAttribute="leading" secondItem="ryW-Tu-pmf" secondAttribute="leading" id="f5R-9X-K6c"/>
+                            <constraint firstItem="8Pb-Ac-TS8" firstAttribute="trailing" secondItem="ryW-Tu-pmf" secondAttribute="trailing" id="tzT-wQ-K77"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Feed" image="List" id="J09-8D-NUh">
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="feed"/>
-                        </userDefinedRuntimeAttributes>
-                    </tabBarItem>
+                    <navigationItem key="navigationItem" title="Feed" id="SF3-bs-lcJ"/>
+                    <connections>
+                        <outlet property="feedTableView" destination="Dff-d6-aaD" id="kk3-8o-H3F"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MfE-Cc-Nho" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2244.927536231884" y="137.94642857142856"/>
+            <point key="canvasLocation" x="3153.6231884057975" y="137.94642857142856"/>
         </scene>
         <!--MainTabBarController-->
         <scene sceneID="FnD-T0-C7e">
@@ -206,7 +229,7 @@
                         <color key="selectedImageTintColor" name="SecondaryColor"/>
                     </tabBar>
                     <connections>
-                        <segue destination="gzU-wd-SIw" kind="relationship" relationship="viewControllers" id="5Il-MB-3q4"/>
+                        <segue destination="WUY-59-IZb" kind="relationship" relationship="viewControllers" id="5Il-MB-3q4"/>
                         <segue destination="91p-IC-CO4" kind="relationship" relationship="viewControllers" id="jNC-81-249"/>
                         <segue destination="3OB-vE-MFP" kind="relationship" relationship="viewControllers" id="jok-6K-XvK"/>
                         <segue destination="gma-FY-b2o" kind="relationship" relationship="viewControllers" id="zDQ-kQ-YLq"/>
@@ -215,6 +238,29 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IyJ-3s-9d7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1334.7826086956522" y="137.94642857142856"/>
+        </scene>
+        <!--Feed-->
+        <scene sceneID="KKe-HV-PCZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WUY-59-IZb" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Feed" image="List" id="J09-8D-NUh">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="feed"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Fbt-do-saO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gzU-wd-SIw" kind="relationship" relationship="rootViewController" id="0la-ax-qL6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zrz-1b-p5I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2243.4782608695655" y="137.94642857142856"/>
         </scene>
     </scenes>
     <resources>
