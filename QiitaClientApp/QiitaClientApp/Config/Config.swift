@@ -9,4 +9,5 @@ import UIKit
 
 enum Segue: String, SegueType {
     case toMainTabController
+    case toArticleViewController
 }

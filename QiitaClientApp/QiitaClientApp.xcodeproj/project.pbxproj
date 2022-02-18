@@ -130,8 +130,8 @@
 				3B1FD4B527B91A5800D01974 /* Resource */,
 				3B6EC12D27B94F4E00C02F65 /* Config */,
 				3B6EC12A27B94E0E00C02F65 /* Utility */,
-				3BB69B6627AF59A400B2C0F0 /* TopLoginViewController.swift */,
-				3B3529A027BBC13A00497836 /* FeedViewController.swift */,
+				3BE52DCC27C26C100001EE29 /* ArticleList */,
+				3BE52DCD27C26C3A0001EE29 /* Login */,
 			);
 			path = QiitaClientApp;
 			sourceTree = "<group>";
@@ -142,6 +142,22 @@
 				3B1FD4B627B91A6600D01974 /* Pacifico */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		3BE52DCC27C26C100001EE29 /* ArticleList */ = {
+			isa = PBXGroup;
+			children = (
+				3B3529A027BBC13A00497836 /* FeedViewController.swift */,
+			);
+			path = ArticleList;
+			sourceTree = "<group>";
+		};
+		3BE52DCD27C26C3A0001EE29 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				3BB69B6627AF59A400B2C0F0 /* TopLoginViewController.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		D04599CAF0CFB2047975301D /* Pods */ = {
