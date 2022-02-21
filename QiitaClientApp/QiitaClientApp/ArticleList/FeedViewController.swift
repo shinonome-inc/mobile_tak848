@@ -77,6 +77,31 @@ class FeedViewController: UIViewController {
             }
         refreshControl.endRefreshing()
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if let indexPathForSelectedRow = feedTableView.indexPathForSelectedRow {
+            feedTableView.deselectRow(at: indexPathForSelectedRow, animated: true)
+        }
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("hello")
+        if segue.identifier == Segue.toArticleViewController.rawValue {
+            print("hello")
+            guard let nextVC3 = segue.destination as? UINavigationController,
+                  let nextVC2 = nextVC3.topViewController as? ArticleViewController
+            else {
+                return
+            }
+            print("hello")
+            nextVC2.articleUrl = URL(string: "https://qiita.com")
+//            if let nextVC = nextVC {
+//                print("hello")
+//                nextVC.articleUrl = URL(string: "https://qiita.com")
+//            }
+        }
+    }
 }
 
 extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
@@ -98,14 +123,18 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        guard let unwrappedArticles: [QiitaArticle] = articles else {
-//            return
-//        }
-//        if let qiitaArticleVC = self.storyboard?.instantiateViewController(withIdentifier: QiitaArticleViewController.identifier) as? QiitaArticleViewController {
-//            qiitaArticleVC.articleUrl = URL(string: unwrappedArticles[indexPath.row].url)
-//            self.navigationController?.pushViewController(qiitaArticleVC, animated: true)
-//        }
-        performSegue(segue: .toArticleViewController, sender: nil)
+        guard let articles: [QiitaArticle] = articles else {
+            return
+        }
+        if let qiitaArticleVC = storyboard?.instantiateViewController(withIdentifier: ArticleViewController.identifier) as? ArticleViewController {
+            print(articles[indexPath.row])
+            qiitaArticleVC.articleUrl = URL(string: articles[indexPath.row].url)
+            print(articles[indexPath.row].url)
+            print(qiitaArticleVC.articleUrl ?? "")
+//            sleep(2)
+            performSegue(segue: .toArticleViewController, sender: nil)
+//            navigationController?.pushViewController(qiitaArticleVC, animated: true)
+        }
     }
 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -139,31 +168,26 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
 extension FeedViewController {
     func setupSearchBar() {
         searchController = UISearchController(searchResultsController: nil)
-        searchController.searchResultsUpdater = self
+//        searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.delegate = self
-        // UISearchControllerをUINavigationItemのsearchControllerプロパティにセットする。
         navigationItem.searchController = searchController
-
-        // trueだとスクロールした時にSearchBarを隠す（デフォルトはtrue）
-        // falseだとスクロール位置に関係なく常にSearchBarが表示される
-        navigationItem.hidesSearchBarWhenScrolling = true
     }
 }
 
-extension FeedViewController: UISearchResultsUpdating {
-    func updateSearchResults(for searchController: UISearchController) {
-//        // SearchBarに入力したテキストを使って表示データをフィルタリングする。
-//        let text = searchController.searchBar.text ?? ""
-//        if text.isEmpty {
-//            filteredTitles = titles
-//        } else {
-//            filteredTitles = titles.filter { $0.contains(text) }
-//        }
-        print(searchController.searchBar.text)
-        feedTableView.reloadData()
-    }
-}
+// extension FeedViewController: UISearchResultsUpdating {
+//    func updateSearchResults(for searchController: UISearchController) {
+////        // SearchBarに入力したテキストを使って表示データをフィルタリングする。
+////        let text = searchController.searchBar.text ?? ""
+////        if text.isEmpty {
+////            filteredTitles = titles
+////        } else {
+////            filteredTitles = titles.filter { $0.contains(text) }
+////        }
+//        print(searchController.searchBar.text ?? "")
+//        feedTableView.reloadData()
+//    }
+// }
 
 extension FeedViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
@@ -245,3 +269,19 @@ extension UIImageView {
 //        }
 //    }
 // }
+import WebKit
+class ArticleViewController: UIViewController, WKUIDelegate {
+    static let identifier = "ArticleViewController"
+    var articleUrl: URL?
+    @IBOutlet weak var qiitaArticleWebView: WKWebView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        qiitaArticleWebView.uiDelegate = self
+        print(articleUrl ?? "")
+        if let url: URL = articleUrl {
+            let request = URLRequest(url: url)
+            qiitaArticleWebView.load(request)
+        }
+    }
+}

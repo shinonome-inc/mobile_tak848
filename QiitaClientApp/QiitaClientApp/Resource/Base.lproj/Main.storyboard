@@ -195,7 +195,7 @@
         <!--Article-->
         <scene sceneID="Cao-u3-wCk">
             <objects>
-                <viewController modalPresentationStyle="pageSheet" id="uqm-yl-r2H" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ArticleViewController" modalPresentationStyle="pageSheet" id="uqm-yl-r2H" customClass="ArticleViewController" customModule="QiitaClientApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KPk-ts-Ge2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -219,6 +219,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Article" id="iKb-R3-MgY"/>
+                    <connections>
+                        <outlet property="qiitaArticleWebView" destination="e4K-YD-58T" id="Brb-J0-jbN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IgX-m8-P5z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
