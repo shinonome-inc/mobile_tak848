@@ -21,9 +21,11 @@ struct QiitaUser: Codable {
 
 class FeedViewController: UIViewController {
     var articles: [QiitaArticle]?
+    var searchController: UISearchController!
     @IBOutlet weak var feedTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupSearchBar()
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         AF.request("https://qiita.com/api/v2/items?page=1&per_page=40")
@@ -73,6 +75,47 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
 //            self.navigationController?.pushViewController(qiitaArticleVC, animated: true)
 //        }
         performSegue(segue: .toArticleViewController, sender: nil)
+    }
+}
+
+extension FeedViewController: UISearchBarDelegate {
+    func setupSearchBar() {
+        searchController = UISearchController(searchResultsController: nil)
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        // UISearchControllerをUINavigationItemのsearchControllerプロパティにセットする。
+        navigationItem.searchController = searchController
+
+        // trueだとスクロールした時にSearchBarを隠す（デフォルトはtrue）
+        // falseだとスクロール位置に関係なく常にSearchBarが表示される
+        navigationItem.hidesSearchBarWhenScrolling = true
+    }
+
+    // MARK: - UISearchBar Delegate methods
+
+    // 編集が開始されたら、キャンセルボタンを有効にする
+    func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
+        searchBar.showsCancelButton = true
+        return true
+    }
+
+    // キャンセルボタンが押されたらキャンセルボタンを無効にしてフォーカスを外す
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.showsCancelButton = false
+        searchBar.resignFirstResponder()
+    }
+}
+
+extension FeedViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+//        // SearchBarに入力したテキストを使って表示データをフィルタリングする。
+//        let text = searchController.searchBar.text ?? ""
+//        if text.isEmpty {
+//            filteredTitles = titles
+//        } else {
+//            filteredTitles = titles.filter { $0.contains(text) }
+//        }
+        feedTableView.reloadData()
     }
 }
 

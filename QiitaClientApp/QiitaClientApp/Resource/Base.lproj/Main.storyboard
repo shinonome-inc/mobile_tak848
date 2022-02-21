@@ -168,26 +168,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="8Pb-Ac-TS8">
-                                <rect key="frame" x="0.0" y="56" width="414" height="51"/>
-                                <offsetWrapper key="searchFieldBackgroundPositionAdjustment" horizontal="0.0" vertical="0.0"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Dff-d6-aaD">
-                                <rect key="frame" x="0.0" y="107" width="414" height="706"/>
+                                <rect key="frame" x="0.0" y="56" width="414" height="757"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ryW-Tu-pmf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Dff-d6-aaD" firstAttribute="top" secondItem="ryW-Tu-pmf" secondAttribute="top" id="MBQ-qx-Hv3"/>
                             <constraint firstItem="ryW-Tu-pmf" firstAttribute="bottom" secondItem="Dff-d6-aaD" secondAttribute="bottom" id="MQ6-4J-EVl"/>
                             <constraint firstItem="Dff-d6-aaD" firstAttribute="leading" secondItem="ryW-Tu-pmf" secondAttribute="leading" id="Uvx-fJ-l93"/>
-                            <constraint firstItem="8Pb-Ac-TS8" firstAttribute="top" secondItem="ryW-Tu-pmf" secondAttribute="top" id="Z8e-H0-i9S"/>
-                            <constraint firstItem="Dff-d6-aaD" firstAttribute="top" secondItem="8Pb-Ac-TS8" secondAttribute="bottom" id="bqt-dQ-lTA"/>
                             <constraint firstItem="ryW-Tu-pmf" firstAttribute="trailing" secondItem="Dff-d6-aaD" secondAttribute="trailing" id="cPd-Xd-UBc"/>
-                            <constraint firstItem="8Pb-Ac-TS8" firstAttribute="leading" secondItem="ryW-Tu-pmf" secondAttribute="leading" id="f5R-9X-K6c"/>
-                            <constraint firstItem="8Pb-Ac-TS8" firstAttribute="trailing" secondItem="ryW-Tu-pmf" secondAttribute="trailing" id="tzT-wQ-K77"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Feed" id="SF3-bs-lcJ"/>
