@@ -199,8 +199,24 @@
                     <view key="view" contentMode="scaleToFill" id="KPk-ts-Ge2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e4K-YD-58T">
+                                <rect key="frame" x="0.0" y="56" width="414" height="786"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="tMa-CM-vvI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="e4K-YD-58T" firstAttribute="leading" secondItem="tMa-CM-vvI" secondAttribute="leading" id="QlO-Tn-19L"/>
+                            <constraint firstItem="e4K-YD-58T" firstAttribute="top" secondItem="tMa-CM-vvI" secondAttribute="top" id="Ts7-L0-kqG"/>
+                            <constraint firstItem="tMa-CM-vvI" firstAttribute="bottom" secondItem="e4K-YD-58T" secondAttribute="bottom" id="UVr-Ia-Vax"/>
+                            <constraint firstItem="tMa-CM-vvI" firstAttribute="trailing" secondItem="e4K-YD-58T" secondAttribute="trailing" id="jo2-GC-KVh"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Article" id="iKb-R3-MgY"/>
                 </viewController>

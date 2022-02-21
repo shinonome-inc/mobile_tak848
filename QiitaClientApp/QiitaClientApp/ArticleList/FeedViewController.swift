@@ -22,13 +22,25 @@ struct QiitaUser: Codable {
 class FeedViewController: UIViewController {
     var articles: [QiitaArticle]?
     var searchController: UISearchController!
+    var page = 0
     @IBOutlet weak var feedTableView: UITableView!
+    let refreshControl = UIRefreshControl()
+    let headers: HTTPHeaders = [
+        "Authorization": "Bearer 93748143a1e64ab5838a865f8c60cbb755e65a60"
+    ]
+    var loading = false
+    var searchWord: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        feedTableView.refreshControl = refreshControl
+        refreshControl.addTarget(self, action: #selector(refresh(_:)), for: .valueChanged)
         setupSearchBar()
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
-        AF.request("https://qiita.com/api/v2/items?page=1&per_page=40")
+        page += 1
+        loading = true
+        AF.request("https://qiita.com/api/v2/items?page=\(page)&per_page=40", headers: headers)
             .responseDecodable(of: [QiitaArticle].self, decoder: decoder) { response in
                 switch response.result {
                 case let .success(articles):
@@ -37,14 +49,33 @@ class FeedViewController: UIViewController {
                     self.feedTableView.dataSource = self
                     self.feedTableView.register(UINib(nibName: "QiitaArticleCell", bundle: nil), forCellReuseIdentifier: QiitaArticleCell.identifier)
                     self.feedTableView.reloadData()
+                    self.loading = false
                 case let .failure(error):
                     print(error)
                 }
             }
-//        articles = [QiitaArticle(title: "aa", url: "bb", user: QiitaUser(id: "aaa"))]
-//        feedTableView.delegate = self
-//        feedTableView.dataSource = self
-//        feedTableView.register(UINib(nibName: "QiitaArticleCell", bundle: nil), forCellReuseIdentifier: QiitaArticleCell.identifier)
+    }
+
+    @objc func refresh(_ sender: UIRefreshControl) {
+        let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        page = 1
+        loading = true
+        AF.request("https://qiita.com/api/v2/items?page=\(page)&per_page=4", headers: headers)
+            .responseDecodable(of: [QiitaArticle].self, decoder: decoder) { response in
+                switch response.result {
+                case let .success(articles):
+                    self.articles = articles
+                    self.feedTableView.delegate = self
+                    self.feedTableView.dataSource = self
+                    self.feedTableView.register(UINib(nibName: "QiitaArticleCell", bundle: nil), forCellReuseIdentifier: QiitaArticleCell.identifier)
+                    self.feedTableView.reloadData()
+                    self.loading = false
+                case let .failure(error):
+                    print(error)
+                }
+            }
+        refreshControl.endRefreshing()
     }
 }
 
@@ -76,33 +107,47 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
 //        }
         performSegue(segue: .toArticleViewController, sender: nil)
     }
+
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let currentOffsetY = scrollView.contentOffset.y
+        let maximumOffset = scrollView.contentSize.height - scrollView.frame.height
+        let distanceToBottom = maximumOffset - currentOffsetY
+        print(distanceToBottom)
+        if distanceToBottom < 600, !loading {
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
+            page += 1
+            loading = true
+            AF.request("https://qiita.com/api/v2/items?page=\(page)&per_page=40", headers: headers)
+                .responseDecodable(of: [QiitaArticle].self, decoder: decoder) { response in
+                    switch response.result {
+                    case let .success(articles):
+                        self.articles?.append(contentsOf: articles)
+                        self.feedTableView.delegate = self
+                        self.feedTableView.dataSource = self
+                        self.feedTableView.register(UINib(nibName: "QiitaArticleCell", bundle: nil), forCellReuseIdentifier: QiitaArticleCell.identifier)
+                        self.feedTableView.reloadData()
+                        self.loading = false
+                    case let .failure(error):
+                        print(error)
+                    }
+                }
+        }
+    }
 }
 
-extension FeedViewController: UISearchBarDelegate {
+extension FeedViewController {
     func setupSearchBar() {
         searchController = UISearchController(searchResultsController: nil)
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.delegate = self
         // UISearchControllerをUINavigationItemのsearchControllerプロパティにセットする。
         navigationItem.searchController = searchController
 
         // trueだとスクロールした時にSearchBarを隠す（デフォルトはtrue）
         // falseだとスクロール位置に関係なく常にSearchBarが表示される
         navigationItem.hidesSearchBarWhenScrolling = true
-    }
-
-    // MARK: - UISearchBar Delegate methods
-
-    // 編集が開始されたら、キャンセルボタンを有効にする
-    func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
-        searchBar.showsCancelButton = true
-        return true
-    }
-
-    // キャンセルボタンが押されたらキャンセルボタンを無効にしてフォーカスを外す
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.showsCancelButton = false
-        searchBar.resignFirstResponder()
     }
 }
 
@@ -115,7 +160,32 @@ extension FeedViewController: UISearchResultsUpdating {
 //        } else {
 //            filteredTitles = titles.filter { $0.contains(text) }
 //        }
+        print(searchController.searchBar.text)
         feedTableView.reloadData()
+    }
+}
+
+extension FeedViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        
+        page = 1
+        loading = true
+        AF.request("https://qiita.com/api/v2/items?page=\(page)&per_page=40&query=\(searchBar.text!)", headers: headers)
+            .responseDecodable(of: [QiitaArticle].self, decoder: decoder) { response in
+                switch response.result {
+                case let .success(articles):
+                    self.articles = articles
+                    self.feedTableView.delegate = self
+                    self.feedTableView.dataSource = self
+                    self.feedTableView.register(UINib(nibName: "QiitaArticleCell", bundle: nil), forCellReuseIdentifier: QiitaArticleCell.identifier)
+                    self.feedTableView.reloadData()
+                    self.loading = false
+                case let .failure(error):
+                    print(error)
+                }
+            }
     }
 }
 
