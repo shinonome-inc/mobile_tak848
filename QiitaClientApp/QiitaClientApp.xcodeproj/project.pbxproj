@@ -17,7 +17,7 @@
 		3B0DC8AC27C469BF00204351 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0DC8AB27C469BF00204351 /* ArticleViewController.swift */; };
 		3B0DC8AE27C4703100204351 /* UITableView+registerAndDequeue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0DC8AD27C4703100204351 /* UITableView+registerAndDequeue.swift */; };
 		3B0DC8B227C475D400204351 /* NSObjectProtocol+className.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0DC8B127C475D400204351 /* NSObjectProtocol+className.swift */; };
-		3B0DC8B427C4771C00204351 /* String+localize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0DC8B327C4771C00204351 /* String+localize.swift */; };
+		3B0DC8B427C4771C00204351 /* String+localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0DC8B327C4771C00204351 /* String+localization.swift */; };
 		3B1FD4B827B91AF900D01974 /* Pacifico-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3B1FD4B727B91AF800D01974 /* Pacifico-Regular.ttf */; };
 		3B35299F27BB401700497836 /* StoryboardUI+localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B35299E27BB401700497836 /* StoryboardUI+localization.swift */; };
 		3B3529A127BBC13A00497836 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3529A027BBC13A00497836 /* FeedViewController.swift */; };
@@ -46,7 +46,7 @@
 		3B0DC8AB27C469BF00204351 /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
 		3B0DC8AD27C4703100204351 /* UITableView+registerAndDequeue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+registerAndDequeue.swift"; sourceTree = "<group>"; };
 		3B0DC8B127C475D400204351 /* NSObjectProtocol+className.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObjectProtocol+className.swift"; sourceTree = "<group>"; };
-		3B0DC8B327C4771C00204351 /* String+localize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+localize.swift"; sourceTree = "<group>"; };
+		3B0DC8B327C4771C00204351 /* String+localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+localization.swift"; sourceTree = "<group>"; };
 		3B1FD4B727B91AF800D01974 /* Pacifico-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pacifico-Regular.ttf"; sourceTree = "<group>"; };
 		3B35299E27BB401700497836 /* StoryboardUI+localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StoryboardUI+localization.swift"; sourceTree = "<group>"; };
 		3B3529A027BBC13A00497836 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
@@ -132,7 +132,7 @@
 				3B6EC12B27B94EB900C02F65 /* SegueHandlerType.swift */,
 				3B0DC89E27C45DCC00204351 /* QiitaAPIRequest.swift */,
 				3B0DC8B127C475D400204351 /* NSObjectProtocol+className.swift */,
-				3B0DC8B327C4771C00204351 /* String+localize.swift */,
+				3B0DC8B327C4771C00204351 /* String+localization.swift */,
 				3B0DC8A627C465F300204351 /* Date+dateString.swift */,
 				3B35299E27BB401700497836 /* StoryboardUI+localization.swift */,
 				3B0DC8A427C4657800204351 /* KeyedDecodingContainer+stringToDateDecode.swift */,
@@ -344,7 +344,7 @@
 				3B0DC8B227C475D400204351 /* NSObjectProtocol+className.swift in Sources */,
 				3B0DC89B27C45D4D00204351 /* QiitaArticle.swift in Sources */,
 				3B0DC89D27C45D8800204351 /* QiitaUser.swift in Sources */,
-				3B0DC8B427C4771C00204351 /* String+localize.swift in Sources */,
+				3B0DC8B427C4771C00204351 /* String+localization.swift in Sources */,
 				3B0DC8A727C465F300204351 /* Date+dateString.swift in Sources */,
 				3B0DC8A527C4657800204351 /* KeyedDecodingContainer+stringToDateDecode.swift in Sources */,
 				3BB69B6327AF59A400B2C0F0 /* AppDelegate.swift in Sources */,
