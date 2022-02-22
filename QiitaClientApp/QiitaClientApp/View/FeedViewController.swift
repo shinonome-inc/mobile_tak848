@@ -62,8 +62,8 @@ class FeedViewController: UIViewController {
         }
     }
     
-    func fetchAndSetArticles(refresh: Bool = false) {
-        if refresh {
+    func fetchAndSetArticles(refreshAll: Bool = false) {
+        if refreshAll {
             page = 1
             articles = nil
             feedTableView.reloadData()
@@ -74,7 +74,7 @@ class FeedViewController: UIViewController {
                 switch response.result {
                 case let .success(articles):
                     self.page += 1
-                    if refresh || self.articles == nil {
+                    if refreshAll || self.articles == nil {
                         self.articles = articles
                     } else {
                         self.articles?.append(contentsOf: articles)
@@ -103,7 +103,7 @@ class FeedViewController: UIViewController {
     }
 
     @objc func refresh(_ sender: UIRefreshControl) {
-        fetchAndSetArticles(refresh: true)
+        fetchAndSetArticles(refreshAll: true)
         refreshControl.endRefreshing()
     }
 }
@@ -153,14 +153,14 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
 extension FeedViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchWord = searchBar.text
-        fetchAndSetArticles(refresh: true)
+        fetchAndSetArticles(refreshAll: true)
     }
 
     // 文字がセットされていたらクエリなしでfetchし直す
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         if searchWord != nil {
             searchWord = nil
-            fetchAndSetArticles(refresh: true)
+            fetchAndSetArticles(refreshAll: true)
         }
     }
 }
