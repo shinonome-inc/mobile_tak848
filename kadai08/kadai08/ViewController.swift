@@ -24,9 +24,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         AF.request("https://qiita.com/api/v2/items?page=1&per_page=40")
-            .responseDecodable(of: [QiitaArticle].self) { response in
+            .responseDecodable(of: [QiitaArticle].self ) { response in
                 switch response.result {
                 case .success(let articles):
                     self.articles = articles

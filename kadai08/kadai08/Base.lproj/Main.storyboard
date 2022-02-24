@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="zre-e4-UTF">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="QiitaArticleCell" rowHeight="80" id="gMH-CU-22L" customClass="QiitaArticleCell" customModule="kadai08" customModuleProvider="target">
@@ -66,6 +66,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zre-e4-UTF" secondAttribute="trailing" id="vf1-Rh-JFy"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="EvH-mZ-Cou"/>
                     <navigationItem key="navigationItem" title="Qiita Client" id="1Bj-K0-k2N"/>
                     <connections>
                         <outlet property="qiitaArticlesTableView" destination="zre-e4-UTF" id="AHJ-DP-Utu"/>
@@ -74,7 +75,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="987" y="138"/>
+            <point key="canvasLocation" x="1897.1014492753625" y="137.94642857142856"/>
         </scene>
         <!--Qiita Article View Controller-->
         <scene sceneID="N1r-0B-5vJ">
@@ -109,7 +110,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fqV-Zw-sUY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1832" y="138"/>
+            <point key="canvasLocation" x="2742.0289855072465" y="137.94642857142856"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SX2-FC-JHU">
@@ -122,12 +123,30 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="m6K-Un-zTb"/>
+                        <segue destination="Fdv-Db-hX0" kind="relationship" relationship="rootViewController" id="m6K-Un-zTb"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qfI-rh-MSw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="6Zc-4r-d7B">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Fdv-Db-hX0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="f1h-9P-Frf"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cgW-x2-Vyq">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="fPB-5W-0Ie"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LpT-Eb-6Sd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="986.95652173913049" y="137.94642857142856"/>
         </scene>
     </scenes>
     <resources>
