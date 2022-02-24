@@ -43,7 +43,7 @@ class FeedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpSearchBar()
-        setUpTableview()
+        setUpTabkeView()
         fetchAndSetArticles()
     }
 
@@ -94,7 +94,7 @@ class FeedViewController: UIViewController {
         navigationItem.searchController = searchController
     }
     
-    func setUpTableview() {
+    func setUpTabkeView() {
         feedTableView.delegate = self
         feedTableView.dataSource = self
         feedTableView.registerCustomCell(ArticleCell.self)
