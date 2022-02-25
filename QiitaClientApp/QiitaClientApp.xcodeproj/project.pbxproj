@@ -31,6 +31,7 @@
 		3BB69B6A27AF59A500B2C0F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BB69B6827AF59A500B2C0F0 /* Main.storyboard */; };
 		3BB69B6C27AF59A600B2C0F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BB69B6B27AF59A600B2C0F0 /* Assets.xcassets */; };
 		3BB69B6F27AF59A600B2C0F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BB69B6D27AF59A600B2C0F0 /* LaunchScreen.storyboard */; };
+		3BECE16527C765C8007AB283 /* TagCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BECE16427C765C8007AB283 /* TagCollectionCell.xib */; };
 		5E4C686282BE82653A783F51 /* Pods_QiitaClientApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEC91BFED63ED92114497267 /* Pods_QiitaClientApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,7 @@
 		3BB69B6E27AF59A600B2C0F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3BB69B7027AF59A600B2C0F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3BB9416F27B9C5EC00D1249D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3BECE16427C765C8007AB283 /* TagCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TagCollectionCell.xib; sourceTree = "<group>"; };
 		5730C412B1F57479C5FB7D83 /* Pods-QiitaClientApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QiitaClientApp.debug.xcconfig"; path = "Target Support Files/Pods-QiitaClientApp/Pods-QiitaClientApp.debug.xcconfig"; sourceTree = "<group>"; };
 		FEC91BFED63ED92114497267 /* Pods_QiitaClientApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QiitaClientApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -114,6 +116,7 @@
 				3BB69B6827AF59A500B2C0F0 /* Main.storyboard */,
 				3BB69B6D27AF59A600B2C0F0 /* LaunchScreen.storyboard */,
 				3B3529A227BBCF5900497836 /* ArticleCell.xib */,
+				3BECE16427C765C8007AB283 /* TagCollectionCell.xib */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 			files = (
 				3B6EC13527B9554A00C02F65 /* Localizable.strings in Resources */,
 				3B3529A327BBCF5900497836 /* ArticleCell.xib in Resources */,
+				3BECE16527C765C8007AB283 /* TagCollectionCell.xib in Resources */,
 				3BB69B6F27AF59A600B2C0F0 /* LaunchScreen.storyboard in Resources */,
 				3B1FD4B827B91AF900D01974 /* Pacifico-Regular.ttf in Resources */,
 				3BB69B6C27AF59A600B2C0F0 /* Assets.xcassets in Resources */,
