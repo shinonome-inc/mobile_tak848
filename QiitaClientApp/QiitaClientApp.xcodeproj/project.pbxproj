@@ -31,6 +31,11 @@
 		3BB69B6A27AF59A500B2C0F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BB69B6827AF59A500B2C0F0 /* Main.storyboard */; };
 		3BB69B6C27AF59A600B2C0F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BB69B6B27AF59A600B2C0F0 /* Assets.xcassets */; };
 		3BB69B6F27AF59A600B2C0F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BB69B6D27AF59A600B2C0F0 /* LaunchScreen.storyboard */; };
+		3BBAB2FC27D5D87600DD978E /* TagsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBAB2FB27D5D87600DD978E /* TagsViewController.swift */; };
+		3BBAB2FE27D5DA5800DD978E /* QiitaTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBAB2FD27D5DA5800DD978E /* QiitaTag.swift */; };
+		3BBAB30027D7505400DD978E /* TagCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBAB2FF27D7505400DD978E /* TagCollectionCell.swift */; };
+		3BBBB84A27D8E0EB009418C9 /* TagDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBBB84927D8E0EB009418C9 /* TagDetailsViewController.swift */; };
+		3BBBB84C27D9628C009418C9 /* UIView+border.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBBB84B27D9628C009418C9 /* UIView+border.swift */; };
 		3BECE16527C765C8007AB283 /* TagCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BECE16427C765C8007AB283 /* TagCollectionCell.xib */; };
 		5E4C686282BE82653A783F51 /* Pods_QiitaClientApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEC91BFED63ED92114497267 /* Pods_QiitaClientApp.framework */; };
 /* End PBXBuildFile section */
@@ -64,6 +69,11 @@
 		3BB69B6E27AF59A600B2C0F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3BB69B7027AF59A600B2C0F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3BB9416F27B9C5EC00D1249D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3BBAB2FB27D5D87600DD978E /* TagsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsViewController.swift; sourceTree = "<group>"; };
+		3BBAB2FD27D5DA5800DD978E /* QiitaTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaTag.swift; sourceTree = "<group>"; };
+		3BBAB2FF27D7505400DD978E /* TagCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCollectionCell.swift; sourceTree = "<group>"; };
+		3BBBB84927D8E0EB009418C9 /* TagDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagDetailsViewController.swift; sourceTree = "<group>"; };
+		3BBBB84B27D9628C009418C9 /* UIView+border.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+border.swift"; sourceTree = "<group>"; };
 		3BECE16427C765C8007AB283 /* TagCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TagCollectionCell.xib; sourceTree = "<group>"; };
 		5730C412B1F57479C5FB7D83 /* Pods-QiitaClientApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QiitaClientApp.debug.xcconfig"; path = "Target Support Files/Pods-QiitaClientApp/Pods-QiitaClientApp.debug.xcconfig"; sourceTree = "<group>"; };
 		FEC91BFED63ED92114497267 /* Pods_QiitaClientApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QiitaClientApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				3B0DC8A227C4651000204351 /* ArticleCell.swift */,
+				3BBAB2FF27D7505400DD978E /* TagCollectionCell.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -103,6 +114,8 @@
 				3BB69B6627AF59A400B2C0F0 /* TopLoginViewController.swift */,
 				3B3529A027BBC13A00497836 /* FeedViewController.swift */,
 				3B0DC8AB27C469BF00204351 /* ArticleViewController.swift */,
+				3BBAB2FB27D5D87600DD978E /* TagsViewController.swift */,
+				3BBBB84927D8E0EB009418C9 /* TagDetailsViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -141,6 +154,7 @@
 				3B0DC8A427C4657800204351 /* KeyedDecodingContainer+stringToDateDecode.swift */,
 				3B0DC8A927C4662300204351 /* UIImageView+cacheImage.swift */,
 				3B0DC8AD27C4703100204351 /* UITableView+registerAndDequeue.swift */,
+				3BBBB84B27D9628C009418C9 /* UIView+border.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -151,6 +165,7 @@
 				3B6EC12E27B94F6800C02F65 /* Segue.swift */,
 				3B0DC89A27C45D4D00204351 /* QiitaArticle.swift */,
 				3B0DC89C27C45D8800204351 /* QiitaUser.swift */,
+				3BBAB2FD27D5DA5800DD978E /* QiitaTag.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -344,6 +359,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BB69B6727AF59A400B2C0F0 /* TopLoginViewController.swift in Sources */,
+				3BBBB84C27D9628C009418C9 /* UIView+border.swift in Sources */,
 				3B0DC8AE27C4703100204351 /* UITableView+registerAndDequeue.swift in Sources */,
 				3B0DC8B227C475D400204351 /* NSObjectProtocol+className.swift in Sources */,
 				3B0DC89B27C45D4D00204351 /* QiitaArticle.swift in Sources */,
@@ -353,12 +369,16 @@
 				3B0DC8A527C4657800204351 /* KeyedDecodingContainer+stringToDateDecode.swift in Sources */,
 				3BB69B6327AF59A400B2C0F0 /* AppDelegate.swift in Sources */,
 				3B6EC12F27B94F6800C02F65 /* Segue.swift in Sources */,
+				3BBBB84A27D8E0EB009418C9 /* TagDetailsViewController.swift in Sources */,
 				3B0DC8AC27C469BF00204351 /* ArticleViewController.swift in Sources */,
+				3BBAB30027D7505400DD978E /* TagCollectionCell.swift in Sources */,
 				3B35299F27BB401700497836 /* StoryboardUI+localization.swift in Sources */,
 				3B6EC12C27B94EB900C02F65 /* SegueHandlerType.swift in Sources */,
 				3B0DC89F27C45DCC00204351 /* QiitaAPIRequest.swift in Sources */,
 				3BB69B6527AF59A400B2C0F0 /* SceneDelegate.swift in Sources */,
 				3B0DC8AA27C4662300204351 /* UIImageView+cacheImage.swift in Sources */,
+				3BBAB2FC27D5D87600DD978E /* TagsViewController.swift in Sources */,
+				3BBAB2FE27D5DA5800DD978E /* QiitaTag.swift in Sources */,
 				3B3529A127BBC13A00497836 /* FeedViewController.swift in Sources */,
 				3B0DC8A327C4651000204351 /* ArticleCell.swift in Sources */,
 			);
