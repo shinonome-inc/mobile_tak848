@@ -22,4 +22,3 @@ class TagCollectionCell: UICollectionViewCell {
         tagFollowersCountLabel.text = "\("followers count".localized() ?? ""): \(qiitaTag.followersCount)"
     }
 }
-

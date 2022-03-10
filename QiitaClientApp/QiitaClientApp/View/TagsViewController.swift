@@ -54,7 +54,7 @@ class TagsViewController: UIViewController {
     var nextTagId: String?
     
     var viewWidth: CGFloat {
-        view.frame.width
+        view.safeAreaLayoutGuide.layoutFrame.width
     }
     
     override func viewDidLoad() {
