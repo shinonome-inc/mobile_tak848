@@ -140,7 +140,8 @@ extension TagsViewController: UICollectionViewDelegate, UICollectionViewDataSour
             let currentOffsetY = scrollView.contentOffset.y
             let maximumOffset = scrollView.contentSize.height - scrollView.frame.height
             let distanceToBottom = maximumOffset - currentOffsetY
-            if distanceToBottom < 600, !loading {
+            let nextLoadingDistance: CGFloat = 600
+            if distanceToBottom < nextLoadingDistance {
                 fetchAndSetTags()
             }
         }
