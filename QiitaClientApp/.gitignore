@@ -91,3 +91,6 @@ iOSInjectionProject/
 
 #CocoaPod
 Pods/*
+
+# env
+.env
