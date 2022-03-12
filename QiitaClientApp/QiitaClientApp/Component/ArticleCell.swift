@@ -16,7 +16,7 @@ class ArticleCell: UITableViewCell {
     
     func configure(article: QiitaArticle) {
         articleTitleLabel.text = article.title
-        articleUserIdLabel.text = "@\(article.user.id) 投稿日: \(article.createdAt.dateString) LGTM: \(article.likesCount)"
+        articleUserIdLabel.text = "@\(article.user.id) \("created at".localized() ?? ""): \(article.createdAt.dateString) LGTM: \(article.likesCount)"
         articleUserImage.cacheImage(imageUrl: article.user.profileImageUrl)
     }
 }
