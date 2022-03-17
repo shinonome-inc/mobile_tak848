@@ -2,14 +2,15 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20019"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArticleCell" id="PEB-Zs-lKu" customClass="ArticleCell" customModule="QiitaClientApp" customModuleProvider="target">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NormalArticleCell" id="PEB-Zs-lKu" customClass="NormalArticleCell" customModule="QiitaClientApp" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="414" height="48.5"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PEB-Zs-lKu" id="7PD-xe-c0d">
@@ -53,10 +54,11 @@
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Hqc-eU-ZYT" secondAttribute="bottom" constant="8" id="wqQ-3l-B1U"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <inset key="separatorInset" minX="62" minY="0.0" maxX="0.0" maxY="0.0"/>
             <connections>
-                <outlet property="articleTitleLabel" destination="OwW-gy-4Rr" id="wim-dT-yKl"/>
-                <outlet property="articleUserIdLabel" destination="Hqc-eU-ZYT" id="s2c-FN-ydY"/>
+                <outlet property="articleDetailLabel" destination="Hqc-eU-ZYT" id="RGi-JR-aMb"/>
+                <outlet property="articleTitleLabel" destination="OwW-gy-4Rr" id="6AW-SK-TqJ"/>
                 <outlet property="articleUserImage" destination="teQ-kX-uMN" id="Xhh-yS-f3z"/>
             </connections>
             <point key="canvasLocation" x="-1538" y="84"/>
@@ -69,5 +71,8 @@
         <namedColor name="SecondaryGrey">
             <color red="0.50980392156862742" green="0.50980392156862742" blue="0.50980392156862742" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

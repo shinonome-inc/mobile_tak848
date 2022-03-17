@@ -17,7 +17,7 @@
         <!--Top Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="TopLoginViewController" customModule="QiitaClientApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TopLoginViewController" modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="TopLoginViewController" customModule="QiitaClientApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -104,24 +104,25 @@
                             <constraint firstItem="bbK-O5-5OV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zR2-bA-OwM"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Vbl-P7-daF"/>
                     <connections>
-                        <segue destination="86s-Zn-XEW" kind="show" identifier="toMainTabController" id="3Pm-Cc-AIR"/>
+                        <segue destination="Rt5-Vl-3v5" kind="presentation" identifier="toOauthViewController" id="agt-ay-SXL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+            <point key="canvasLocation" x="274" y="138"/>
         </scene>
         <!--Tags-->
         <scene sceneID="OPI-4B-iIH">
             <objects>
                 <viewController id="91p-IC-CO4" customClass="TagsViewController" customModule="QiitaClientApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="P95-ic-8qG">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3rU-n7-IKk">
-                                <rect key="frame" x="0.0" y="56" width="414" height="757"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8oJ-tm-5dr">
                                     <size key="itemSize" width="168" height="132"/>
@@ -151,14 +152,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tK4-ag-GTf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3138" y="865"/>
+            <point key="canvasLocation" x="3154" y="865"/>
         </scene>
         <!--Tag Details View Controller-->
         <scene sceneID="UdV-bx-nTK">
             <objects>
                 <viewController storyboardIdentifier="TagDetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OdO-6O-yui" customClass="TagDetailsViewController" customModule="QiitaClientApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OOp-0R-tj8">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="dNB-Rz-7ym"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -167,35 +168,68 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N8L-4H-xaS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4007" y="865"/>
+            <point key="canvasLocation" x="4096" y="865"/>
         </scene>
-        <!--View Controller-->
+        <!--Mypage-->
         <scene sceneID="WGd-wG-jmq">
             <objects>
-                <viewController id="3OB-vE-MFP" sceneMemberID="viewController">
+                <viewController id="3OB-vE-MFP" customClass="UserPageViewController" customModule="QiitaClientApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DRl-IU-DMH">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jan-2I-3LO">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="sectionIndexColor" name="SecondaryGrey"/>
+                                <color key="sectionIndexBackgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="yGH-zc-P0x"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yGH-zc-P0x" firstAttribute="trailing" secondItem="jan-2I-3LO" secondAttribute="trailing" id="irk-3Z-Mqm"/>
+                            <constraint firstItem="jan-2I-3LO" firstAttribute="leading" secondItem="yGH-zc-P0x" secondAttribute="leading" id="sgr-Xk-lJp"/>
+                            <constraint firstItem="yGH-zc-P0x" firstAttribute="bottom" secondItem="jan-2I-3LO" secondAttribute="bottom" id="tcd-uL-A3g"/>
+                            <constraint firstItem="jan-2I-3LO" firstAttribute="top" secondItem="yGH-zc-P0x" secondAttribute="top" id="vet-S1-Xpt"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="loP-os-YLb"/>
+                    <navigationItem key="navigationItem" title="Mypage" id="loP-os-YLb"/>
+                    <connections>
+                        <outlet property="articlesTableView" destination="jan-2I-3LO" id="P2r-s5-cdR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EBw-dt-QLr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3152.1739130434785" y="1628.5714285714284"/>
         </scene>
-        <!--View Controller-->
+        <!--Settings View Controller-->
         <scene sceneID="tal-nF-Zag">
             <objects>
-                <viewController id="gma-FY-b2o" sceneMemberID="viewController">
+                <viewController id="gma-FY-b2o" customClass="SettingsViewController" customModule="QiitaClientApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="D66-De-eIw">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sRc-MY-POv">
+                                <rect key="frame" x="174.5" y="432.5" width="65" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="logout"/>
+                                <connections>
+                                    <action selector="onTapLogout:" destination="gma-FY-b2o" eventType="touchUpInside" id="VxD-F9-HMW"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="h9a-FK-c64"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sRc-MY-POv" firstAttribute="centerY" secondItem="D66-De-eIw" secondAttribute="centerY" id="0sm-wO-SMi"/>
+                            <constraint firstItem="sRc-MY-POv" firstAttribute="centerX" secondItem="D66-De-eIw" secondAttribute="centerX" id="sAx-xx-3wy"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ePH-gJ-Lme"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="showDetail" identifier="toTopLoginViewController" id="BNs-Ru-7ql"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QA4-GG-tlA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -206,11 +240,11 @@
             <objects>
                 <viewController id="gzU-wd-SIw" customClass="FeedViewController" customModule="QiitaClientApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="S1b-35-hoA">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Dff-d6-aaD">
-                                <rect key="frame" x="0.0" y="56" width="414" height="757"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -225,7 +259,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Feed" id="SF3-bs-lcJ"/>
                     <connections>
-                        <outlet property="feedTableView" destination="Dff-d6-aaD" id="kk3-8o-H3F"/>
+                        <outlet property="articlesTableView" destination="Dff-d6-aaD" id="HmV-VB-a7O"/>
                         <segue destination="Esp-Xq-xuq" kind="presentation" identifier="toArticleViewController" id="ghz-zh-ZfB"/>
                     </connections>
                 </viewController>
@@ -268,10 +302,45 @@
             </objects>
             <point key="canvasLocation" x="5005.7971014492759" y="137.94642857142856"/>
         </scene>
+        <!--Qiita Auth-->
+        <scene sceneID="lQc-Ma-wOx">
+            <objects>
+                <viewController storyboardIdentifier="OauthViewController" id="cfW-Mp-SLm" customClass="OauthViewController" customModule="QiitaClientApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eCZ-nb-6Ia">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KkA-PZ-Sud">
+                                <rect key="frame" x="0.0" y="56" width="414" height="786"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="n1u-Cx-aBv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KkA-PZ-Sud" firstAttribute="top" secondItem="n1u-Cx-aBv" secondAttribute="top" id="2b9-wO-mfv"/>
+                            <constraint firstItem="n1u-Cx-aBv" firstAttribute="bottom" secondItem="KkA-PZ-Sud" secondAttribute="bottom" id="AHe-U4-fI1"/>
+                            <constraint firstItem="KkA-PZ-Sud" firstAttribute="leading" secondItem="n1u-Cx-aBv" secondAttribute="leading" id="KVR-yX-IvQ"/>
+                            <constraint firstItem="n1u-Cx-aBv" firstAttribute="trailing" secondItem="KkA-PZ-Sud" secondAttribute="trailing" id="ntU-CC-6Uj"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Qiita Auth" id="ZIR-tZ-nU5"/>
+                    <connections>
+                        <outlet property="oauthWebView" destination="KkA-PZ-Sud" id="y4M-EC-di7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j5j-ld-fmh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2243" y="-599"/>
+        </scene>
         <!--MainTabBarController-->
         <scene sceneID="FnD-T0-C7e">
             <objects>
-                <tabBarController title="MainTabBarController" modalPresentationStyle="fullScreen" id="86s-Zn-XEW" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTabBarController" title="MainTabBarController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="86s-Zn-XEW" customClass="MainTabBarController" customModule="QiitaClientApp" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Ruj-kr-rUX"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="idm-TM-tbJ">
@@ -303,7 +372,7 @@
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Fbt-do-saO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="Pacifico-Regular" family="Pacifico" pointSize="17"/>
@@ -329,7 +398,7 @@
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Sxu-zj-91P">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="Pacifico-Regular" family="Pacifico" pointSize="17"/>
@@ -342,7 +411,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g07-Zd-h2v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2240.5797101449275" y="864.50892857142856"/>
+            <point key="canvasLocation" x="2239" y="865"/>
         </scene>
         <!--Mypage-->
         <scene sceneID="fts-Cr-4bR">
@@ -355,8 +424,11 @@
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="uNA-5F-Qxf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Pacifico-Regular" family="Pacifico" pointSize="17"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -378,7 +450,7 @@
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hUj-CW-7NM">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -390,10 +462,10 @@
             </objects>
             <point key="canvasLocation" x="2240.5797101449275" y="2412.7232142857142"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Article Navigation Controller-->
         <scene sceneID="rAa-Bt-1Ha">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Esp-Xq-xuq" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="ArticleNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="Esp-Xq-xuq" customClass="ArticleNavigationController" customModule="QiitaClientApp" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="kRS-k0-H6z">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
@@ -411,6 +483,30 @@
             </objects>
             <point key="canvasLocation" x="4095.652173913044" y="137.94642857142856"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="LRc-vu-zqY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Rt5-Vl-3v5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aaY-0d-68m">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Pacifico-Regular" family="Pacifico" pointSize="17"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="0.0"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="cfW-Mp-SLm" kind="relationship" relationship="rootViewController" id="QLB-8Q-Ff9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bgH-MV-VCZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1335" y="-598"/>
+        </scene>
     </scenes>
     <color key="tintColor" name="PrimaryColor"/>
     <resources>
@@ -424,6 +520,9 @@
         </namedColor>
         <namedColor name="SecondaryColor">
             <color red="0.45490196078431372" green="0.75686274509803919" blue="0.22745098039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SecondaryGrey">
+            <color red="0.50980392156862742" green="0.50980392156862742" blue="0.50980392156862742" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
