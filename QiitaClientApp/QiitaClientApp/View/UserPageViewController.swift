@@ -38,7 +38,6 @@ protocol UserPageViewControllerProtocol {
 }
 
 class UserPageViewController: BaseArticlesViewController {
-    var user: QiitaUser?
     var followMode: FollowMode?
    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -107,7 +106,6 @@ class UserPageViewController: BaseArticlesViewController {
             .responseDecodable(of: AuthUserGetRequest.Response.self) { response in
                 switch response.result {
                 case let .success(user):
-                    self.user = user
                     header.configure(userData: user)
                 case .failure:
                     print("error")
