@@ -9,5 +9,6 @@ target 'QiitaClientApp' do
   pod 'Alamofire', '~> 5.5'
   pod 'SwiftFormat/CLI', '~> 0.49'
   pod 'SwiftLint'
+  pod 'KeychainAccess'
   
 end

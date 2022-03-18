@@ -1,22 +1,28 @@
 //
-//  ArticleCell.swift
+//  BaseArticleCell.swift
 //  QiitaClientApp
 //
-//  Created by 高橋拓也 on 2022/02/22.
+//  Created by Takuya Takahashi on 2022/03/15.
 //
 
 import UIKit
 
-class ArticleCell: UITableViewCell {
-    @IBOutlet weak var articleUserImage: UIImageView!
-    @IBOutlet weak var articleTitleLabel: UILabel!
-    @IBOutlet weak var articleUserIdLabel: UILabel!
+protocol ArticleCell {
+    var articleTitleLabel: UILabel! { get set }
+    var articleDetailLabel: UILabel! { get set }
     
-    var articles: [QiitaArticle]?
-    
+    var articles: [QiitaArticle]? { get set }
+    func articleDetailText(article: QiitaArticle) -> String
+    func configure(article: QiitaArticle)
+    func originalConfigure(article: QiitaArticle)
+}
+
+extension ArticleCell {
     func configure(article: QiitaArticle) {
         articleTitleLabel.text = article.title
-        articleUserIdLabel.text = "@\(article.user.id) \("created at".localized() ?? ""): \(article.createdAt.dateString) LGTM: \(article.likesCount)"
-        articleUserImage.cacheImage(imageUrl: article.user.profileImageUrl)
+        articleDetailLabel.text = articleDetailText(article: article)
+        originalConfigure(article: article)
     }
+
+    func originalConfigure(article: QiitaArticle) {}
 }

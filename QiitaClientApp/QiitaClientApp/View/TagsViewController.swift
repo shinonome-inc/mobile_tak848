@@ -8,24 +8,6 @@
 import Alamofire
 import UIKit
 
-struct TagsGetRequest: QiitaAPIRequest {
-    public typealias Response = [QiitaTag]
-    var path: String { "/tags" }
-    var perPage: Int { 50 }
-    var sort: String { "count" }
-    let method = HTTPMethod.get
-
-    let page: Int
-
-    var parameters: Parameters {
-        [
-            "per_page": String(perPage),
-            "page": String(page),
-            "sort": sort
-        ]
-    }
-}
-
 struct CollectionSize {
     static let margin: CGFloat = 16
     static let cellWidth: CGFloat = 162
@@ -145,6 +127,10 @@ extension TagsViewController: UICollectionViewDelegate, UICollectionViewDataSour
                 fetchAndSetTags()
             }
         }
+    }
+
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        tagsCollectionView.reloadData()
     }
 }
 

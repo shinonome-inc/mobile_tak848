@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserArticleCell" id="q28-Gi-hdI" customClass="UserArticleCell" customModule="QiitaClientApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="48.5"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="q28-Gi-hdI" id="Q8i-ad-7VH">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="48.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wRf-IP-z8B">
+                        <rect key="frame" x="16" y="8" width="382" height="17"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                        <color key="textColor" name="PrimaryBlack"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fNe-oH-Wd7">
+                        <rect key="frame" x="16" y="25" width="382" height="15"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                        <color key="textColor" name="SecondaryGrey"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="fNe-oH-Wd7" secondAttribute="bottom" constant="8" id="4c6-LR-jqO"/>
+                    <constraint firstItem="wRf-IP-z8B" firstAttribute="top" secondItem="Q8i-ad-7VH" secondAttribute="top" constant="8" id="7x5-v4-SgF"/>
+                    <constraint firstItem="wRf-IP-z8B" firstAttribute="leading" secondItem="Q8i-ad-7VH" secondAttribute="leading" constant="16" id="OVL-Ie-ni4"/>
+                    <constraint firstAttribute="trailing" secondItem="fNe-oH-Wd7" secondAttribute="trailing" constant="16" id="WWc-CL-W5m"/>
+                    <constraint firstItem="fNe-oH-Wd7" firstAttribute="top" secondItem="wRf-IP-z8B" secondAttribute="bottom" id="cgq-sD-owO"/>
+                    <constraint firstItem="fNe-oH-Wd7" firstAttribute="leading" secondItem="Q8i-ad-7VH" secondAttribute="leading" constant="16" id="ilB-li-YPD"/>
+                    <constraint firstAttribute="trailing" secondItem="wRf-IP-z8B" secondAttribute="trailing" constant="16" id="l2L-eo-HH9"/>
+                </constraints>
+            </tableViewCellContentView>
+            <inset key="separatorInset" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
+            <connections>
+                <outlet property="articleDetailLabel" destination="fNe-oH-Wd7" id="QQq-mX-4Ep"/>
+                <outlet property="articleTitleLabel" destination="wRf-IP-z8B" id="Pja-0Z-f27"/>
+            </connections>
+            <point key="canvasLocation" x="-1538" y="84"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="PrimaryBlack">
+            <color red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SecondaryGrey">
+            <color red="0.50980392156862742" green="0.50980392156862742" blue="0.50980392156862742" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

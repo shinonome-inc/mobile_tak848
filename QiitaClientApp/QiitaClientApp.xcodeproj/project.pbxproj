@@ -10,7 +10,7 @@
 		3B0DC89B27C45D4D00204351 /* QiitaArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0DC89A27C45D4D00204351 /* QiitaArticle.swift */; };
 		3B0DC89D27C45D8800204351 /* QiitaUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0DC89C27C45D8800204351 /* QiitaUser.swift */; };
 		3B0DC89F27C45DCC00204351 /* QiitaAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0DC89E27C45DCC00204351 /* QiitaAPIRequest.swift */; };
-		3B0DC8A327C4651000204351 /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0DC8A227C4651000204351 /* ArticleCell.swift */; };
+		3B0DC8A327C4651000204351 /* NormalArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0DC8A227C4651000204351 /* NormalArticleCell.swift */; };
 		3B0DC8A527C4657800204351 /* KeyedDecodingContainer+stringToDateDecode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0DC8A427C4657800204351 /* KeyedDecodingContainer+stringToDateDecode.swift */; };
 		3B0DC8A727C465F300204351 /* Date+dateString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0DC8A627C465F300204351 /* Date+dateString.swift */; };
 		3B0DC8AA27C4662300204351 /* UIImageView+cacheImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0DC8A927C4662300204351 /* UIImageView+cacheImage.swift */; };
@@ -21,10 +21,23 @@
 		3B1FD4B827B91AF900D01974 /* Pacifico-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3B1FD4B727B91AF800D01974 /* Pacifico-Regular.ttf */; };
 		3B35299F27BB401700497836 /* StoryboardUI+localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B35299E27BB401700497836 /* StoryboardUI+localization.swift */; };
 		3B3529A127BBC13A00497836 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3529A027BBC13A00497836 /* FeedViewController.swift */; };
-		3B3529A327BBCF5900497836 /* ArticleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B3529A227BBCF5900497836 /* ArticleCell.xib */; };
+		3B3529A327BBCF5900497836 /* NormalArticleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B3529A227BBCF5900497836 /* NormalArticleCell.xib */; };
+		3B39989727DCC66B00B7ACF9 /* .env in Resources */ = {isa = PBXBuildFile; fileRef = 3B39989627DCC66B00B7ACF9 /* .env */; };
+		3B39989F27DCCB4100B7ACF9 /* example.env in Resources */ = {isa = PBXBuildFile; fileRef = 3B39989E27DCCB4100B7ACF9 /* example.env */; };
+		3B464DA427DEF33D00AF5BAD /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B464DA327DEF33D00AF5BAD /* MainTabBarController.swift */; };
+		3B464DA627DF8C0A00AF5BAD /* UserInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B464DA527DF8C0A00AF5BAD /* UserInfoView.xib */; };
+		3B464DA827DF8EE100AF5BAD /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B464DA727DF8EE100AF5BAD /* UserInfoView.swift */; };
+		3B464DAA27E02EC700AF5BAD /* PostedArticlesLabel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B464DA927E02EC700AF5BAD /* PostedArticlesLabel.xib */; };
+		3B464DAC27E02FD600AF5BAD /* PostedArticlesLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B464DAB27E02FD600AF5BAD /* PostedArticlesLabel.swift */; };
+		3B464DAE27E03E4300AF5BAD /* UserArticleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B464DAD27E03E4300AF5BAD /* UserArticleCell.xib */; };
+		3B464DB027E03E6900AF5BAD /* UserArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B464DAF27E03E6900AF5BAD /* UserArticleCell.swift */; };
+		3B464DB227E0519700AF5BAD /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B464DB127E0519700AF5BAD /* ArticleCell.swift */; };
+		3B60BC6A27DC6074006D3A2A /* OauthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B60BC6927DC6074006D3A2A /* OauthViewController.swift */; };
 		3B6EC12C27B94EB900C02F65 /* SegueHandlerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6EC12B27B94EB900C02F65 /* SegueHandlerType.swift */; };
 		3B6EC12F27B94F6800C02F65 /* Segue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6EC12E27B94F6800C02F65 /* Segue.swift */; };
 		3B6EC13527B9554A00C02F65 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B6EC13727B9554A00C02F65 /* Localizable.strings */; };
+		3B7C609C27DE422000907C3A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7C609B27DE422000907C3A /* SettingsViewController.swift */; };
+		3B7C609E27DE422E00907C3A /* UserPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7C609D27DE422E00907C3A /* UserPageViewController.swift */; };
 		3BB69B6327AF59A400B2C0F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB69B6227AF59A400B2C0F0 /* AppDelegate.swift */; };
 		3BB69B6527AF59A400B2C0F0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB69B6427AF59A400B2C0F0 /* SceneDelegate.swift */; };
 		3BB69B6727AF59A400B2C0F0 /* TopLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB69B6627AF59A400B2C0F0 /* TopLoginViewController.swift */; };
@@ -36,6 +49,23 @@
 		3BBAB30027D7505400DD978E /* TagCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBAB2FF27D7505400DD978E /* TagCollectionCell.swift */; };
 		3BBBB84A27D8E0EB009418C9 /* TagDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBBB84927D8E0EB009418C9 /* TagDetailsViewController.swift */; };
 		3BBBB84C27D9628C009418C9 /* UIView+border.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBBB84B27D9628C009418C9 /* UIView+border.swift */; };
+		3BD8F47027E2F1E1001049F5 /* URL+queryValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD8F46F27E2F1E1001049F5 /* URL+queryValue.swift */; };
+		3BD8F47227E2F2C2001049F5 /* QiitaToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD8F47127E2F2C2001049F5 /* QiitaToken.swift */; };
+		3BD8F47427E2FD15001049F5 /* FollowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD8F47327E2FD15001049F5 /* FollowViewController.swift */; };
+		3BD8F47727E412D4001049F5 /* UICollectionView+registerAndDequeue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD8F47627E412D4001049F5 /* UICollectionView+registerAndDequeue.swift */; };
+		3BD8F47927E41441001049F5 /* UIStoryboard+instantiateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD8F47827E41441001049F5 /* UIStoryboard+instantiateVC.swift */; };
+		3BD8F47B27E4147F001049F5 /* UINib+fileCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD8F47A27E4147F001049F5 /* UINib+fileCache.swift */; };
+		3BD8F47D27E41D56001049F5 /* LoadingIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD8F47C27E41D56001049F5 /* LoadingIndicatorView.swift */; };
+		3BD8F48027E44FD2001049F5 /* QiitaOauthFirstRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD8F47F27E44FD2001049F5 /* QiitaOauthFirstRequest.swift */; };
+		3BD8F48227E44FE6001049F5 /* AccessTokenGetRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD8F48127E44FE6001049F5 /* AccessTokenGetRequest.swift */; };
+		3BD8F48427E4504E001049F5 /* ArticlesGetRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD8F48327E4504E001049F5 /* ArticlesGetRequest.swift */; };
+		3BD8F48627E4507C001049F5 /* TagsGetRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD8F48527E4507C001049F5 /* TagsGetRequest.swift */; };
+		3BD8F48827E450BC001049F5 /* AccessTokenDeactivateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD8F48727E450BC001049F5 /* AccessTokenDeactivateRequest.swift */; };
+		3BD8F48A27E450E3001049F5 /* AuthUserGetRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD8F48927E450E3001049F5 /* AuthUserGetRequest.swift */; };
+		3BD8F48C27E45104001049F5 /* AuthUserArticlesGetRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD8F48B27E45104001049F5 /* AuthUserArticlesGetRequest.swift */; };
+		3BE0B41927E1B187009C3FAD /* LoadingIndicatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BE0B41827E1B187009C3FAD /* LoadingIndicatorView.xib */; };
+		3BE0B41B27E2C8F5009C3FAD /* QiitaAccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE0B41A27E2C8F5009C3FAD /* QiitaAccessToken.swift */; };
+		3BE0B41D27E2CB2F009C3FAD /* BaseArticlesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE0B41C27E2CB2F009C3FAD /* BaseArticlesViewController.swift */; };
 		3BECE16527C765C8007AB283 /* TagCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BECE16427C765C8007AB283 /* TagCollectionCell.xib */; };
 		5E4C686282BE82653A783F51 /* Pods_QiitaClientApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEC91BFED63ED92114497267 /* Pods_QiitaClientApp.framework */; };
 /* End PBXBuildFile section */
@@ -45,7 +75,7 @@
 		3B0DC89A27C45D4D00204351 /* QiitaArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaArticle.swift; sourceTree = "<group>"; };
 		3B0DC89C27C45D8800204351 /* QiitaUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaUser.swift; sourceTree = "<group>"; };
 		3B0DC89E27C45DCC00204351 /* QiitaAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaAPIRequest.swift; sourceTree = "<group>"; };
-		3B0DC8A227C4651000204351 /* ArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
+		3B0DC8A227C4651000204351 /* NormalArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalArticleCell.swift; sourceTree = "<group>"; };
 		3B0DC8A427C4657800204351 /* KeyedDecodingContainer+stringToDateDecode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyedDecodingContainer+stringToDateDecode.swift"; sourceTree = "<group>"; };
 		3B0DC8A627C465F300204351 /* Date+dateString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+dateString.swift"; sourceTree = "<group>"; };
 		3B0DC8A927C4662300204351 /* UIImageView+cacheImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+cacheImage.swift"; sourceTree = "<group>"; };
@@ -56,10 +86,23 @@
 		3B1FD4B727B91AF800D01974 /* Pacifico-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pacifico-Regular.ttf"; sourceTree = "<group>"; };
 		3B35299E27BB401700497836 /* StoryboardUI+localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StoryboardUI+localization.swift"; sourceTree = "<group>"; };
 		3B3529A027BBC13A00497836 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
-		3B3529A227BBCF5900497836 /* ArticleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleCell.xib; sourceTree = "<group>"; };
+		3B3529A227BBCF5900497836 /* NormalArticleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NormalArticleCell.xib; sourceTree = "<group>"; };
+		3B39989627DCC66B00B7ACF9 /* .env */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env; sourceTree = "<group>"; };
+		3B39989E27DCCB4100B7ACF9 /* example.env */ = {isa = PBXFileReference; lastKnownFileType = text; path = example.env; sourceTree = "<group>"; };
+		3B464DA327DEF33D00AF5BAD /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		3B464DA527DF8C0A00AF5BAD /* UserInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserInfoView.xib; sourceTree = "<group>"; };
+		3B464DA727DF8EE100AF5BAD /* UserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
+		3B464DA927E02EC700AF5BAD /* PostedArticlesLabel.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostedArticlesLabel.xib; sourceTree = "<group>"; };
+		3B464DAB27E02FD600AF5BAD /* PostedArticlesLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostedArticlesLabel.swift; sourceTree = "<group>"; };
+		3B464DAD27E03E4300AF5BAD /* UserArticleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserArticleCell.xib; sourceTree = "<group>"; };
+		3B464DAF27E03E6900AF5BAD /* UserArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserArticleCell.swift; sourceTree = "<group>"; };
+		3B464DB127E0519700AF5BAD /* ArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
+		3B60BC6927DC6074006D3A2A /* OauthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OauthViewController.swift; sourceTree = "<group>"; };
 		3B6EC12B27B94EB900C02F65 /* SegueHandlerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueHandlerType.swift; sourceTree = "<group>"; };
 		3B6EC12E27B94F6800C02F65 /* Segue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Segue.swift; sourceTree = "<group>"; };
 		3B6EC13627B9554A00C02F65 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3B7C609B27DE422000907C3A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		3B7C609D27DE422E00907C3A /* UserPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPageViewController.swift; sourceTree = "<group>"; };
 		3BB69B5F27AF59A400B2C0F0 /* QiitaClientApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QiitaClientApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BB69B6227AF59A400B2C0F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BB69B6427AF59A400B2C0F0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +117,23 @@
 		3BBAB2FF27D7505400DD978E /* TagCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCollectionCell.swift; sourceTree = "<group>"; };
 		3BBBB84927D8E0EB009418C9 /* TagDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagDetailsViewController.swift; sourceTree = "<group>"; };
 		3BBBB84B27D9628C009418C9 /* UIView+border.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+border.swift"; sourceTree = "<group>"; };
+		3BD8F46F27E2F1E1001049F5 /* URL+queryValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+queryValue.swift"; sourceTree = "<group>"; };
+		3BD8F47127E2F2C2001049F5 /* QiitaToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaToken.swift; sourceTree = "<group>"; };
+		3BD8F47327E2FD15001049F5 /* FollowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowViewController.swift; sourceTree = "<group>"; };
+		3BD8F47627E412D4001049F5 /* UICollectionView+registerAndDequeue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+registerAndDequeue.swift"; sourceTree = "<group>"; };
+		3BD8F47827E41441001049F5 /* UIStoryboard+instantiateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+instantiateVC.swift"; sourceTree = "<group>"; };
+		3BD8F47A27E4147F001049F5 /* UINib+fileCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINib+fileCache.swift"; sourceTree = "<group>"; };
+		3BD8F47C27E41D56001049F5 /* LoadingIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorView.swift; sourceTree = "<group>"; };
+		3BD8F47F27E44FD2001049F5 /* QiitaOauthFirstRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaOauthFirstRequest.swift; sourceTree = "<group>"; };
+		3BD8F48127E44FE6001049F5 /* AccessTokenGetRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenGetRequest.swift; sourceTree = "<group>"; };
+		3BD8F48327E4504E001049F5 /* ArticlesGetRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesGetRequest.swift; sourceTree = "<group>"; };
+		3BD8F48527E4507C001049F5 /* TagsGetRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsGetRequest.swift; sourceTree = "<group>"; };
+		3BD8F48727E450BC001049F5 /* AccessTokenDeactivateRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenDeactivateRequest.swift; sourceTree = "<group>"; };
+		3BD8F48927E450E3001049F5 /* AuthUserGetRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUserGetRequest.swift; sourceTree = "<group>"; };
+		3BD8F48B27E45104001049F5 /* AuthUserArticlesGetRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUserArticlesGetRequest.swift; sourceTree = "<group>"; };
+		3BE0B41827E1B187009C3FAD /* LoadingIndicatorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingIndicatorView.xib; sourceTree = "<group>"; };
+		3BE0B41A27E2C8F5009C3FAD /* QiitaAccessToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaAccessToken.swift; sourceTree = "<group>"; };
+		3BE0B41C27E2CB2F009C3FAD /* BaseArticlesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseArticlesViewController.swift; sourceTree = "<group>"; };
 		3BECE16427C765C8007AB283 /* TagCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TagCollectionCell.xib; sourceTree = "<group>"; };
 		5730C412B1F57479C5FB7D83 /* Pods-QiitaClientApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QiitaClientApp.debug.xcconfig"; path = "Target Support Files/Pods-QiitaClientApp/Pods-QiitaClientApp.debug.xcconfig"; sourceTree = "<group>"; };
 		FEC91BFED63ED92114497267 /* Pods_QiitaClientApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QiitaClientApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,8 +162,13 @@
 		3B0DC8A027C4634800204351 /* Component */ = {
 			isa = PBXGroup;
 			children = (
-				3B0DC8A227C4651000204351 /* ArticleCell.swift */,
+				3B464DB127E0519700AF5BAD /* ArticleCell.swift */,
+				3B0DC8A227C4651000204351 /* NormalArticleCell.swift */,
+				3B464DAF27E03E6900AF5BAD /* UserArticleCell.swift */,
 				3BBAB2FF27D7505400DD978E /* TagCollectionCell.swift */,
+				3B464DA727DF8EE100AF5BAD /* UserInfoView.swift */,
+				3B464DAB27E02FD600AF5BAD /* PostedArticlesLabel.swift */,
+				3BD8F47C27E41D56001049F5 /* LoadingIndicatorView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -112,10 +177,16 @@
 			isa = PBXGroup;
 			children = (
 				3BB69B6627AF59A400B2C0F0 /* TopLoginViewController.swift */,
+				3B60BC6927DC6074006D3A2A /* OauthViewController.swift */,
+				3B464DA327DEF33D00AF5BAD /* MainTabBarController.swift */,
+				3BE0B41C27E2CB2F009C3FAD /* BaseArticlesViewController.swift */,
 				3B3529A027BBC13A00497836 /* FeedViewController.swift */,
-				3B0DC8AB27C469BF00204351 /* ArticleViewController.swift */,
 				3BBAB2FB27D5D87600DD978E /* TagsViewController.swift */,
+				3B7C609D27DE422E00907C3A /* UserPageViewController.swift */,
+				3B7C609B27DE422000907C3A /* SettingsViewController.swift */,
+				3B0DC8AB27C469BF00204351 /* ArticleViewController.swift */,
 				3BBBB84927D8E0EB009418C9 /* TagDetailsViewController.swift */,
+				3BD8F47327E2FD15001049F5 /* FollowViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -128,8 +199,12 @@
 				3B6EC13727B9554A00C02F65 /* Localizable.strings */,
 				3BB69B6827AF59A500B2C0F0 /* Main.storyboard */,
 				3BB69B6D27AF59A600B2C0F0 /* LaunchScreen.storyboard */,
-				3B3529A227BBCF5900497836 /* ArticleCell.xib */,
+				3BE0B41827E1B187009C3FAD /* LoadingIndicatorView.xib */,
+				3B3529A227BBCF5900497836 /* NormalArticleCell.xib */,
+				3B464DAD27E03E4300AF5BAD /* UserArticleCell.xib */,
 				3BECE16427C765C8007AB283 /* TagCollectionCell.xib */,
+				3B464DA527DF8C0A00AF5BAD /* UserInfoView.xib */,
+				3B464DA927E02EC700AF5BAD /* PostedArticlesLabel.xib */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -147,14 +222,7 @@
 			children = (
 				3B6EC12B27B94EB900C02F65 /* SegueHandlerType.swift */,
 				3B0DC89E27C45DCC00204351 /* QiitaAPIRequest.swift */,
-				3B0DC8B127C475D400204351 /* NSObjectProtocol+className.swift */,
-				3B0DC8B327C4771C00204351 /* String+localization.swift */,
-				3B0DC8A627C465F300204351 /* Date+dateString.swift */,
-				3B35299E27BB401700497836 /* StoryboardUI+localization.swift */,
-				3B0DC8A427C4657800204351 /* KeyedDecodingContainer+stringToDateDecode.swift */,
-				3B0DC8A927C4662300204351 /* UIImageView+cacheImage.swift */,
-				3B0DC8AD27C4703100204351 /* UITableView+registerAndDequeue.swift */,
-				3BBBB84B27D9628C009418C9 /* UIView+border.swift */,
+				3BE0B41A27E2C8F5009C3FAD /* QiitaAccessToken.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -166,6 +234,8 @@
 				3B0DC89A27C45D4D00204351 /* QiitaArticle.swift */,
 				3B0DC89C27C45D8800204351 /* QiitaUser.swift */,
 				3BBAB2FD27D5DA5800DD978E /* QiitaTag.swift */,
+				3BD8F47127E2F2C2001049F5 /* QiitaToken.swift */,
+				3BD8F47E27E44F85001049F5 /* APIRequest */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -196,9 +266,12 @@
 				3BB69B6427AF59A400B2C0F0 /* SceneDelegate.swift */,
 				3B1FD4B527B91A5800D01974 /* Resource */,
 				3B6EC12D27B94F4E00C02F65 /* Model */,
+				3BD8F47527E4126C001049F5 /* Extension */,
 				3B6EC12A27B94E0E00C02F65 /* Utility */,
 				3B0DC8A127C4636100204351 /* View */,
 				3B0DC8A027C4634800204351 /* Component */,
+				3B39989627DCC66B00B7ACF9 /* .env */,
+				3B39989E27DCCB4100B7ACF9 /* example.env */,
 			);
 			path = QiitaClientApp;
 			sourceTree = "<group>";
@@ -209,6 +282,39 @@
 				3B1FD4B627B91A6600D01974 /* Pacifico */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		3BD8F47527E4126C001049F5 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				3B0DC8A927C4662300204351 /* UIImageView+cacheImage.swift */,
+				3B0DC8A627C465F300204351 /* Date+dateString.swift */,
+				3B0DC8B127C475D400204351 /* NSObjectProtocol+className.swift */,
+				3B0DC8B327C4771C00204351 /* String+localization.swift */,
+				3B35299E27BB401700497836 /* StoryboardUI+localization.swift */,
+				3BBBB84B27D9628C009418C9 /* UIView+border.swift */,
+				3BD8F46F27E2F1E1001049F5 /* URL+queryValue.swift */,
+				3B0DC8A427C4657800204351 /* KeyedDecodingContainer+stringToDateDecode.swift */,
+				3B0DC8AD27C4703100204351 /* UITableView+registerAndDequeue.swift */,
+				3BD8F47627E412D4001049F5 /* UICollectionView+registerAndDequeue.swift */,
+				3BD8F47827E41441001049F5 /* UIStoryboard+instantiateVC.swift */,
+				3BD8F47A27E4147F001049F5 /* UINib+fileCache.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		3BD8F47E27E44F85001049F5 /* APIRequest */ = {
+			isa = PBXGroup;
+			children = (
+				3BD8F47F27E44FD2001049F5 /* QiitaOauthFirstRequest.swift */,
+				3BD8F48127E44FE6001049F5 /* AccessTokenGetRequest.swift */,
+				3BD8F48327E4504E001049F5 /* ArticlesGetRequest.swift */,
+				3BD8F48527E4507C001049F5 /* TagsGetRequest.swift */,
+				3BD8F48727E450BC001049F5 /* AccessTokenDeactivateRequest.swift */,
+				3BD8F48927E450E3001049F5 /* AuthUserGetRequest.swift */,
+				3BD8F48B27E45104001049F5 /* AuthUserArticlesGetRequest.swift */,
+			);
+			path = APIRequest;
 			sourceTree = "<group>";
 		};
 		D04599CAF0CFB2047975301D /* Pods */ = {
@@ -230,9 +336,10 @@
 				F7CFD57729925C15CF03C3BC /* [CP] Check Pods Manifest.lock */,
 				3BB69B5B27AF59A400B2C0F0 /* Sources */,
 				3BB69B5C27AF59A400B2C0F0 /* Frameworks */,
+				3B3998A027DCCF4A00B7ACF9 /* Run Script  読み込み時のinfo.plistに.envのurlスキームを追加 */,
 				3BB69B5D27AF59A400B2C0F0 /* Resources */,
 				BEBBD8BFDAF9DA6CE25F93B7 /* [CP] Embed Pods Frameworks */,
-				3BB69B7627B23B5C00B2C0F0 /* ShellScript */,
+				3BB69B7627B23B5C00B2C0F0 /* Run Script Swift Format/Lint */,
 			);
 			buildRules = (
 			);
@@ -283,10 +390,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B6EC13527B9554A00C02F65 /* Localizable.strings in Resources */,
-				3B3529A327BBCF5900497836 /* ArticleCell.xib in Resources */,
+				3B464DA627DF8C0A00AF5BAD /* UserInfoView.xib in Resources */,
+				3B3529A327BBCF5900497836 /* NormalArticleCell.xib in Resources */,
+				3BE0B41927E1B187009C3FAD /* LoadingIndicatorView.xib in Resources */,
 				3BECE16527C765C8007AB283 /* TagCollectionCell.xib in Resources */,
+				3B39989727DCC66B00B7ACF9 /* .env in Resources */,
+				3B464DAA27E02EC700AF5BAD /* PostedArticlesLabel.xib in Resources */,
 				3BB69B6F27AF59A600B2C0F0 /* LaunchScreen.storyboard in Resources */,
+				3B464DAE27E03E4300AF5BAD /* UserArticleCell.xib in Resources */,
 				3B1FD4B827B91AF900D01974 /* Pacifico-Regular.ttf in Resources */,
+				3B39989F27DCCB4100B7ACF9 /* example.env in Resources */,
 				3BB69B6C27AF59A600B2C0F0 /* Assets.xcassets in Resources */,
 				3BB69B6A27AF59A500B2C0F0 /* Main.storyboard in Resources */,
 			);
@@ -295,7 +408,26 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3BB69B7627B23B5C00B2C0F0 /* ShellScript */ = {
+		3B3998A027DCCF4A00B7ACF9 /* Run Script  読み込み時のinfo.plistに.envのurlスキームを追加 */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${TEMP_DIR}/Preprocessed-Info.plist",
+			);
+			name = "Run Script  読み込み時のinfo.plistに.envのurlスキームを追加";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "plistBuddy=\"/usr/libexec/PlistBuddy\"\ninfoPlistFileSource=\"${SRCROOT}/${INFOPLIST_FILE}\"\ninfoPlistFileDestination=\"${TEMP_DIR}/Preprocessed-Info.plist\"\n\n. ./QiitaClientApp/.env\n\n$plistBuddy -x -c \"Set :CFBundleURLTypes:0:CFBundleURLSchemes:0 ${APPLICATION_URL_SCHEME}\" \"${infoPlistFileDestination}\"\n";
+		};
+		3BB69B7627B23B5C00B2C0F0 /* Run Script Swift Format/Lint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -304,6 +436,7 @@
 			);
 			inputPaths = (
 			);
+			name = "Run Script Swift Format/Lint";
 			outputFileListPaths = (
 			);
 			outputPaths = (
@@ -358,29 +491,53 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B464DAC27E02FD600AF5BAD /* PostedArticlesLabel.swift in Sources */,
 				3BB69B6727AF59A400B2C0F0 /* TopLoginViewController.swift in Sources */,
+				3BD8F48427E4504E001049F5 /* ArticlesGetRequest.swift in Sources */,
 				3BBBB84C27D9628C009418C9 /* UIView+border.swift in Sources */,
+				3BD8F47427E2FD15001049F5 /* FollowViewController.swift in Sources */,
 				3B0DC8AE27C4703100204351 /* UITableView+registerAndDequeue.swift in Sources */,
+				3B7C609E27DE422E00907C3A /* UserPageViewController.swift in Sources */,
+				3BD8F48627E4507C001049F5 /* TagsGetRequest.swift in Sources */,
+				3BD8F48027E44FD2001049F5 /* QiitaOauthFirstRequest.swift in Sources */,
 				3B0DC8B227C475D400204351 /* NSObjectProtocol+className.swift in Sources */,
+				3B60BC6A27DC6074006D3A2A /* OauthViewController.swift in Sources */,
 				3B0DC89B27C45D4D00204351 /* QiitaArticle.swift in Sources */,
+				3BD8F48227E44FE6001049F5 /* AccessTokenGetRequest.swift in Sources */,
 				3B0DC89D27C45D8800204351 /* QiitaUser.swift in Sources */,
 				3B0DC8B427C4771C00204351 /* String+localization.swift in Sources */,
+				3BD8F47D27E41D56001049F5 /* LoadingIndicatorView.swift in Sources */,
+				3B7C609C27DE422000907C3A /* SettingsViewController.swift in Sources */,
+				3BD8F48A27E450E3001049F5 /* AuthUserGetRequest.swift in Sources */,
 				3B0DC8A727C465F300204351 /* Date+dateString.swift in Sources */,
 				3B0DC8A527C4657800204351 /* KeyedDecodingContainer+stringToDateDecode.swift in Sources */,
 				3BB69B6327AF59A400B2C0F0 /* AppDelegate.swift in Sources */,
 				3B6EC12F27B94F6800C02F65 /* Segue.swift in Sources */,
+				3B464DB227E0519700AF5BAD /* ArticleCell.swift in Sources */,
 				3BBBB84A27D8E0EB009418C9 /* TagDetailsViewController.swift in Sources */,
+				3B464DA827DF8EE100AF5BAD /* UserInfoView.swift in Sources */,
+				3BD8F47B27E4147F001049F5 /* UINib+fileCache.swift in Sources */,
+				3BD8F47027E2F1E1001049F5 /* URL+queryValue.swift in Sources */,
+				3BE0B41D27E2CB2F009C3FAD /* BaseArticlesViewController.swift in Sources */,
+				3B464DB027E03E6900AF5BAD /* UserArticleCell.swift in Sources */,
+				3BD8F47227E2F2C2001049F5 /* QiitaToken.swift in Sources */,
+				3BD8F47727E412D4001049F5 /* UICollectionView+registerAndDequeue.swift in Sources */,
 				3B0DC8AC27C469BF00204351 /* ArticleViewController.swift in Sources */,
 				3BBAB30027D7505400DD978E /* TagCollectionCell.swift in Sources */,
 				3B35299F27BB401700497836 /* StoryboardUI+localization.swift in Sources */,
 				3B6EC12C27B94EB900C02F65 /* SegueHandlerType.swift in Sources */,
+				3BD8F48827E450BC001049F5 /* AccessTokenDeactivateRequest.swift in Sources */,
 				3B0DC89F27C45DCC00204351 /* QiitaAPIRequest.swift in Sources */,
+				3B464DA427DEF33D00AF5BAD /* MainTabBarController.swift in Sources */,
+				3BD8F48C27E45104001049F5 /* AuthUserArticlesGetRequest.swift in Sources */,
 				3BB69B6527AF59A400B2C0F0 /* SceneDelegate.swift in Sources */,
 				3B0DC8AA27C4662300204351 /* UIImageView+cacheImage.swift in Sources */,
 				3BBAB2FC27D5D87600DD978E /* TagsViewController.swift in Sources */,
+				3BE0B41B27E2C8F5009C3FAD /* QiitaAccessToken.swift in Sources */,
 				3BBAB2FE27D5DA5800DD978E /* QiitaTag.swift in Sources */,
 				3B3529A127BBC13A00497836 /* FeedViewController.swift in Sources */,
-				3B0DC8A327C4651000204351 /* ArticleCell.swift in Sources */,
+				3BD8F47927E41441001049F5 /* UIStoryboard+instantiateVC.swift in Sources */,
+				3B0DC8A327C4651000204351 /* NormalArticleCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,6 +624,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_PREPROCESS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -523,6 +681,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_PREPROCESS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -549,12 +708,13 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_PREPROCESS = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = jp.tak848.playground.QiitaClientApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.tak848.playground.ios-qiita-client";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -578,12 +738,13 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_PREPROCESS = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = jp.tak848.playground.QiitaClientApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.tak848.playground.ios-qiita-client";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

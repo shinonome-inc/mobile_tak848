@@ -8,7 +8,7 @@
 import UIKit
 
 enum Segue: String, SegueType {
-    case toMainTabController
-    case toArticleViewController
     case toTagDetailsViewController
+    case toOauthViewController
+    case toFollowViewController
 }
