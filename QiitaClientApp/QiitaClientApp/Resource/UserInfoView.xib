@@ -67,7 +67,6 @@
                         </attributedString>
                     </state>
                     <connections>
-                        <action selector="onTapFollowersButton:" destination="-2" eventType="touchUpInside" id="1WB-id-ra6"/>
                         <action selector="onTapFollowingButton:" destination="-2" eventType="touchUpInside" id="NmJ-vu-wOS"/>
                     </connections>
                 </button>
