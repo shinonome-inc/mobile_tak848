@@ -19,10 +19,10 @@ class UserInfoView: UITableViewHeaderFooterView {
     var delegate: UserPageViewControllerProtocol?
     
     override func awakeFromNib() {
-        resetContent()
+        initContent()
     }
 
-    func resetContent() {
+    func initContent() {
         userProfileImage.image = nil
         userNameLabel.text = nil
         userIdLabel.text = nil
