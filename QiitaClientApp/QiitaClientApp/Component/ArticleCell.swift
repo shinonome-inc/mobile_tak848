@@ -23,5 +23,6 @@ extension ArticleCell {
         articleDetailLabel.text = articleDetailText(article: article)
         originalConfigure(article: article)
     }
+
     func originalConfigure(article: QiitaArticle) {}
 }

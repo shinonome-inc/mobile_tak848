@@ -38,13 +38,16 @@ struct QiitaAccessToken {
     func remove() {
         let deleteValue = value
         UserDefaults.standard.set(false, forKey: userDefaultsLoggedInKey)
+        guard deleteValue != "" else {
+            return
+        }
         AF.request(AccessTokenDeactivateRequest(accessToken: deleteValue))
             .responseString { response in
                 switch response.response?.statusCode {
                 case 204?:
                     Keychain()[self.keychainAccessTokenKey] = nil
                 default:
-                    print("error")
+                    print("Tokenの無効化に失敗しました")
                 }
             }
     }

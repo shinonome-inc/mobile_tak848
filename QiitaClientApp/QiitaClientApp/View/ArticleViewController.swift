@@ -8,6 +8,8 @@
 import UIKit
 import WebKit
 
+class ArticleNavigationController: UINavigationController {}
+
 class ArticleViewController: UIViewController, WKUIDelegate {
     @IBOutlet weak var articleWebView: WKWebView!
     
