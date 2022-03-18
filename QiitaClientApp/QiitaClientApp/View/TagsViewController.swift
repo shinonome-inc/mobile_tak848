@@ -35,7 +35,7 @@ class TagsViewController: UIViewController {
     let tagsPerPage = 100
     let maxPage = 100
     var loading = false
-    var paginationFinished = true
+    var paginationFinished = false
     var nextTagId: String?
     
     var viewWidth: CGFloat {
@@ -53,6 +53,7 @@ class TagsViewController: UIViewController {
             page = 1
             tags = nil
             tagsCollectionView.reloadData()
+            paginationFinished = false
         }
         loading = true
         setUpCollectionView()
