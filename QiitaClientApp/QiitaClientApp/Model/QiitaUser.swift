@@ -6,6 +6,7 @@
 //
 
 import Foundation
+
 struct QiitaUser: Codable {
     var id: String
     var name: String?

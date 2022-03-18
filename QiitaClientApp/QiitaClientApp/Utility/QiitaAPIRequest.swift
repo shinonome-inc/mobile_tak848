@@ -18,7 +18,11 @@ protocol QiitaAPIRequest: URLRequestConvertible {
 extension QiitaAPIRequest {
     var baseURL: URL { URL(string: "https://qiita.com/api/v2")! }
     public func asURLRequest() throws -> URLRequest {
-        let request = URLRequest(url: baseURL.appendingPathComponent(path))
+        var request = URLRequest(url: baseURL.appendingPathComponent(path))
+        request.method = method
+        if QiitaAccessToken().isExist {
+            request.addValue("Bearer " + QiitaAccessToken().value, forHTTPHeaderField: "Authorization")
+        }
         switch method {
         case .post, .put:
             return try JSONEncoding.default.encode(request, with: parameters)

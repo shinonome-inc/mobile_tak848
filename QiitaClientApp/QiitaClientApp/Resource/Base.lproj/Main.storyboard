@@ -193,14 +193,33 @@
                             <constraint firstItem="jan-2I-3LO" firstAttribute="top" secondItem="yGH-zc-P0x" secondAttribute="top" id="vet-S1-Xpt"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Mypage" id="loP-os-YLb"/>
+                    <navigationItem key="navigationItem" title="Mypage" id="loP-os-YLb">
+                        <barButtonItem key="backBarButtonItem" title=" " id="ah6-bp-sA8"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="articlesTableView" destination="jan-2I-3LO" id="P2r-s5-cdR"/>
+                        <segue destination="J8h-Xo-pxO" kind="show" identifier="toFollowViewController" id="MY0-Lt-t5u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EBw-dt-QLr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3152.1739130434785" y="1628.5714285714284"/>
+        </scene>
+        <!--Follow View Controller-->
+        <scene sceneID="g7e-LS-VH7">
+            <objects>
+                <viewController storyboardIdentifier="FollowViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="J8h-Xo-pxO" customClass="FollowViewController" customModule="QiitaClientApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tsa-ua-gJa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="lHR-rp-quE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="shA-iB-wGk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PM6-oJ-PWw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4096" y="1629"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="tal-nF-Zag">
@@ -227,9 +246,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ePH-gJ-Lme"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="showDetail" identifier="toTopLoginViewController" id="BNs-Ru-7ql"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QA4-GG-tlA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -260,7 +276,6 @@
                     <navigationItem key="navigationItem" title="Feed" id="SF3-bs-lcJ"/>
                     <connections>
                         <outlet property="articlesTableView" destination="Dff-d6-aaD" id="HmV-VB-a7O"/>
-                        <segue destination="Esp-Xq-xuq" kind="presentation" identifier="toArticleViewController" id="ghz-zh-ZfB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MfE-Cc-Nho" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -272,11 +287,11 @@
             <objects>
                 <viewController storyboardIdentifier="ArticleViewController" modalPresentationStyle="pageSheet" id="uqm-yl-r2H" customClass="ArticleViewController" customModule="QiitaClientApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KPk-ts-Ge2">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e4K-YD-58T">
-                                <rect key="frame" x="0.0" y="56" width="414" height="786"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -300,7 +315,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IgX-m8-P5z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5005.7971014492759" y="137.94642857142856"/>
+            <point key="canvasLocation" x="4984" y="-599"/>
         </scene>
         <!--Qiita Auth-->
         <scene sceneID="lQc-Ma-wOx">
@@ -468,7 +483,7 @@
                 <navigationController storyboardIdentifier="ArticleNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="Esp-Xq-xuq" customClass="ArticleNavigationController" customModule="QiitaClientApp" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="kRS-k0-H6z">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="Pacifico-Regular" family="Pacifico" pointSize="16"/>
@@ -481,7 +496,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xPo-6Y-kpv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4095.652173913044" y="137.94642857142856"/>
+            <point key="canvasLocation" x="4096" y="-599"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="LRc-vu-zqY">
