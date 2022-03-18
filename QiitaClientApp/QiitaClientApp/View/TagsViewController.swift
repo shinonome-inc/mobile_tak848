@@ -32,7 +32,10 @@ class TagsViewController: UIViewController {
     let refreshControl = UIRefreshControl()
     var tags: [QiitaTag]?
     var page = 1
+    let tagsPerPage = 100
+    let maxPage = 100
     var loading = false
+    var paginationFinished = true
     var nextTagId: String?
     
     var viewWidth: CGFloat {
@@ -53,7 +56,7 @@ class TagsViewController: UIViewController {
         }
         loading = true
         setUpCollectionView()
-        AF.request(TagsGetRequest(page: page))
+        AF.request(TagsGetRequest(page: page, perPage: tagsPerPage))
             .responseDecodable(of: TagsGetRequest.Response.self) { response in
                 switch response.result {
                 case let .success(tags):
@@ -62,6 +65,9 @@ class TagsViewController: UIViewController {
                         self.tags = tags
                     } else {
                         self.tags?.append(contentsOf: tags)
+                    }
+                    if tags.count < self.tagsPerPage || self.page > self.maxPage {
+                        self.paginationFinished = true
                     }
                 case .failure:
                     self.tags = nil
@@ -118,7 +124,7 @@ extension TagsViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if !loading {
+        if !loading, !paginationFinished {
             let currentOffsetY = scrollView.contentOffset.y
             let maximumOffset = scrollView.contentSize.height - scrollView.frame.height
             let distanceToBottom = maximumOffset - currentOffsetY

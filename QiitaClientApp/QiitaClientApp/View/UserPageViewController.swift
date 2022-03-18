@@ -49,10 +49,6 @@ class UserPageViewController: BaseArticlesViewController {
         }
     }
 
-    func setUpPostedArticlesSectionHeader() {
-        articlesTableView.register(headerFooterViewClass: PostedArticlesLabel.self)
-    }
-
     override func settingsBeforeFetch(refreshAll: Bool) {
         if refreshAll {
             page = 1
@@ -65,7 +61,7 @@ class UserPageViewController: BaseArticlesViewController {
 
     override func fetchAndSetArticles(refreshAll: Bool = false) {
         settingsBeforeFetch(refreshAll: refreshAll)
-        AF.request(AuthUserArticlesGetRequest(page: page))
+        AF.request(AuthUserArticlesGetRequest(page: page, perPage: articlesPerPage))
             .responseDecodable(of: AuthUserArticlesGetRequest.Response.self) { response in
                 self.setArticlesFromResponse(refreshAll: refreshAll, response: response)
             }

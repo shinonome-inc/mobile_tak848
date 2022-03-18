@@ -14,7 +14,10 @@ class BaseArticlesViewController: UIViewController {
     let refreshControl = UIRefreshControl()
     var articles: [QiitaArticle]?
     var loading = false
+    var paginationFinished = false
     var page = 1
+    let articlesPerPage = 30
+    let maxPage = 100
     var searchWord: String?
     
     override func viewDidLoad() {
@@ -38,6 +41,7 @@ class BaseArticlesViewController: UIViewController {
             page = 1
             articles = nil
             articlesTableView.reloadData()
+            paginationFinished = false
         }
         loading = true
     }
@@ -50,6 +54,9 @@ class BaseArticlesViewController: UIViewController {
                 articles = newArticles
             } else {
                 articles?.append(contentsOf: newArticles)
+            }
+            if newArticles.count < articlesPerPage || page > maxPage {
+                paginationFinished = true
             }
         case .failure:
             articles = nil
@@ -64,6 +71,10 @@ class BaseArticlesViewController: UIViewController {
         articlesTableView.registerCustomCell(NormalArticleCell.self)
         articlesTableView.refreshControl = refreshControl
         refreshControl.addTarget(self, action: #selector(refresh(_:)), for: .valueChanged)
+    }
+
+    func setUpPostedArticlesSectionHeader() {
+        articlesTableView.register(headerFooterViewClass: PostedArticlesLabel.self)
     }
 
     @objc func refresh(_ sender: UIRefreshControl) {
@@ -104,7 +115,7 @@ extension BaseArticlesViewController: UITableViewDelegate, UITableViewDataSource
 
     // ある程度下に来たら次のfetch
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if !loading {
+        if !loading, !paginationFinished {
             let currentOffsetY = scrollView.contentOffset.y
             let maximumOffset = scrollView.contentSize.height - scrollView.frame.height
             let distanceToBottom = maximumOffset - currentOffsetY

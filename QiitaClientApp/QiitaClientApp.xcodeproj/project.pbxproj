@@ -63,6 +63,7 @@
 		3BD8F48827E450BC001049F5 /* AccessTokenDeactivateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD8F48727E450BC001049F5 /* AccessTokenDeactivateRequest.swift */; };
 		3BD8F48A27E450E3001049F5 /* AuthUserGetRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD8F48927E450E3001049F5 /* AuthUserGetRequest.swift */; };
 		3BD8F48C27E45104001049F5 /* AuthUserArticlesGetRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD8F48B27E45104001049F5 /* AuthUserArticlesGetRequest.swift */; };
+		3BD8F48E27E457DB001049F5 /* TagArticlesGetRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD8F48D27E457DB001049F5 /* TagArticlesGetRequest.swift */; };
 		3BE0B41927E1B187009C3FAD /* LoadingIndicatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BE0B41827E1B187009C3FAD /* LoadingIndicatorView.xib */; };
 		3BE0B41B27E2C8F5009C3FAD /* QiitaAccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE0B41A27E2C8F5009C3FAD /* QiitaAccessToken.swift */; };
 		3BE0B41D27E2CB2F009C3FAD /* BaseArticlesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE0B41C27E2CB2F009C3FAD /* BaseArticlesViewController.swift */; };
@@ -131,6 +132,7 @@
 		3BD8F48727E450BC001049F5 /* AccessTokenDeactivateRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenDeactivateRequest.swift; sourceTree = "<group>"; };
 		3BD8F48927E450E3001049F5 /* AuthUserGetRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUserGetRequest.swift; sourceTree = "<group>"; };
 		3BD8F48B27E45104001049F5 /* AuthUserArticlesGetRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUserArticlesGetRequest.swift; sourceTree = "<group>"; };
+		3BD8F48D27E457DB001049F5 /* TagArticlesGetRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagArticlesGetRequest.swift; sourceTree = "<group>"; };
 		3BE0B41827E1B187009C3FAD /* LoadingIndicatorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingIndicatorView.xib; sourceTree = "<group>"; };
 		3BE0B41A27E2C8F5009C3FAD /* QiitaAccessToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaAccessToken.swift; sourceTree = "<group>"; };
 		3BE0B41C27E2CB2F009C3FAD /* BaseArticlesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseArticlesViewController.swift; sourceTree = "<group>"; };
@@ -313,6 +315,7 @@
 				3BD8F48727E450BC001049F5 /* AccessTokenDeactivateRequest.swift */,
 				3BD8F48927E450E3001049F5 /* AuthUserGetRequest.swift */,
 				3BD8F48B27E45104001049F5 /* AuthUserArticlesGetRequest.swift */,
+				3BD8F48D27E457DB001049F5 /* TagArticlesGetRequest.swift */,
 			);
 			path = APIRequest;
 			sourceTree = "<group>";
@@ -525,6 +528,7 @@
 				3B0DC8AC27C469BF00204351 /* ArticleViewController.swift in Sources */,
 				3BBAB30027D7505400DD978E /* TagCollectionCell.swift in Sources */,
 				3B35299F27BB401700497836 /* StoryboardUI+localization.swift in Sources */,
+				3BD8F48E27E457DB001049F5 /* TagArticlesGetRequest.swift in Sources */,
 				3B6EC12C27B94EB900C02F65 /* SegueHandlerType.swift in Sources */,
 				3BD8F48827E450BC001049F5 /* AccessTokenDeactivateRequest.swift in Sources */,
 				3B0DC89F27C45DCC00204351 /* QiitaAPIRequest.swift in Sources */,
