@@ -11,7 +11,7 @@ import UIKit
 struct TagsGetRequest: QiitaAPIRequest {
     public typealias Response = [QiitaTag]
     var path: String { "/tags" }
-    var perPage: Int { 50 }
+    var perPage: Int { 100 }
     var sort: String { "count" }
     let method = HTTPMethod.get
 
@@ -145,6 +145,10 @@ extension TagsViewController: UICollectionViewDelegate, UICollectionViewDataSour
                 fetchAndSetTags()
             }
         }
+    }
+
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        tagsCollectionView.reloadData()
     }
 }
 
