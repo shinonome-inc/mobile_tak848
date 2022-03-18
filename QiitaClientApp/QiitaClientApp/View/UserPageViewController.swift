@@ -10,16 +10,14 @@ import UIKit
 
 struct AuthUserGetRequest: QiitaAPIRequest {
     public typealias Response = QiitaUser
-//    var path: String { "/authenticated_user" }
-    var path: String { "/users/yaotti" }
+    var path: String { "/authenticated_user" }
     let method = HTTPMethod.get
     var parameters: Parameters { [:] }
 }
 
 struct AuthUserArticlesGetRequest: QiitaAPIRequest {
     public typealias Response = [QiitaArticle]
-//    var path: String { "/authenticated_user/items" }
-    var path: String { "/users/yaotti/items" }
+    var path: String { "/authenticated_user/items" }
     var perPage: Int { 30 }
     let method = HTTPMethod.get
 
