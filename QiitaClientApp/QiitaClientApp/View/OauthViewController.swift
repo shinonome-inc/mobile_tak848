@@ -10,24 +10,6 @@ import KeychainAccess
 import UIKit
 import WebKit
 
-struct AccessTokenGetRequest: QiitaAPIRequest {
-    public typealias Response = QiitaToken
-    var path: String { "/access_tokens" }
-    let method = HTTPMethod.post
-
-    let code: String
-    var clientId: String
-    var clientSecret: String
-
-    var parameters: Parameters {
-        [
-            "client_id": String(clientId),
-            "client_secret": String(clientSecret),
-            "code": String(code)
-        ]
-    }
-}
-
 class OauthViewController: UIViewController, WKUIDelegate {
     @IBOutlet weak var oauthWebView: WKWebView!
     

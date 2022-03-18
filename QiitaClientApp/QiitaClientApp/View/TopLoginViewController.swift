@@ -8,30 +8,6 @@
 import Alamofire
 import UIKit
 
-struct QiitaOauthFirstRequest: QiitaAPIRequest {
-    var path: String { "/oauth/authorize" }
-    let method = HTTPMethod.get
-    var clientId: String {
-        ProcessInfo.processInfo.environment["QIITA_APPLICATION_CLIENT_ID"] ?? ""
-    }
-
-    var scope: [String] {
-        [
-            "read_qiita",
-            "write_qiita"
-        ]
-    }
-
-    var state: String
-    var parameters: Parameters {
-        [
-            "client_id": clientId,
-            "scope": scope.joined(separator: " "),
-            "state": state
-        ]
-    }
-}
-
 protocol TopLoginViewControllerDelegate: AnyObject {
     func presentMainTabController()
     func addIndicatorSubView()
