@@ -11,11 +11,11 @@ import Foundation
 struct TagsGetRequest: QiitaAPIRequest {
     public typealias Response = [QiitaTag]
     var path: String { "/tags" }
-    var perPage: Int { 100 }
     var sort: String { "count" }
     let method = HTTPMethod.get
 
     let page: Int
+    var perPage: Int
 
     var parameters: Parameters {
         [
