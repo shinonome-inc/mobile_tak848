@@ -41,8 +41,6 @@ class FollowViewController: UIViewController {
         followMode = mode
     }
 
-    
-
     func setUpCollectionView() {
         usersCollectionView.delegate = self
         usersCollectionView.dataSource = self
@@ -63,6 +61,7 @@ class FollowViewController: UIViewController {
         }
         usersCollectionView.collectionViewLayout = compositionalLayout
     }
+
     func fetchAndSetUsers(refreshAll: Bool = false) {
         guard let targetUser = targetUser,
               let followMode = followMode
