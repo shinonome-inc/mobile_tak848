@@ -81,7 +81,6 @@ extension BaseUserPageViewController {
         guard let header = tableView.dequeueReusableHeaderFooterView(withClass: PostedArticlesLabel.self) else {
             return PostedArticlesLabel()
         }
-        print("setSectionHeader")
         return header
     }
 

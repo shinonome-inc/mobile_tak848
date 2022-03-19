@@ -41,6 +41,28 @@ class FollowViewController: UIViewController {
         followMode = mode
     }
 
+    
+
+    func setUpCollectionView() {
+        usersCollectionView.delegate = self
+        usersCollectionView.dataSource = self
+        usersCollectionView.registerCustomCell(UserCollectionCell.self)
+        usersCollectionView.refreshControl = refreshControl
+        refreshControl.addTarget(self, action: #selector(refresh(_:)), for: .valueChanged)
+        let compositionalLayout = UICollectionViewCompositionalLayout { (_: Int, _: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? in
+            let inset: CGFloat = 16
+            let minimumUserCollectionCellHeight: CGFloat = 68
+            let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(minimumUserCollectionCellHeight))
+            let item = NSCollectionLayoutItem(layoutSize: itemSize)
+            let group = NSCollectionLayoutGroup.horizontal(layoutSize: itemSize, subitems: [item])
+            group.contentInsets = NSDirectionalEdgeInsets(top: .zero, leading: inset, bottom: .zero, trailing: inset)
+            let section = NSCollectionLayoutSection(group: group)
+            section.interGroupSpacing = inset
+            section.contentInsets = NSDirectionalEdgeInsets(top: inset, leading: .zero, bottom: inset, trailing: .zero)
+            return section
+        }
+        usersCollectionView.collectionViewLayout = compositionalLayout
+    }
     func fetchAndSetUsers(refreshAll: Bool = false) {
         guard let targetUser = targetUser,
               let followMode = followMode
@@ -76,27 +98,6 @@ class FollowViewController: UIViewController {
                 self.usersCollectionView.collectionViewLayout.invalidateLayout()
                 self.usersCollectionView.layoutIfNeeded()
             }
-    }
-
-    func setUpCollectionView() {
-        usersCollectionView.delegate = self
-        usersCollectionView.dataSource = self
-        usersCollectionView.registerCustomCell(UserCollectionCell.self)
-        usersCollectionView.refreshControl = refreshControl
-        refreshControl.addTarget(self, action: #selector(refresh(_:)), for: .valueChanged)
-        let compositionalLayout = UICollectionViewCompositionalLayout { (_: Int, _: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? in
-            let inset: CGFloat = 16
-            let minimumUserCollectionCellHeight: CGFloat = 68
-            let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(minimumUserCollectionCellHeight))
-            let item = NSCollectionLayoutItem(layoutSize: itemSize)
-            let group = NSCollectionLayoutGroup.horizontal(layoutSize: itemSize, subitems: [item])
-            group.contentInsets = NSDirectionalEdgeInsets(top: .zero, leading: inset, bottom: .zero, trailing: inset)
-            let section = NSCollectionLayoutSection(group: group)
-            section.interGroupSpacing = inset
-            section.contentInsets = NSDirectionalEdgeInsets(top: inset, leading: .zero, bottom: inset, trailing: .zero)
-            return section
-        }
-        usersCollectionView.collectionViewLayout = compositionalLayout
     }
 
     @objc func refresh(_ sender: UIRefreshControl) {

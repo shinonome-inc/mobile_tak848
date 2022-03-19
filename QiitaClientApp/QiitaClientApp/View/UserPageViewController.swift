@@ -32,9 +32,7 @@ class UserPageViewController: BaseUserPageViewController {
                 case let .success(user):
                     header.configure(userData: user)
                     self.user = user
-                    self.articlesTableView.layoutSubviews()
-                    self.articlesTableView.tableHeaderView?.layoutSubviews()
-                    self.articlesTableView.reloadData()
+                    self.setUserInfoHeader()
                     
                 case .failure:
                     print("error")

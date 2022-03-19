@@ -26,7 +26,6 @@ class UserCollectionCell: UICollectionViewCell {
             userDescriptionLabel.text = nil
             descriptionBottomSpaceConstraint.constant = 0
         }
-        print(user.description ?? "")
         userProfileImage.cacheImage(imageUrl: user.profileImageUrl)
     }
 }
