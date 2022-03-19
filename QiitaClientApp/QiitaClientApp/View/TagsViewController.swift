@@ -32,7 +32,10 @@ class TagsViewController: UIViewController {
     let refreshControl = UIRefreshControl()
     var tags: [QiitaTag]?
     var page = 1
+    let tagsPerPage = 100
+    let maxPage = 100
     var loading = false
+    var paginationFinished = false
     var nextTagId: String?
     
     var viewWidth: CGFloat {
@@ -43,6 +46,7 @@ class TagsViewController: UIViewController {
         super.viewDidLoad()
         setUpCollectionView()
         fetchAndSetTags(refreshAll: true)
+        navigationItem.backButtonDisplayMode = .minimal
     }
 
     func fetchAndSetTags(refreshAll: Bool = false) {
@@ -50,10 +54,11 @@ class TagsViewController: UIViewController {
             page = 1
             tags = nil
             tagsCollectionView.reloadData()
+            paginationFinished = false
         }
         loading = true
         setUpCollectionView()
-        AF.request(TagsGetRequest(page: page))
+        AF.request(TagsGetRequest(page: page, perPage: tagsPerPage))
             .responseDecodable(of: TagsGetRequest.Response.self) { response in
                 switch response.result {
                 case let .success(tags):
@@ -118,7 +123,7 @@ extension TagsViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if !loading {
+        if !loading, !paginationFinished {
             let currentOffsetY = scrollView.contentOffset.y
             let maximumOffset = scrollView.contentSize.height - scrollView.frame.height
             let distanceToBottom = maximumOffset - currentOffsetY
@@ -130,7 +135,11 @@ extension TagsViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
 
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        tagsCollectionView.reloadData()
+        if let tags = tags,
+           tags.count != 0
+        {
+            tagsCollectionView.reloadData()
+        }
     }
 }
 
