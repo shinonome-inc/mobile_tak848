@@ -14,6 +14,7 @@ class UserInfoView: UITableViewHeaderFooterView {
     @IBOutlet weak var userDescriptionLabel: UILabel!
     @IBOutlet weak var userFollowingButton: UIButton!
     @IBOutlet weak var userFollowersButton: UIButton!
+    @IBOutlet weak var descriptionBottomSpaceConstraint: NSLayoutConstraint!
     
     var articles: [QiitaArticle]?
     var delegate: UserPageViewControllerProtocol?
@@ -32,16 +33,23 @@ class UserInfoView: UITableViewHeaderFooterView {
     }
     
     func configure(userData user: QiitaUser) {
-        userIdLabel.text = "@\(user.id)"
-        if let userName = user.name, userName != "" {
-            userNameLabel.text = userName
+        userIdLabel.text = user.displayId
+        userNameLabel.text = user.displayName
+        if let description = user.description,
+           description != ""
+        {
+            userDescriptionLabel.text = description
+            descriptionBottomSpaceConstraint.constant = 16
         } else {
-            userNameLabel.text = user.id
+            userDescriptionLabel.text = nil
+            descriptionBottomSpaceConstraint.constant = 0
         }
-        userDescriptionLabel.text = user.description
+        userProfileImage.cacheImage(imageUrl: user.profileImageUrl)
         userFollowingButton.setAttributedTitle(countAndUnitMutableAttributedString(count: user.followeesCount, unit: "following".localized() ?? ""), for: .normal)
         userFollowersButton.setAttributedTitle(countAndUnitMutableAttributedString(count: user.followersCount, unit: "followers".localized() ?? ""), for: .normal)
-        userProfileImage.cacheImage(imageUrl: user.profileImageUrl)
+        // フォロー or フォロワー数が0の時はそれぞれボタンを無効化
+        userFollowingButton.isEnabled = (user.followeesCount != 0)
+        userFollowersButton.isEnabled = (user.followersCount != 0)
     }
 
     func countAndUnitMutableAttributedString(count: Int, unit: String) -> NSMutableAttributedString {
