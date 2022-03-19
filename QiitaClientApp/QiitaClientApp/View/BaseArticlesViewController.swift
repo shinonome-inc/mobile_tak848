@@ -72,6 +72,10 @@ class BaseArticlesViewController: UIViewController {
         articlesTableView.refreshControl = refreshControl
         refreshControl.addTarget(self, action: #selector(refresh(_:)), for: .valueChanged)
     }
+    
+    func setUpPostedArticlesSectionHeader() {
+        articlesTableView.register(headerFooterViewClass: PostedArticlesLabel.self)
+    }
 
     @objc func refresh(_ sender: UIRefreshControl) {
         fetchAndSetArticles(refreshAll: true)

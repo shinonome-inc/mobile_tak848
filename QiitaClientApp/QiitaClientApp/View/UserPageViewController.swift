@@ -1,123 +1,52 @@
 //
-//  MypageViewController.swift
+//  UserPageViewController.swift
 //  QiitaClientApp
 //
-//  Created by Takuya Takahashi on 2022/03/14.
+//  Created by Takuya Takahashi on 2022/03/19.
 //
 
 import Alamofire
 import UIKit
 
-protocol UserPageViewControllerProtocol {
-    func presentFollowViewController(followMode mode: FollowMode)
-}
-
-class UserPageViewController: BaseArticlesViewController {
-    var followMode: FollowMode?
-   
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == Segue.toFollowViewController.rawValue {
-            if let nextVC = segue.destination as? FollowViewController,
-               let followMode = followMode
-            {
-                nextVC.configure(followMode: followMode)
-            }
-        }
+class UserPageViewController: BaseUserPageViewController {
+    func configure(user: QiitaUser) {
+        self.user = user
+        title = user.displayName
+        navigationItem.backButtonTitle = "\(user.displayName) \(user.displayId)"
     }
 
-    override func setUpTableView() {
-        articlesTableView.delegate = self
-        articlesTableView.dataSource = self
-        articlesTableView.registerCustomCell(UserArticleCell.self)
-        articlesTableView.refreshControl = refreshControl
-        refreshControl.addTarget(self, action: #selector(refresh(_:)), for: .valueChanged)
-        setUpTableViewUserInfoHeader()
-        setUpPostedArticlesSectionHeader()
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setUserInfoHeader()
     }
 
-    func setUpTableViewUserInfoHeader() {
-        articlesTableView.sectionHeaderTopPadding = 0
-        if let userInfoView = Bundle.main.loadNibNamed(UserInfoView.identifier, owner: self)?.first as? UIView {
-            userInfoView.translatesAutoresizingMaskIntoConstraints = false
-            articlesTableView.tableHeaderView = userInfoView
-            userInfoView.widthAnchor.constraint(equalTo: articlesTableView.widthAnchor).isActive = true
-            userInfoView.centerXAnchor.constraint(equalTo: articlesTableView.centerXAnchor).isActive = true
-            userInfoView.topAnchor.constraint(equalTo: articlesTableView.topAnchor).isActive = true
-        }
-        if let header = articlesTableView.tableHeaderView as? UserInfoView {
-            header.delegate = self
-        }
-    }
-
-    func setUpPostedArticlesSectionHeader() {
-        articlesTableView.register(headerFooterViewClass: PostedArticlesLabel.self)
-    }
-
-    override func settingsBeforeFetch(refreshAll: Bool) {
-        if refreshAll {
-            page = 1
-            articles = nil
-            articlesTableView.reloadData()
-            fetchAndSetUserInfo()
-        }
-        loading = true
-    }
-
-    override func fetchAndSetArticles(refreshAll: Bool = false) {
-        settingsBeforeFetch(refreshAll: refreshAll)
-        AF.request(AuthUserArticlesGetRequest(page: page))
-            .responseDecodable(of: AuthUserArticlesGetRequest.Response.self) { response in
-                self.setArticlesFromResponse(refreshAll: refreshAll, response: response)
-            }
-    }
-    
-    func fetchAndSetUserInfo() {
-        guard QiitaAccessToken().isExist,
-              let header = articlesTableView.tableHeaderView as? UserInfoView
+    override func fetchAndSetUserInfo() {
+        guard let header = articlesTableView.tableHeaderView as? UserInfoView,
+              let user = user
         else {
             return
         }
-        AF.request(AuthUserGetRequest())
-            .responseDecodable(of: AuthUserGetRequest.Response.self) { response in
+        AF.request(UserGetRequest(user: user))
+            .responseDecodable(of: UserGetRequest.Response.self) { response in
                 switch response.result {
                 case let .success(user):
                     header.configure(userData: user)
+                    self.user = user
+                    self.articlesTableView.layoutSubviews()
+                    self.articlesTableView.tableHeaderView?.layoutSubviews()
+                    self.articlesTableView.reloadData()
+                    
                 case .failure:
                     print("error")
                 }
             }
     }
-}
 
-extension UserPageViewController {
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCustomCell(with: UserArticleCell.self),
-              let articles = articles
-        else {
-            return UserArticleCell()
-        }
-        cell.configure(article: articles[indexPath.row])
-        return cell
-    }
-
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        guard let header = tableView.dequeueReusableHeaderFooterView(withClass: PostedArticlesLabel.self) else {
-            return PostedArticlesLabel()
-        }
-        return header
-    }
-
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        guard let header = tableView.dequeueReusableHeaderFooterView(withClass: PostedArticlesLabel.self) else {
-            return 0
-        }
-        return header.frame.height
-    }
-}
-
-extension UserPageViewController: UserPageViewControllerProtocol {
-    func presentFollowViewController(followMode mode: FollowMode) {
-        followMode = mode
-        performSegue(segue: .toFollowViewController, sender: nil)
+    override func fetchAndSetArticles(refreshAll: Bool = false) {
+        settingsBeforeFetch(refreshAll: refreshAll)
+        AF.request(UserArticlesGetRequest(user: user!, page: page, perPage: articlesPerPage))
+            .responseDecodable(of: AuthUserArticlesGetRequest.Response.self) { response in
+                self.setArticlesFromResponse(refreshAll: refreshAll, response: response)
+            }
     }
 }
