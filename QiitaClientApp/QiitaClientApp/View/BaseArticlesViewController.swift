@@ -14,6 +14,7 @@ class BaseArticlesViewController: UIViewController {
     let refreshControl = UIRefreshControl()
     var articles: [QiitaArticle]?
     var loading = false
+    // これ以上記事が無いorページネーションの最大ページへの到達検知フラグ
     var paginationFinished = false
     var page = 1
     let articlesPerPage = 30

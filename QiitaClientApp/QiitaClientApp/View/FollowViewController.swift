@@ -23,6 +23,7 @@ class FollowViewController: UIViewController {
     let usersPerPage = 30
     let maxPage = 100
     var loading = false
+    // これ以上記事が無いorページネーションの最大ページへの到達検知フラグ
     var paginationFinished = false
     
     override func viewDidLoad() {
