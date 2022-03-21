@@ -36,6 +36,9 @@
 		3B6EC12C27B94EB900C02F65 /* SegueHandlerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6EC12B27B94EB900C02F65 /* SegueHandlerType.swift */; };
 		3B6EC12F27B94F6800C02F65 /* Segue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6EC12E27B94F6800C02F65 /* Segue.swift */; };
 		3B6EC13527B9554A00C02F65 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B6EC13727B9554A00C02F65 /* Localizable.strings */; };
+		3B70AC5C27E84ADF006CA198 /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B70AC5B27E84ADE006CA198 /* TextViewController.swift */; };
+		3B70AC5E27E853EC006CA198 /* PrivacyPolicy.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3B70AC5D27E853EC006CA198 /* PrivacyPolicy.txt */; };
+		3B70AC6027E855FF006CA198 /* TermsOfService.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3B70AC5F27E855FF006CA198 /* TermsOfService.txt */; };
 		3B7C609C27DE422000907C3A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7C609B27DE422000907C3A /* SettingsViewController.swift */; };
 		3B7C609E27DE422E00907C3A /* UserPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7C609D27DE422E00907C3A /* UserPageViewController.swift */; };
 		3BB69B6327AF59A400B2C0F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB69B6227AF59A400B2C0F0 /* AppDelegate.swift */; };
@@ -49,6 +52,8 @@
 		3BBAB30027D7505400DD978E /* TagCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBAB2FF27D7505400DD978E /* TagCollectionCell.swift */; };
 		3BBBB84A27D8E0EB009418C9 /* TagDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBBB84927D8E0EB009418C9 /* TagDetailsViewController.swift */; };
 		3BBBB84C27D9628C009418C9 /* UIView+border.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBBB84B27D9628C009418C9 /* UIView+border.swift */; };
+		3BD3755E27E8BC9B00501807 /* SettingsTableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD3755D27E8BC9B00501807 /* SettingsTableData.swift */; };
+		3BD3756027E8BCCF00501807 /* TextViewMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD3755F27E8BCCF00501807 /* TextViewMode.swift */; };
 		3BD8F47027E2F1E1001049F5 /* URL+queryValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD8F46F27E2F1E1001049F5 /* URL+queryValue.swift */; };
 		3BD8F47227E2F2C2001049F5 /* QiitaToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD8F47127E2F2C2001049F5 /* QiitaToken.swift */; };
 		3BD8F47427E2FD15001049F5 /* FollowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD8F47327E2FD15001049F5 /* FollowViewController.swift */; };
@@ -101,6 +106,9 @@
 		3B6EC12B27B94EB900C02F65 /* SegueHandlerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueHandlerType.swift; sourceTree = "<group>"; };
 		3B6EC12E27B94F6800C02F65 /* Segue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Segue.swift; sourceTree = "<group>"; };
 		3B6EC13627B9554A00C02F65 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3B70AC5B27E84ADE006CA198 /* TextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
+		3B70AC5D27E853EC006CA198 /* PrivacyPolicy.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = PrivacyPolicy.txt; sourceTree = "<group>"; };
+		3B70AC5F27E855FF006CA198 /* TermsOfService.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = TermsOfService.txt; sourceTree = "<group>"; };
 		3B7C609B27DE422000907C3A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		3B7C609D27DE422E00907C3A /* UserPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPageViewController.swift; sourceTree = "<group>"; };
 		3BB69B5F27AF59A400B2C0F0 /* QiitaClientApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QiitaClientApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,6 +125,8 @@
 		3BBAB2FF27D7505400DD978E /* TagCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCollectionCell.swift; sourceTree = "<group>"; };
 		3BBBB84927D8E0EB009418C9 /* TagDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagDetailsViewController.swift; sourceTree = "<group>"; };
 		3BBBB84B27D9628C009418C9 /* UIView+border.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+border.swift"; sourceTree = "<group>"; };
+		3BD3755D27E8BC9B00501807 /* SettingsTableData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableData.swift; sourceTree = "<group>"; };
+		3BD3755F27E8BCCF00501807 /* TextViewMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewMode.swift; sourceTree = "<group>"; };
 		3BD8F46F27E2F1E1001049F5 /* URL+queryValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+queryValue.swift"; sourceTree = "<group>"; };
 		3BD8F47127E2F2C2001049F5 /* QiitaToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaToken.swift; sourceTree = "<group>"; };
 		3BD8F47327E2FD15001049F5 /* FollowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowViewController.swift; sourceTree = "<group>"; };
@@ -187,6 +197,7 @@
 				3B0DC8AB27C469BF00204351 /* ArticleViewController.swift */,
 				3BBBB84927D8E0EB009418C9 /* TagDetailsViewController.swift */,
 				3BD8F47327E2FD15001049F5 /* FollowViewController.swift */,
+				3B70AC5B27E84ADE006CA198 /* TextViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -205,6 +216,8 @@
 				3BECE16427C765C8007AB283 /* TagCollectionCell.xib */,
 				3B464DA527DF8C0A00AF5BAD /* UserInfoView.xib */,
 				3B464DA927E02EC700AF5BAD /* PostedArticlesLabel.xib */,
+				3B70AC5D27E853EC006CA198 /* PrivacyPolicy.txt */,
+				3B70AC5F27E855FF006CA198 /* TermsOfService.txt */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -236,6 +249,8 @@
 				3BBAB2FD27D5DA5800DD978E /* QiitaTag.swift */,
 				3BD8F47127E2F2C2001049F5 /* QiitaToken.swift */,
 				3BD8F47E27E44F85001049F5 /* APIRequest */,
+				3BD3755D27E8BC9B00501807 /* SettingsTableData.swift */,
+				3BD3755F27E8BCCF00501807 /* TextViewMode.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -390,12 +405,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B6EC13527B9554A00C02F65 /* Localizable.strings in Resources */,
+				3B70AC5E27E853EC006CA198 /* PrivacyPolicy.txt in Resources */,
 				3B464DA627DF8C0A00AF5BAD /* UserInfoView.xib in Resources */,
 				3B3529A327BBCF5900497836 /* NormalArticleCell.xib in Resources */,
 				3BE0B41927E1B187009C3FAD /* LoadingIndicatorView.xib in Resources */,
 				3BECE16527C765C8007AB283 /* TagCollectionCell.xib in Resources */,
 				3B39989727DCC66B00B7ACF9 /* .env in Resources */,
 				3B464DAA27E02EC700AF5BAD /* PostedArticlesLabel.xib in Resources */,
+				3B70AC6027E855FF006CA198 /* TermsOfService.txt in Resources */,
 				3BB69B6F27AF59A600B2C0F0 /* LaunchScreen.storyboard in Resources */,
 				3B464DAE27E03E4300AF5BAD /* UserArticleCell.xib in Resources */,
 				3B1FD4B827B91AF900D01974 /* Pacifico-Regular.ttf in Resources */,
@@ -493,7 +510,9 @@
 			files = (
 				3B464DAC27E02FD600AF5BAD /* PostedArticlesLabel.swift in Sources */,
 				3BB69B6727AF59A400B2C0F0 /* TopLoginViewController.swift in Sources */,
+				3BD3755E27E8BC9B00501807 /* SettingsTableData.swift in Sources */,
 				3BD8F48427E4504E001049F5 /* ArticlesGetRequest.swift in Sources */,
+				3BD3756027E8BCCF00501807 /* TextViewMode.swift in Sources */,
 				3BBBB84C27D9628C009418C9 /* UIView+border.swift in Sources */,
 				3BD8F47427E2FD15001049F5 /* FollowViewController.swift in Sources */,
 				3B0DC8AE27C4703100204351 /* UITableView+registerAndDequeue.swift in Sources */,
@@ -514,6 +533,7 @@
 				3BB69B6327AF59A400B2C0F0 /* AppDelegate.swift in Sources */,
 				3B6EC12F27B94F6800C02F65 /* Segue.swift in Sources */,
 				3B464DB227E0519700AF5BAD /* ArticleCell.swift in Sources */,
+				3B70AC5C27E84ADF006CA198 /* TextViewController.swift in Sources */,
 				3BBBB84A27D8E0EB009418C9 /* TagDetailsViewController.swift in Sources */,
 				3B464DA827DF8EE100AF5BAD /* UserInfoView.swift in Sources */,
 				3BD8F47B27E4147F001049F5 /* UINib+fileCache.swift in Sources */,
@@ -713,7 +733,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.tak848.playground.ios-qiita-client";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -743,7 +763,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.tak848.playground.ios-qiita-client";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
