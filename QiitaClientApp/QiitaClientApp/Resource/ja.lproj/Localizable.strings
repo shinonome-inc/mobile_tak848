@@ -8,6 +8,7 @@
 
 "-playground-" = "-PlayGround-";
 "login" = "ログイン";
+"logout" = "ログアウトする";
 "start without login" = "ログインせずに利用する";
 
 "feed" = "フィード";
@@ -24,3 +25,9 @@
 "followers" = "フォロワー";
 
 "posted articles" = "投稿記事";
+
+"app information" = "アプリ情報";
+"others" = "その他";
+"privacy policy" = "プライバシーポリシー";
+"terms of service" = "利用規約";
+"app version" = "アプリバージョン";

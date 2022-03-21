@@ -8,6 +8,7 @@
 
 "-playground-" = "-PlayGround-";
 "login" = "Login";
+"logout" = "Logout";
 "start without login" = "Start without Login";
 
 "feed" = "Feed";
@@ -24,3 +25,9 @@
 "followers" = "Followers";
 
 "posted articles" = "Posted articles";
+
+"app information" = "App information";
+"others" = "Others";
+"privacy policy" = "Privacy policy";
+"terms of service" = "Terms of service";
+"app version" = "App version";
