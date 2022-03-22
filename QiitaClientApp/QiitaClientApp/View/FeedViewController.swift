@@ -43,5 +43,6 @@ extension FeedViewController: UISearchBarDelegate {
             searchWord = nil
             fetchAndSetArticles(refreshAll: true)
         }
+        removeNoQueryMatchErrorSubView()
     }
 }

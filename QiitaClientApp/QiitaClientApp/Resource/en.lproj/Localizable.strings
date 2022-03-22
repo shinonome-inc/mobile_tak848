@@ -8,6 +8,7 @@
 
 "-playground-" = "-PlayGround-";
 "login" = "Login";
+"do login" = "Login";
 "start without login" = "Start without Login";
 
 "feed" = "Feed";
@@ -24,3 +25,11 @@
 "followers" = "Followers";
 
 "posted articles" = "Posted articles";
+
+"reload" = "Reload";
+"network error" = "Network Error";
+"please reload in a place with good network connection" = "Please reload in a place with good network connection";
+"login is required" = "Login is required";
+"login is required to use Mypage" = "Login is required to use Mypage";
+"no articles matching the search word" = "No articles matching the search word";
+"please change the search word and search again" = "Please change the search word and search again";

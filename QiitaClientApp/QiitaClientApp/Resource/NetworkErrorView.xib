@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB" customClass="NetworkErrorView" customModule="QiitaClientApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <visualEffectView opaque="NO" alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uso-cp-Gxb">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="EHe-fi-1V4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <color key="backgroundColor" name="AccentColor"/>
+                    <blurEffect style="regular"/>
+                </visualEffectView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qom-yV-JUb">
+                    <rect key="frame" x="24" y="814" width="366" height="50"/>
+                    <color key="backgroundColor" name="SecondaryColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="2uo-9M-LRi"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Reload">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <attributedString key="userComments">
+                        <fragment content="login button"/>
+                    </attributedString>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <real key="value" value="25"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="reload"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="onTapReloadButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="boN-QR-we6"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please reload in a place with good network connection" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VHJ-qF-Lm7">
+                    <rect key="frame" x="16" y="462.5" width="382" height="14.5"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                    <color key="textColor" name="SecondaryGrey"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="please reload in a place with good network connection"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Network" translatesAutoresizingMaskIntoConstraints="NO" id="FqC-iM-wDY">
+                    <rect key="frame" x="167" y="317.5" width="80" height="80"/>
+                    <color key="tintColor" name="SecondaryColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="49V-V9-WY3"/>
+                        <constraint firstAttribute="height" constant="80" id="Taw-E0-OCY"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Network error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jG2-Dz-9IJ">
+                    <rect key="frame" x="161" y="439.5" width="92.5" height="17"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                    <color key="textColor" name="PrimaryBlack"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="network error"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="jG2-Dz-9IJ" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="7X8-hz-SFF"/>
+                <constraint firstItem="jG2-Dz-9IJ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Bdh-VK-SDl"/>
+                <constraint firstItem="VHJ-qF-Lm7" firstAttribute="top" secondItem="jG2-Dz-9IJ" secondAttribute="bottom" constant="6" id="DZi-Gu-9VK"/>
+                <constraint firstItem="qom-yV-JUb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="24" id="KO4-YZ-S2l"/>
+                <constraint firstItem="uso-cp-Gxb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="QfW-Gf-kuR"/>
+                <constraint firstItem="VHJ-qF-Lm7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="RNn-V6-iBX"/>
+                <constraint firstAttribute="bottom" secondItem="qom-yV-JUb" secondAttribute="bottom" constant="32" id="TaC-Wx-75y"/>
+                <constraint firstAttribute="trailing" secondItem="VHJ-qF-Lm7" secondAttribute="trailing" constant="16" id="ZTu-ZW-nXN"/>
+                <constraint firstAttribute="trailing" secondItem="qom-yV-JUb" secondAttribute="trailing" constant="24" id="bxU-5a-Bam"/>
+                <constraint firstItem="FqC-iM-wDY" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="cA1-Xo-Zsr"/>
+                <constraint firstAttribute="bottom" secondItem="uso-cp-Gxb" secondAttribute="bottom" id="cVW-KK-ODO"/>
+                <constraint firstAttribute="trailing" secondItem="uso-cp-Gxb" secondAttribute="trailing" id="dMn-ld-6tb"/>
+                <constraint firstItem="jG2-Dz-9IJ" firstAttribute="top" secondItem="FqC-iM-wDY" secondAttribute="bottom" constant="42" id="giF-mf-sJW"/>
+                <constraint firstItem="uso-cp-Gxb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="t3v-L1-ocH"/>
+                <constraint firstItem="VHJ-qF-Lm7" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="xCU-Sd-8x3"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="152.67857142857142"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Network" width="80" height="80"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="PrimaryBlack">
+            <color red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SecondaryColor">
+            <color red="0.45490196078431372" green="0.75686274509803919" blue="0.22745098039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SecondaryGrey">
+            <color red="0.50980392156862742" green="0.50980392156862742" blue="0.50980392156862742" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

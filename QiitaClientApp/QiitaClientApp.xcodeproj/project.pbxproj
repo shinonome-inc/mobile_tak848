@@ -49,6 +49,12 @@
 		3BBAB30027D7505400DD978E /* TagCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBAB2FF27D7505400DD978E /* TagCollectionCell.swift */; };
 		3BBBB84A27D8E0EB009418C9 /* TagDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBBB84927D8E0EB009418C9 /* TagDetailsViewController.swift */; };
 		3BBBB84C27D9628C009418C9 /* UIView+border.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBBB84B27D9628C009418C9 /* UIView+border.swift */; };
+		3BD3756227E8C5D700501807 /* NetworkErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BD3756127E8C5D700501807 /* NetworkErrorView.xib */; };
+		3BD3756427E9434C00501807 /* NetworkErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD3756327E9434C00501807 /* NetworkErrorView.swift */; };
+		3BD3756827E9613600501807 /* LoginRequiredErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BD3756727E9613600501807 /* LoginRequiredErrorView.xib */; };
+		3BD3756A27E9616000501807 /* NoQueryMatchErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BD3756927E9616000501807 /* NoQueryMatchErrorView.xib */; };
+		3BD3756C27E9618100501807 /* LoginRequiredErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD3756B27E9618100501807 /* LoginRequiredErrorView.swift */; };
+		3BD3756E27E9619300501807 /* NoQueryMatchErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD3756D27E9619300501807 /* NoQueryMatchErrorView.swift */; };
 		3BD8F47027E2F1E1001049F5 /* URL+queryValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD8F46F27E2F1E1001049F5 /* URL+queryValue.swift */; };
 		3BD8F47227E2F2C2001049F5 /* QiitaToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD8F47127E2F2C2001049F5 /* QiitaToken.swift */; };
 		3BD8F47427E2FD15001049F5 /* FollowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD8F47327E2FD15001049F5 /* FollowViewController.swift */; };
@@ -117,6 +123,12 @@
 		3BBAB2FF27D7505400DD978E /* TagCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCollectionCell.swift; sourceTree = "<group>"; };
 		3BBBB84927D8E0EB009418C9 /* TagDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagDetailsViewController.swift; sourceTree = "<group>"; };
 		3BBBB84B27D9628C009418C9 /* UIView+border.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+border.swift"; sourceTree = "<group>"; };
+		3BD3756127E8C5D700501807 /* NetworkErrorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NetworkErrorView.xib; sourceTree = "<group>"; };
+		3BD3756327E9434C00501807 /* NetworkErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrorView.swift; sourceTree = "<group>"; };
+		3BD3756727E9613600501807 /* LoginRequiredErrorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginRequiredErrorView.xib; sourceTree = "<group>"; };
+		3BD3756927E9616000501807 /* NoQueryMatchErrorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoQueryMatchErrorView.xib; sourceTree = "<group>"; };
+		3BD3756B27E9618100501807 /* LoginRequiredErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequiredErrorView.swift; sourceTree = "<group>"; };
+		3BD3756D27E9619300501807 /* NoQueryMatchErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoQueryMatchErrorView.swift; sourceTree = "<group>"; };
 		3BD8F46F27E2F1E1001049F5 /* URL+queryValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+queryValue.swift"; sourceTree = "<group>"; };
 		3BD8F47127E2F2C2001049F5 /* QiitaToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaToken.swift; sourceTree = "<group>"; };
 		3BD8F47327E2FD15001049F5 /* FollowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowViewController.swift; sourceTree = "<group>"; };
@@ -169,6 +181,9 @@
 				3B464DA727DF8EE100AF5BAD /* UserInfoView.swift */,
 				3B464DAB27E02FD600AF5BAD /* PostedArticlesLabel.swift */,
 				3BD8F47C27E41D56001049F5 /* LoadingIndicatorView.swift */,
+				3BD3756327E9434C00501807 /* NetworkErrorView.swift */,
+				3BD3756B27E9618100501807 /* LoginRequiredErrorView.swift */,
+				3BD3756D27E9619300501807 /* NoQueryMatchErrorView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -205,6 +220,9 @@
 				3BECE16427C765C8007AB283 /* TagCollectionCell.xib */,
 				3B464DA527DF8C0A00AF5BAD /* UserInfoView.xib */,
 				3B464DA927E02EC700AF5BAD /* PostedArticlesLabel.xib */,
+				3BD3756127E8C5D700501807 /* NetworkErrorView.xib */,
+				3BD3756727E9613600501807 /* LoginRequiredErrorView.xib */,
+				3BD3756927E9616000501807 /* NoQueryMatchErrorView.xib */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -395,13 +413,16 @@
 				3BE0B41927E1B187009C3FAD /* LoadingIndicatorView.xib in Resources */,
 				3BECE16527C765C8007AB283 /* TagCollectionCell.xib in Resources */,
 				3B39989727DCC66B00B7ACF9 /* .env in Resources */,
+				3BD3756827E9613600501807 /* LoginRequiredErrorView.xib in Resources */,
 				3B464DAA27E02EC700AF5BAD /* PostedArticlesLabel.xib in Resources */,
 				3BB69B6F27AF59A600B2C0F0 /* LaunchScreen.storyboard in Resources */,
 				3B464DAE27E03E4300AF5BAD /* UserArticleCell.xib in Resources */,
 				3B1FD4B827B91AF900D01974 /* Pacifico-Regular.ttf in Resources */,
 				3B39989F27DCCB4100B7ACF9 /* example.env in Resources */,
 				3BB69B6C27AF59A600B2C0F0 /* Assets.xcassets in Resources */,
+				3BD3756227E8C5D700501807 /* NetworkErrorView.xib in Resources */,
 				3BB69B6A27AF59A500B2C0F0 /* Main.storyboard in Resources */,
+				3BD3756A27E9616000501807 /* NoQueryMatchErrorView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,6 +516,7 @@
 				3BB69B6727AF59A400B2C0F0 /* TopLoginViewController.swift in Sources */,
 				3BD8F48427E4504E001049F5 /* ArticlesGetRequest.swift in Sources */,
 				3BBBB84C27D9628C009418C9 /* UIView+border.swift in Sources */,
+				3BD3756C27E9618100501807 /* LoginRequiredErrorView.swift in Sources */,
 				3BD8F47427E2FD15001049F5 /* FollowViewController.swift in Sources */,
 				3B0DC8AE27C4703100204351 /* UITableView+registerAndDequeue.swift in Sources */,
 				3B7C609E27DE422E00907C3A /* UserPageViewController.swift in Sources */,
@@ -507,6 +529,7 @@
 				3B0DC89D27C45D8800204351 /* QiitaUser.swift in Sources */,
 				3B0DC8B427C4771C00204351 /* String+localization.swift in Sources */,
 				3BD8F47D27E41D56001049F5 /* LoadingIndicatorView.swift in Sources */,
+				3BD3756427E9434C00501807 /* NetworkErrorView.swift in Sources */,
 				3B7C609C27DE422000907C3A /* SettingsViewController.swift in Sources */,
 				3BD8F48A27E450E3001049F5 /* AuthUserGetRequest.swift in Sources */,
 				3B0DC8A727C465F300204351 /* Date+dateString.swift in Sources */,
@@ -532,6 +555,7 @@
 				3BD8F48C27E45104001049F5 /* AuthUserArticlesGetRequest.swift in Sources */,
 				3BB69B6527AF59A400B2C0F0 /* SceneDelegate.swift in Sources */,
 				3B0DC8AA27C4662300204351 /* UIImageView+cacheImage.swift in Sources */,
+				3BD3756E27E9619300501807 /* NoQueryMatchErrorView.swift in Sources */,
 				3BBAB2FC27D5D87600DD978E /* TagsViewController.swift in Sources */,
 				3BE0B41B27E2C8F5009C3FAD /* QiitaAccessToken.swift in Sources */,
 				3BBAB2FE27D5DA5800DD978E /* QiitaTag.swift in Sources */,
