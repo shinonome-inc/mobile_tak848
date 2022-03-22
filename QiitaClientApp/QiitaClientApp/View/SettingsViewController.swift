@@ -21,7 +21,7 @@ class SettingsViewController: UIViewController {
         settingsTableView.reloadData()
     }
 
-    func login() {
+    func moveToTopPage() {
         if let tabBarController = tabBarController,
            let topLoginViewController = storyboard!.instantiateViewController(with: TopLoginViewController.self)
         {
@@ -31,7 +31,7 @@ class SettingsViewController: UIViewController {
         }
     }
 
-    func logout() {
+    func discardTokenAndMoveToTopOauthPage() {
         QiitaAccessToken().remove()
         if let tabBarController = tabBarController,
            let topLoginViewController = storyboard!.instantiateViewController(with: TopLoginViewController.self)
@@ -139,9 +139,9 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
             switch othersCell {
             case .logoutOrLogin:
                 if QiitaAccessToken().isExist {
-                    logout()
+                    discardTokenAndMoveToTopOauthPage()
                 } else {
-                    login()
+                    moveToTopPage()
                 }
             case .none:
                 break
