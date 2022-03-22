@@ -9,7 +9,8 @@
 "-playground-" = "-PlayGround-";
 "login" = "ログイン";
 "do login" = "ログインする";
-"logout" = "ログアウトする";
+"logout" = "ログアウト";
+"do logout" = "ログアウトする";
 "start without login" = "ログインせずに利用する";
 
 "feed" = "フィード";

@@ -42,9 +42,9 @@ enum SettingsOthersCell: Int, CaseIterable {
         switch self {
         case .logoutOrLogin:
             if QiitaAccessToken().isExist {
-                return "logout".localized()!
+                return "do logout".localized()!
             } else {
-                return "login".localized()!
+                return "do login".localized()!
             }
         }
     }

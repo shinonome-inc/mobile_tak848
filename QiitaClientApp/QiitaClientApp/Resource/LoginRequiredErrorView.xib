@@ -15,15 +15,6 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <visualEffectView opaque="NO" alpha="0.30000001192092896" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xjg-Rb-W4P">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="5J2-XV-f2x">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    </view>
-                    <color key="backgroundColor" name="AccentColor"/>
-                    <blurEffect style="regular"/>
-                </visualEffectView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oBT-yO-S47">
                     <rect key="frame" x="24" y="814" width="366" height="50"/>
                     <color key="backgroundColor" name="SecondaryColor"/>
@@ -44,9 +35,12 @@
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="do login"/>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="onLoginButtonClicked:" destination="Hf2-G6-PYs" eventType="touchUpInside" id="1ZF-EW-rlu"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login is required to use Mypage" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oC8-NB-IoR">
-                    <rect key="frame" x="16" y="462.5" width="382" height="14.5"/>
+                    <rect key="frame" x="16" y="441" width="382" height="14.5"/>
                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                     <color key="textColor" name="SecondaryGrey"/>
                     <nil key="highlightedColor"/>
@@ -55,7 +49,7 @@
                     </userDefinedRuntimeAttributes>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login is required" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qLD-GR-ko2">
-                    <rect key="frame" x="152" y="439.5" width="110" height="17"/>
+                    <rect key="frame" x="152" y="418" width="110" height="17"/>
                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                     <color key="textColor" name="PrimaryBlack"/>
                     <nil key="highlightedColor"/>
@@ -68,16 +62,12 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="oBT-yO-S47" firstAttribute="leading" secondItem="Hf2-G6-PYs" secondAttribute="leading" constant="24" id="97T-QH-E3j"/>
-                <constraint firstItem="xjg-Rb-W4P" firstAttribute="leading" secondItem="Hf2-G6-PYs" secondAttribute="leading" id="D8U-8Y-PlO"/>
+                <constraint firstItem="oC8-NB-IoR" firstAttribute="centerY" secondItem="Hf2-G6-PYs" secondAttribute="centerY" id="BNr-Ig-UXG"/>
                 <constraint firstItem="oC8-NB-IoR" firstAttribute="centerX" secondItem="Hf2-G6-PYs" secondAttribute="centerX" id="MKM-KL-BwP"/>
                 <constraint firstItem="qLD-GR-ko2" firstAttribute="centerX" secondItem="Hf2-G6-PYs" secondAttribute="centerX" id="fgZ-Rv-jpQ"/>
-                <constraint firstItem="xjg-Rb-W4P" firstAttribute="top" secondItem="Hf2-G6-PYs" secondAttribute="top" id="ipG-KM-Cxe"/>
                 <constraint firstAttribute="trailing" secondItem="oBT-yO-S47" secondAttribute="trailing" constant="24" id="j6W-2x-xaT"/>
                 <constraint firstItem="oC8-NB-IoR" firstAttribute="top" secondItem="qLD-GR-ko2" secondAttribute="bottom" constant="6" id="jid-gg-vMe"/>
                 <constraint firstAttribute="trailing" secondItem="oC8-NB-IoR" secondAttribute="trailing" constant="16" id="jsh-c8-2yy"/>
-                <constraint firstItem="qLD-GR-ko2" firstAttribute="centerY" secondItem="Hf2-G6-PYs" secondAttribute="centerY" id="l3Q-SA-XR8"/>
-                <constraint firstAttribute="bottom" secondItem="xjg-Rb-W4P" secondAttribute="bottom" id="oie-EM-X0c"/>
-                <constraint firstAttribute="trailing" secondItem="xjg-Rb-W4P" secondAttribute="trailing" id="tRv-60-MYJ"/>
                 <constraint firstItem="oC8-NB-IoR" firstAttribute="leading" secondItem="Hf2-G6-PYs" secondAttribute="leading" constant="16" id="y55-E5-bFb"/>
                 <constraint firstAttribute="bottom" secondItem="oBT-yO-S47" secondAttribute="bottom" constant="32" id="yNB-n9-7ny"/>
             </constraints>
@@ -85,9 +75,6 @@
         </view>
     </objects>
     <resources>
-        <namedColor name="AccentColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="PrimaryBlack">
             <color red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

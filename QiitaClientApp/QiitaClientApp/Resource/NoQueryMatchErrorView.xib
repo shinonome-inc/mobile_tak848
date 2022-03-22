@@ -15,15 +15,6 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <visualEffectView opaque="NO" alpha="0.30000001192092896" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kr3-DV-MPY">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="zkN-Fq-b25">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    </view>
-                    <color key="backgroundColor" name="AccentColor"/>
-                    <blurEffect style="regular"/>
-                </visualEffectView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please change the search word and search again" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ial-XT-2qd">
                     <rect key="frame" x="16" y="462.5" width="382" height="14.5"/>
                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
@@ -47,23 +38,16 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="JIk-tb-Lld" firstAttribute="centerX" secondItem="9iz-wC-TPA" secondAttribute="centerX" id="F3M-7S-21u"/>
-                <constraint firstItem="kr3-DV-MPY" firstAttribute="leading" secondItem="9iz-wC-TPA" secondAttribute="leading" id="JAg-Ry-tq4"/>
-                <constraint firstItem="kr3-DV-MPY" firstAttribute="top" secondItem="9iz-wC-TPA" secondAttribute="top" id="Nd9-t3-Ovn"/>
                 <constraint firstItem="JIk-tb-Lld" firstAttribute="centerY" secondItem="9iz-wC-TPA" secondAttribute="centerY" id="Q0n-vX-MwF"/>
-                <constraint firstAttribute="trailing" secondItem="kr3-DV-MPY" secondAttribute="trailing" id="gel-tK-GgW"/>
                 <constraint firstItem="ial-XT-2qd" firstAttribute="top" secondItem="JIk-tb-Lld" secondAttribute="bottom" constant="6" id="idp-YW-W42"/>
                 <constraint firstAttribute="trailing" secondItem="ial-XT-2qd" secondAttribute="trailing" constant="16" id="mZ5-Cc-IUh"/>
                 <constraint firstItem="ial-XT-2qd" firstAttribute="leading" secondItem="9iz-wC-TPA" secondAttribute="leading" constant="16" id="nNQ-z8-KQd"/>
-                <constraint firstAttribute="bottom" secondItem="kr3-DV-MPY" secondAttribute="bottom" id="rnI-u7-Kd7"/>
                 <constraint firstItem="ial-XT-2qd" firstAttribute="centerX" secondItem="9iz-wC-TPA" secondAttribute="centerX" id="wy4-v1-bny"/>
             </constraints>
             <point key="canvasLocation" x="180" y="158"/>
         </view>
     </objects>
     <resources>
-        <namedColor name="AccentColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="PrimaryBlack">
             <color red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

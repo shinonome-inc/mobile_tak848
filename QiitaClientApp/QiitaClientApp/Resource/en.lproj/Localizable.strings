@@ -10,6 +10,7 @@
 "login" = "Login";
 "do login" = "Login";
 "logout" = "Logout";
+"do logout" = "Logout";
 "start without login" = "Start without Login";
 
 "feed" = "Feed";

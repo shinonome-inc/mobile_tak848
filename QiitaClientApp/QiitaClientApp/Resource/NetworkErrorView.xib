@@ -14,15 +14,6 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <visualEffectView opaque="NO" alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uso-cp-Gxb">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="EHe-fi-1V4">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    </view>
-                    <color key="backgroundColor" name="AccentColor"/>
-                    <blurEffect style="regular"/>
-                </visualEffectView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qom-yV-JUb">
                     <rect key="frame" x="24" y="814" width="366" height="50"/>
                     <color key="backgroundColor" name="SecondaryColor"/>
@@ -80,16 +71,12 @@
                 <constraint firstItem="jG2-Dz-9IJ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Bdh-VK-SDl"/>
                 <constraint firstItem="VHJ-qF-Lm7" firstAttribute="top" secondItem="jG2-Dz-9IJ" secondAttribute="bottom" constant="6" id="DZi-Gu-9VK"/>
                 <constraint firstItem="qom-yV-JUb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="24" id="KO4-YZ-S2l"/>
-                <constraint firstItem="uso-cp-Gxb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="QfW-Gf-kuR"/>
                 <constraint firstItem="VHJ-qF-Lm7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="RNn-V6-iBX"/>
                 <constraint firstAttribute="bottom" secondItem="qom-yV-JUb" secondAttribute="bottom" constant="32" id="TaC-Wx-75y"/>
                 <constraint firstAttribute="trailing" secondItem="VHJ-qF-Lm7" secondAttribute="trailing" constant="16" id="ZTu-ZW-nXN"/>
                 <constraint firstAttribute="trailing" secondItem="qom-yV-JUb" secondAttribute="trailing" constant="24" id="bxU-5a-Bam"/>
                 <constraint firstItem="FqC-iM-wDY" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="cA1-Xo-Zsr"/>
-                <constraint firstAttribute="bottom" secondItem="uso-cp-Gxb" secondAttribute="bottom" id="cVW-KK-ODO"/>
-                <constraint firstAttribute="trailing" secondItem="uso-cp-Gxb" secondAttribute="trailing" id="dMn-ld-6tb"/>
                 <constraint firstItem="jG2-Dz-9IJ" firstAttribute="top" secondItem="FqC-iM-wDY" secondAttribute="bottom" constant="42" id="giF-mf-sJW"/>
-                <constraint firstItem="uso-cp-Gxb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="t3v-L1-ocH"/>
                 <constraint firstItem="VHJ-qF-Lm7" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="xCU-Sd-8x3"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="152.67857142857142"/>
@@ -97,9 +84,6 @@
     </objects>
     <resources>
         <image name="Network" width="80" height="80"/>
-        <namedColor name="AccentColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="PrimaryBlack">
             <color red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
