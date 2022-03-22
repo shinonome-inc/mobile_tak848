@@ -221,7 +221,7 @@
             </objects>
             <point key="canvasLocation" x="4096" y="1629"/>
         </scene>
-        <!--Settings View Controller-->
+        <!--Settings-->
         <scene sceneID="tal-nF-Zag">
             <objects>
                 <viewController id="gma-FY-b2o" customClass="SettingsViewController" customModule="QiitaClientApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -243,7 +243,7 @@
                             <constraint firstItem="wh9-3Z-E7O" firstAttribute="top" secondItem="h9a-FK-c64" secondAttribute="top" id="mpc-47-cvQ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="ePH-gJ-Lme"/>
+                    <navigationItem key="navigationItem" title="Settings" id="ePH-gJ-Lme"/>
                     <connections>
                         <outlet property="settingsTableView" destination="wh9-3Z-E7O" id="dWt-8Y-dqK"/>
                     </connections>
@@ -545,6 +545,9 @@ MAIL: Matarai@shinonome.io</string>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hUj-CW-7NM">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Pacifico-Regular" family="Pacifico" pointSize="17"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
