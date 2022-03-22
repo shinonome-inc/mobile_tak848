@@ -69,6 +69,9 @@ class TagsViewController: UIViewController {
                     } else {
                         self.tags?.append(contentsOf: tags)
                     }
+                    if tags.count < self.tagsPerPage || self.page > self.maxPage {
+                        self.paginationFinished = true
+                    }
                 case .failure:
                     self.tags = nil
                 }
