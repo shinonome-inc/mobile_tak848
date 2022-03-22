@@ -9,6 +9,7 @@
 "-playground-" = "-PlayGround-";
 "login" = "Login";
 "do login" = "Login";
+"logout" = "Logout";
 "start without login" = "Start without Login";
 
 "feed" = "Feed";
@@ -26,6 +27,11 @@
 
 "posted articles" = "Posted articles";
 
+"app information" = "App information";
+"others" = "Others";
+"privacy policy" = "Privacy policy";
+"terms of service" = "Terms of service";
+"app version" = "App version";
 "reload" = "Reload";
 "network error" = "Network Error";
 "please reload in a place with good network connection" = "Please reload in a place with good network connection";

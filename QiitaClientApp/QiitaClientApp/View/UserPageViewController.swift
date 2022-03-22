@@ -20,8 +20,27 @@ class UserPageViewController: BaseUserPageViewController {
         setUserInfoHeader()
     }
 
+    override func settingsBeforeFetch(refreshAll: Bool) {
+        if refreshAll {
+            page = 1
+            articles = nil
+            articlesTableView.reloadData()
+            fetchAndSetUserInfo()
+        }
+        loading = true
+    }
+
+    override func fetchAndSetArticles(refreshAll: Bool = false) {
+        settingsBeforeFetch(refreshAll: refreshAll)
+        AF.request(AuthUserArticlesGetRequest(page: page, perPage: articlesPerPage))
+            .responseDecodable(of: AuthUserArticlesGetRequest.Response.self) { response in
+                self.setArticlesFromResponse(refreshAll: refreshAll, response: response)
+            }
+    }
+
     override func fetchAndSetUserInfo() {
-        guard let header = articlesTableView.tableHeaderView as? UserInfoView,
+        guard QiitaAccessToken().isExist,
+              let header = articlesTableView.tableHeaderView as? UserInfoView,
               let user = user
         else {
             return
@@ -37,14 +56,6 @@ class UserPageViewController: BaseUserPageViewController {
                 case .failure:
                     print("error")
                 }
-            }
-    }
-
-    override func fetchAndSetArticles(refreshAll: Bool = false) {
-        settingsBeforeFetch(refreshAll: refreshAll)
-        AF.request(UserArticlesGetRequest(user: user!, page: page, perPage: articlesPerPage))
-            .responseDecodable(of: AuthUserArticlesGetRequest.Response.self) { response in
-                self.setArticlesFromResponse(refreshAll: refreshAll, response: response)
             }
     }
 }

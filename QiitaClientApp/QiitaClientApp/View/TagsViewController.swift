@@ -27,7 +27,7 @@ struct CollectionSize {
 }
 
 class TagsViewController: UIViewController {
-    @IBOutlet weak var tagsCollectionView: UICollectionView!
+    @IBOutlet weak var tagsCollectionView: UICollectionView?
     
     let refreshControl = UIRefreshControl()
     var tags: [QiitaTag]?
@@ -54,7 +54,7 @@ class TagsViewController: UIViewController {
         if refreshAll {
             page = 1
             tags = nil
-            tagsCollectionView.reloadData()
+            tagsCollectionView?.reloadData()
             paginationFinished = false
         }
         loading = true
@@ -69,19 +69,22 @@ class TagsViewController: UIViewController {
                     } else {
                         self.tags?.append(contentsOf: tags)
                     }
+                    if tags.count < self.tagsPerPage || self.page > self.maxPage {
+                        self.paginationFinished = true
+                    }
                 case .failure:
                     self.tags = nil
                 }
                 self.loading = false
-                self.tagsCollectionView.reloadData()
+                self.tagsCollectionView?.reloadData()
             }
     }
 
     func setUpCollectionView() {
-        tagsCollectionView.delegate = self
-        tagsCollectionView.dataSource = self
-        tagsCollectionView.registerCustomCell(TagCollectionCell.self)
-        tagsCollectionView.refreshControl = refreshControl
+        tagsCollectionView?.delegate = self
+        tagsCollectionView?.dataSource = self
+        tagsCollectionView?.registerCustomCell(TagCollectionCell.self)
+        tagsCollectionView?.refreshControl = refreshControl
         refreshControl.addTarget(self, action: #selector(refresh(_:)), for: .valueChanged)
     }
 
@@ -139,7 +142,7 @@ extension TagsViewController: UICollectionViewDelegate, UICollectionViewDataSour
         if let tags = tags,
            tags.count != 0
         {
-            tagsCollectionView.reloadData()
+            tagsCollectionView?.reloadData()
         }
     }
 }
