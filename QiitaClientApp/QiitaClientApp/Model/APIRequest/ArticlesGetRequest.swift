@@ -11,10 +11,10 @@ import Foundation
 struct ArticlesGetRequest: QiitaAPIRequest {
     public typealias Response = [QiitaArticle]
     var path: String { "/items" }
-    var perPage: Int { 30 }
     let method = HTTPMethod.get
 
     let page: Int
+    var perPage: Int
     let query: String?
 
     var parameters: Parameters {
