@@ -78,10 +78,6 @@ class BaseArticlesViewController: UIViewController {
         articlesTableView.register(headerFooterViewClass: PostedArticlesLabel.self)
     }
 
-    func setUpPostedArticlesSectionHeader() {
-        articlesTableView.register(headerFooterViewClass: PostedArticlesLabel.self)
-    }
-
     @objc func refresh(_ sender: UIRefreshControl) {
         fetchAndSetArticles(refreshAll: true)
         refreshControl.endRefreshing()

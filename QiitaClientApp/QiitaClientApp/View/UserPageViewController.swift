@@ -58,12 +58,4 @@ class UserPageViewController: BaseUserPageViewController {
                 }
             }
     }
-
-    override func fetchAndSetArticles(refreshAll: Bool = false) {
-        settingsBeforeFetch(refreshAll: refreshAll)
-        AF.request(UserArticlesGetRequest(user: user!, page: page, perPage: articlesPerPage))
-            .responseDecodable(of: AuthUserArticlesGetRequest.Response.self) { response in
-                self.setArticlesFromResponse(refreshAll: refreshAll, response: response)
-            }
-    }
 }
