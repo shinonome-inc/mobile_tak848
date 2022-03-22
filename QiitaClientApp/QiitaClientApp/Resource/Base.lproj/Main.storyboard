@@ -142,9 +142,7 @@
                             <constraint firstItem="Vli-fE-Z4L" firstAttribute="bottom" secondItem="3rU-n7-IKk" secondAttribute="bottom" id="kIx-Ad-PAd"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Tags" id="ymR-SW-qdy">
-                        <barButtonItem key="backBarButtonItem" title=" " id="lkm-oQ-Txg"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Tags" id="ymR-SW-qdy"/>
                     <connections>
                         <outlet property="tagsCollectionView" destination="3rU-n7-IKk" id="ac9-b4-RGq"/>
                         <segue destination="OdO-6O-yui" kind="show" identifier="toTagDetailsViewController" id="ERK-hY-ODK"/>
@@ -157,7 +155,7 @@
         <!--Tag Details View Controller-->
         <scene sceneID="UdV-bx-nTK">
             <objects>
-                <viewController storyboardIdentifier="TagDetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OdO-6O-yui" customClass="TagDetailsViewController" customModule="QiitaClientApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TagDetailsViewController" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OdO-6O-yui" customClass="TagDetailsViewController" customModule="QiitaClientApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OOp-0R-tj8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -188,7 +186,7 @@
         <!--Mypage-->
         <scene sceneID="WGd-wG-jmq">
             <objects>
-                <viewController id="3OB-vE-MFP" customClass="UserPageViewController" customModule="QiitaClientApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="3OB-vE-MFP" customClass="MyPageViewController" customModule="QiitaClientApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DRl-IU-DMH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -208,12 +206,9 @@
                             <constraint firstItem="jan-2I-3LO" firstAttribute="top" secondItem="yGH-zc-P0x" secondAttribute="top" id="vet-S1-Xpt"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Mypage" id="loP-os-YLb">
-                        <barButtonItem key="backBarButtonItem" title=" " id="ah6-bp-sA8"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Mypage" id="loP-os-YLb"/>
                     <connections>
                         <outlet property="articlesTableView" destination="jan-2I-3LO" id="P2r-s5-cdR"/>
-                        <segue destination="J8h-Xo-pxO" kind="show" identifier="toFollowViewController" id="MY0-Lt-t5u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EBw-dt-QLr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -223,18 +218,70 @@
         <!--Follow View Controller-->
         <scene sceneID="g7e-LS-VH7">
             <objects>
-                <viewController storyboardIdentifier="FollowViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="J8h-Xo-pxO" customClass="FollowViewController" customModule="QiitaClientApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FollowViewController" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="J8h-Xo-pxO" customClass="FollowViewController" customModule="QiitaClientApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tsa-ua-gJa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KIw-T1-8eG">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="4NV-Lh-DpI">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="lHR-rp-quE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lHR-rp-quE" firstAttribute="bottom" secondItem="KIw-T1-8eG" secondAttribute="bottom" id="CBy-Bw-0TZ"/>
+                            <constraint firstItem="KIw-T1-8eG" firstAttribute="top" secondItem="lHR-rp-quE" secondAttribute="top" id="Shg-xD-qAv"/>
+                            <constraint firstItem="lHR-rp-quE" firstAttribute="trailing" secondItem="KIw-T1-8eG" secondAttribute="trailing" id="YGc-lM-ult"/>
+                            <constraint firstItem="KIw-T1-8eG" firstAttribute="leading" secondItem="lHR-rp-quE" secondAttribute="leading" id="tf0-28-ZSK"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="shA-iB-wGk"/>
+                    <connections>
+                        <outlet property="usersCollectionView" destination="KIw-T1-8eG" id="SRM-fd-Pwf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PM6-oJ-PWw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4096" y="1629"/>
+        </scene>
+        <!--User Page View Controller-->
+        <scene sceneID="8SE-kg-NVx">
+            <objects>
+                <viewController storyboardIdentifier="UserPageViewController" hidesBottomBarWhenPushed="YES" id="CYA-aU-dOJ" customClass="UserPageViewController" customModule="QiitaClientApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FKH-8G-XCQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="rHx-uV-2xc">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kXS-pI-80y"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rHx-uV-2xc" firstAttribute="leading" secondItem="kXS-pI-80y" secondAttribute="leading" id="UYo-ls-cks"/>
+                            <constraint firstItem="kXS-pI-80y" firstAttribute="bottom" secondItem="rHx-uV-2xc" secondAttribute="bottom" id="dJm-uu-Z7E"/>
+                            <constraint firstItem="kXS-pI-80y" firstAttribute="trailing" secondItem="rHx-uV-2xc" secondAttribute="trailing" id="qFx-GI-8g4"/>
+                            <constraint firstItem="rHx-uV-2xc" firstAttribute="top" secondItem="kXS-pI-80y" secondAttribute="top" id="sKt-Ss-iLr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="articlesTableView" destination="rHx-uV-2xc" id="83l-vL-kYJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1B2-vf-xWw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4983" y="1629"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="tal-nF-Zag">

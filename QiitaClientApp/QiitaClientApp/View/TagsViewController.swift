@@ -47,6 +47,7 @@ class TagsViewController: UIViewController {
         super.viewDidLoad()
         setUpCollectionView()
         fetchAndSetTags(refreshAll: true)
+        navigationItem.backButtonDisplayMode = .minimal
     }
 
     func fetchAndSetTags(refreshAll: Bool = false) {
@@ -138,7 +139,11 @@ extension TagsViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
 
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        tagsCollectionView.reloadData()
+        if let tags = tags,
+           tags.count != 0
+        {
+            tagsCollectionView.reloadData()
+        }
     }
 }
 

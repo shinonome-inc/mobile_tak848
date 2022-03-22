@@ -111,6 +111,7 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="descriptionBottomSpaceConstraint" destination="z30-lZ-ipk" id="d7x-k8-i9m"/>
                 <outlet property="userDescriptionLabel" destination="dfr-eR-rOU" id="SGQ-EZ-KtF"/>
                 <outlet property="userFollowersButton" destination="38m-4j-2f2" id="gW0-iC-FdB"/>
                 <outlet property="userFollowingButton" destination="OVe-Nn-ZXs" id="afH-wy-9z2"/>
