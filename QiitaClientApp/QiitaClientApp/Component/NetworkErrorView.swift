@@ -7,8 +7,13 @@
 
 import UIKit
 
+protocol NetworkErrorViewProtocol: AnyObject {
+    func reloadFromErrorButton()
+}
+
 class NetworkErrorView: UIView {
+    var delegate: NetworkErrorViewProtocol?
     @IBAction func onTapReloadButton(_ sender: UIButton) {
-        print("tap")
+        delegate?.reloadFromErrorButton()
     }
 }

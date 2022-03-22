@@ -32,7 +32,7 @@ class UserPageViewController: BaseUserPageViewController {
 
     override func fetchAndSetArticles(refreshAll: Bool = false) {
         settingsBeforeFetch(refreshAll: refreshAll)
-        AF.request(AuthUserArticlesGetRequest(page: page, perPage: articlesPerPage))
+        AF.request(UserArticlesGetRequest(user: user!, page: page, perPage: articlesPerPage))
             .responseDecodable(of: AuthUserArticlesGetRequest.Response.self) { response in
                 self.setArticlesFromResponse(refreshAll: refreshAll, response: response)
             }
@@ -52,9 +52,9 @@ class UserPageViewController: BaseUserPageViewController {
                     header.configure(userData: user)
                     self.user = user
                     self.setUserInfoHeader()
-                    
+                    self.removeNetworkErrorSubView()
                 case .failure:
-                    print("error")
+                    self.addNetworkErrorSubView()
                 }
             }
     }

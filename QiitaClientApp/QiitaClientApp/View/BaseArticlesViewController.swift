@@ -10,8 +10,10 @@ import UIKit
 
 class BaseArticlesViewController: UIViewController {
     @IBOutlet weak var articlesTableView: UITableView!
-    var networkErrorView: UIView?
-    var noQueryMatchErrorView: UIView?
+    var networkErrorView: NetworkErrorView?
+    var noQueryMatchErrorView: NoQueryMatchErrorView?
+    
+    var displayingNetworkError = false
     
     let refreshControl = UIRefreshControl()
     var articles: [QiitaArticle]?
@@ -25,10 +27,11 @@ class BaseArticlesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        networkErrorView = Bundle.main.loadNibNamed(NetworkErrorView.identifier, owner: self)!.first! as? UIView
-        noQueryMatchErrorView = Bundle.main.loadNibNamed(NoQueryMatchErrorView.identifier, owner: self)!.first! as? UIView
+        networkErrorView = Bundle.main.loadNibNamed(NetworkErrorView.identifier, owner: self)!.first! as? NetworkErrorView
+        noQueryMatchErrorView = Bundle.main.loadNibNamed(NoQueryMatchErrorView.identifier, owner: self)!.first! as? NoQueryMatchErrorView
         setUpTableView()
         fetchAndSetArticles(refreshAll: true)
+        networkErrorView?.delegate = self
     }
     
     func fetchAndSetArticles(refreshAll: Bool = false) {
@@ -51,8 +54,7 @@ class BaseArticlesViewController: UIViewController {
         loading = true
     }
 
-    func setArticlesFromResponse(refreshAll: Bool, response: DataResponse<ArticlesGetRequest.Response, AFError>) {
-//        addNetworkErrorSubView()
+    final func setArticlesFromResponse(refreshAll: Bool, response: DataResponse<ArticlesGetRequest.Response, AFError>) {
         switch response.result {
         case let .success(newArticles):
             if page == 1 && newArticles.count == 0 && searchWord != nil {
@@ -67,11 +69,9 @@ class BaseArticlesViewController: UIViewController {
             if newArticles.count < articlesPerPage || page > maxPage {
                 paginationFinished = true
             }
-            
-//            addNetworkErrorSubView()
+            removeNetworkErrorSubView()
         case .failure:
-            articles = nil
-//            addNetworkErrorSubView()
+            addNetworkErrorSubView()
         }
         loading = false
         articlesTableView.reloadData()
@@ -95,37 +95,30 @@ class BaseArticlesViewController: UIViewController {
     }
     
     func addNetworkErrorSubView() {
-        guard let networkErrorView = networkErrorView else {
+        guard let networkErrorView = networkErrorView, !displayingNetworkError else {
             return
         }
+        if searchWord == nil {
+            navigationItem.searchController?.searchBar.isHidden = true
+        }
+        displayingNetworkError = true
         view.addSubview(networkErrorView)
         networkErrorView.translatesAutoresizingMaskIntoConstraints = false
         
-        view.leadingAnchor.constraint(equalToSystemSpacingAfter: networkErrorView.leadingAnchor, multiplier: 0).isActive = true
-//        view.topAnchor.constraint(equalToSystemSpacingBelow: networkErrorView.topAnchor, multiplier: 0).isActive = true
-        let ccc = view.safeAreaLayoutGuide.topAnchor.constraint(equalToSystemSpacingBelow: networkErrorView.topAnchor, multiplier: 0)
-        ccc.priority = UILayoutPriority(800)
-        ccc.isActive = true
-        let ddd = navigationController?.navigationBar.topItem?.searchController?.searchBar.topAnchor.constraint(equalToSystemSpacingBelow: networkErrorView.topAnchor, multiplier: 0)
-
-        ddd?.priority = UILayoutPriority(900)
-//        ddd?.isActive = true
-        let eee = navigationController?.navigationBar.backItem?.searchController?.searchBar.topAnchor.constraint(equalToSystemSpacingBelow: networkErrorView.topAnchor, multiplier: 0)
-        eee?.priority = UILayoutPriority(870)
-//        eee?.isActive = true
-        
-//        navigationController?.navigationBar.bottomAnchor.constraint(equalToSystemSpacingBelow: networkErrorView.topAnchor, multiplier: 0).isActive = true
-//        articlesTableView.topAnchor.constraint(equalToSystemSpacingBelow: networkErrorView.topAnchor, multiplier: 0).isActive = true
-        view.trailingAnchor.constraint(equalToSystemSpacingAfter: networkErrorView.trailingAnchor, multiplier: 0).isActive = true
-//        view.bottomAnchor.constraint(equalToSystemSpacingBelow: networkErrorView.bottomAnchor, multiplier: 0).isActive = true
-        articlesTableView.bottomAnchor.constraint(equalToSystemSpacingBelow: networkErrorView.bottomAnchor, multiplier: 0).isActive = true
+        let safeArea = view.safeAreaLayoutGuide
+        safeArea.topAnchor.constraint(equalToSystemSpacingBelow: networkErrorView.topAnchor, multiplier: 0).isActive = true
+        safeArea.leadingAnchor.constraint(equalToSystemSpacingAfter: networkErrorView.leadingAnchor, multiplier: 0).isActive = true
+        safeArea.trailingAnchor.constraint(equalToSystemSpacingAfter: networkErrorView.trailingAnchor, multiplier: 0).isActive = true
+        safeArea.bottomAnchor.constraint(equalToSystemSpacingBelow: networkErrorView.bottomAnchor, multiplier: 0).isActive = true
     }
 
     func removeNetworkErrorSubView() {
-        guard let networkErrorView = networkErrorView else {
+        guard let networkErrorView = networkErrorView, displayingNetworkError else {
             return
         }
         networkErrorView.removeFromSuperview()
+        displayingNetworkError = false
+        navigationItem.searchController?.searchBar.isHidden = false
     }
 
     func addNoQueryMatchErrorSubView() {
@@ -134,12 +127,11 @@ class BaseArticlesViewController: UIViewController {
         }
         view.addSubview(noQueryMatchErrorView)
         noQueryMatchErrorView.translatesAutoresizingMaskIntoConstraints = false
-        view.safeAreaLayoutGuide.topAnchor.constraint(equalToSystemSpacingBelow: noQueryMatchErrorView.topAnchor, multiplier: 0).isActive = true
-        view.safeAreaLayoutGuide.bottomAnchor.constraint(equalToSystemSpacingBelow: noQueryMatchErrorView.bottomAnchor, multiplier: 0).isActive = true
-        view.safeAreaLayoutGuide.leadingAnchor.constraint(equalToSystemSpacingAfter: noQueryMatchErrorView.leadingAnchor, multiplier: 0).isActive = true
-//        view.safeAreaLayoutGuide.leadingAnchor.constraint(equalToSystemSpacingBelow: noQueryMatchErrorView.leadingAnchor, multiplier: 0).isActive = true
-        view.safeAreaLayoutGuide.trailingAnchor.constraint(equalToSystemSpacingAfter: noQueryMatchErrorView.trailingAnchor, multiplier: 0).isActive = true
-//        view.safeAreaLayoutGuide.trailingAnchor.constraint(equalToSystemSpacingBelow: noQueryMatchErrorView.trailingAnchor, multiplier: 0).isActive = true
+        let safeArea = view.safeAreaLayoutGuide
+        safeArea.topAnchor.constraint(equalToSystemSpacingBelow: noQueryMatchErrorView.topAnchor, multiplier: 0).isActive = true
+        safeArea.bottomAnchor.constraint(equalToSystemSpacingBelow: noQueryMatchErrorView.bottomAnchor, multiplier: 0).isActive = true
+        safeArea.leadingAnchor.constraint(equalToSystemSpacingAfter: noQueryMatchErrorView.leadingAnchor, multiplier: 0).isActive = true
+        safeArea.trailingAnchor.constraint(equalToSystemSpacingAfter: noQueryMatchErrorView.trailingAnchor, multiplier: 0).isActive = true
     }
 
     func removeNoQueryMatchErrorSubView() {
@@ -189,12 +181,15 @@ extension BaseArticlesViewController: UITableViewDelegate, UITableViewDataSource
             let nextLoadingDistance: CGFloat = 600
             if distanceToBottom < nextLoadingDistance {
                 fetchAndSetArticles()
-//                addNetworkErrorSubView()
             }
-            if currentOffsetY > 2 {
-                addNetworkErrorSubView()
-            }
-            print(currentOffsetY)
+        }
+    }
+}
+
+extension BaseArticlesViewController: NetworkErrorViewProtocol {
+    func reloadFromErrorButton() {
+        if !loading {
+            fetchAndSetArticles(refreshAll: true)
         }
     }
 }

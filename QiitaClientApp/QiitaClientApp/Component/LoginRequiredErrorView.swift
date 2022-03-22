@@ -7,4 +7,14 @@
 
 import UIKit
 
-class LoginRequiredErrorView: UIView {}
+protocol LoginRequiredProtocol: AnyObject {
+    func moveToTopOauthPage()
+}
+
+class LoginRequiredErrorView: UIView {
+    var delegate: LoginRequiredProtocol?
+    
+    @IBAction func onLoginButtonClicked(_ sender: UIButton) {
+        delegate?.moveToTopOauthPage()
+    }
+}

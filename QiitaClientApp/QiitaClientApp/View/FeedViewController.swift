@@ -35,6 +35,7 @@ extension FeedViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchWord = searchBar.text
         fetchAndSetArticles(refreshAll: true)
+        removeNoQueryMatchErrorSubView()
     }
 
     // 文字がセットされていたらクエリなしでfetchし直す
@@ -44,5 +45,8 @@ extension FeedViewController: UISearchBarDelegate {
             fetchAndSetArticles(refreshAll: true)
         }
         removeNoQueryMatchErrorSubView()
+        if displayingNetworkError {
+            navigationItem.searchController?.searchBar.isHidden = true
+        }
     }
 }

@@ -14,6 +14,9 @@ protocol FollowViewControllerDelegate: AnyObject {
 
 class FollowViewController: UIViewController {
     @IBOutlet weak var usersCollectionView: UICollectionView!
+    var networkErrorView: NetworkErrorView?
+    
+    var displayingNetworkError = false
     
     let refreshControl = UIRefreshControl()
     var targetUser: QiitaUser?
@@ -35,6 +38,8 @@ class FollowViewController: UIViewController {
         }
         setUpCollectionView()
         fetchAndSetUsers(refreshAll: true)
+        networkErrorView = Bundle.main.loadNibNamed(NetworkErrorView.identifier, owner: self)!.first! as? NetworkErrorView
+        networkErrorView?.delegate = self
     }
 
     func configure(targetUser user: QiitaUser, followMode mode: FollowMode) {
@@ -90,8 +95,10 @@ class FollowViewController: UIViewController {
                     if users.count < self.usersPerPage || self.page > self.maxPage {
                         self.paginationFinished = true
                     }
+                    self.removeNetworkErrorSubView()
                 case .failure:
                     self.users = nil
+                    self.addNetworkErrorSubView()
                 }
                 self.loading = false
                 self.usersCollectionView.reloadData()
@@ -115,6 +122,28 @@ class FollowViewController: UIViewController {
                 fetchAndSetUsers()
             }
         }
+    }
+
+    func addNetworkErrorSubView() {
+        guard let networkErrorView = networkErrorView, !displayingNetworkError else {
+            return
+        }
+        displayingNetworkError = true
+        view.addSubview(networkErrorView)
+        networkErrorView.translatesAutoresizingMaskIntoConstraints = false
+        let safeArea = view.safeAreaLayoutGuide
+        safeArea.topAnchor.constraint(equalToSystemSpacingBelow: networkErrorView.topAnchor, multiplier: 0).isActive = true
+        safeArea.leadingAnchor.constraint(equalToSystemSpacingAfter: networkErrorView.leadingAnchor, multiplier: 0).isActive = true
+        safeArea.trailingAnchor.constraint(equalToSystemSpacingAfter: networkErrorView.trailingAnchor, multiplier: 0).isActive = true
+        safeArea.bottomAnchor.constraint(equalToSystemSpacingBelow: networkErrorView.bottomAnchor, multiplier: 0).isActive = true
+    }
+
+    func removeNetworkErrorSubView() {
+        guard let networkErrorView = networkErrorView, displayingNetworkError else {
+            return
+        }
+        networkErrorView.removeFromSuperview()
+        displayingNetworkError = false
     }
 }
 
@@ -142,6 +171,14 @@ extension FollowViewController: UICollectionViewDelegate, UICollectionViewDataSo
         {
             userPageViewController.configure(user: users[indexPath.row])
             navigationController.pushViewController(userPageViewController, animated: true)
+        }
+    }
+}
+
+extension FollowViewController: NetworkErrorViewProtocol {
+    func reloadFromErrorButton() {
+        if !loading {
+            fetchAndSetUsers(refreshAll: true)
         }
     }
 }
