@@ -17,7 +17,7 @@ final class FeedViewController: BaseArticlesViewController {
 
     override func fetchAndSetArticles(refreshAll: Bool = false) {
         settingsBeforeFetch(refreshAll: refreshAll)
-        AF.request(ArticlesGetRequest(page: page, query: searchWord))
+        AF.request(ArticlesGetRequest(page: page, perPage: articlesPerPage, query: searchWord))
             .responseDecodable(of: ArticlesGetRequest.Response.self) { response in
                 self.setArticlesFromResponse(refreshAll: refreshAll, response: response)
             }

@@ -10,5 +10,4 @@ import UIKit
 enum Segue: String, SegueType {
     case toTagDetailsViewController
     case toOauthViewController
-    case toFollowViewController
 }

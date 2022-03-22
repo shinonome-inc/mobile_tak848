@@ -36,8 +36,9 @@
 		3B6EC12C27B94EB900C02F65 /* SegueHandlerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6EC12B27B94EB900C02F65 /* SegueHandlerType.swift */; };
 		3B6EC12F27B94F6800C02F65 /* Segue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6EC12E27B94F6800C02F65 /* Segue.swift */; };
 		3B6EC13527B9554A00C02F65 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B6EC13727B9554A00C02F65 /* Localizable.strings */; };
+		3B70AC5A27E692A9006CA198 /* FollowMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B70AC5927E692A9006CA198 /* FollowMode.swift */; };
 		3B7C609C27DE422000907C3A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7C609B27DE422000907C3A /* SettingsViewController.swift */; };
-		3B7C609E27DE422E00907C3A /* UserPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7C609D27DE422E00907C3A /* UserPageViewController.swift */; };
+		3B7C609E27DE422E00907C3A /* BaseUserPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7C609D27DE422E00907C3A /* BaseUserPageViewController.swift */; };
 		3BB69B6327AF59A400B2C0F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB69B6227AF59A400B2C0F0 /* AppDelegate.swift */; };
 		3BB69B6527AF59A400B2C0F0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB69B6427AF59A400B2C0F0 /* SceneDelegate.swift */; };
 		3BB69B6727AF59A400B2C0F0 /* TopLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB69B6627AF59A400B2C0F0 /* TopLoginViewController.swift */; };
@@ -63,6 +64,13 @@
 		3BD8F48827E450BC001049F5 /* AccessTokenDeactivateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD8F48727E450BC001049F5 /* AccessTokenDeactivateRequest.swift */; };
 		3BD8F48A27E450E3001049F5 /* AuthUserGetRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD8F48927E450E3001049F5 /* AuthUserGetRequest.swift */; };
 		3BD8F48C27E45104001049F5 /* AuthUserArticlesGetRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD8F48B27E45104001049F5 /* AuthUserArticlesGetRequest.swift */; };
+		3BD8F49227E46553001049F5 /* UserCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BD8F49127E46553001049F5 /* UserCollectionCell.xib */; };
+		3BD8F49427E4683F001049F5 /* UserCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD8F49327E4683F001049F5 /* UserCollectionCell.swift */; };
+		3BD8F49627E497F7001049F5 /* FollowUsersGetRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD8F49527E497F7001049F5 /* FollowUsersGetRequest.swift */; };
+		3BD8F52B27E5E72E001049F5 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD8F52A27E5E72E001049F5 /* MyPageViewController.swift */; };
+		3BD8F52D27E5EA88001049F5 /* UserPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD8F52C27E5EA88001049F5 /* UserPageViewController.swift */; };
+		3BD8F52F27E5F173001049F5 /* UserGetRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD8F52E27E5F172001049F5 /* UserGetRequest.swift */; };
+		3BD8F53127E5F1D4001049F5 /* UserArticlesGetRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD8F53027E5F1D4001049F5 /* UserArticlesGetRequest.swift */; };
 		3BE0B41927E1B187009C3FAD /* LoadingIndicatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BE0B41827E1B187009C3FAD /* LoadingIndicatorView.xib */; };
 		3BE0B41B27E2C8F5009C3FAD /* QiitaAccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE0B41A27E2C8F5009C3FAD /* QiitaAccessToken.swift */; };
 		3BE0B41D27E2CB2F009C3FAD /* BaseArticlesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE0B41C27E2CB2F009C3FAD /* BaseArticlesViewController.swift */; };
@@ -101,8 +109,9 @@
 		3B6EC12B27B94EB900C02F65 /* SegueHandlerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueHandlerType.swift; sourceTree = "<group>"; };
 		3B6EC12E27B94F6800C02F65 /* Segue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Segue.swift; sourceTree = "<group>"; };
 		3B6EC13627B9554A00C02F65 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3B70AC5927E692A9006CA198 /* FollowMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowMode.swift; sourceTree = "<group>"; };
 		3B7C609B27DE422000907C3A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		3B7C609D27DE422E00907C3A /* UserPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPageViewController.swift; sourceTree = "<group>"; };
+		3B7C609D27DE422E00907C3A /* BaseUserPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUserPageViewController.swift; sourceTree = "<group>"; };
 		3BB69B5F27AF59A400B2C0F0 /* QiitaClientApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QiitaClientApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BB69B6227AF59A400B2C0F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BB69B6427AF59A400B2C0F0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -131,6 +140,13 @@
 		3BD8F48727E450BC001049F5 /* AccessTokenDeactivateRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenDeactivateRequest.swift; sourceTree = "<group>"; };
 		3BD8F48927E450E3001049F5 /* AuthUserGetRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUserGetRequest.swift; sourceTree = "<group>"; };
 		3BD8F48B27E45104001049F5 /* AuthUserArticlesGetRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUserArticlesGetRequest.swift; sourceTree = "<group>"; };
+		3BD8F49127E46553001049F5 /* UserCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCollectionCell.xib; sourceTree = "<group>"; };
+		3BD8F49327E4683F001049F5 /* UserCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCollectionCell.swift; sourceTree = "<group>"; };
+		3BD8F49527E497F7001049F5 /* FollowUsersGetRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowUsersGetRequest.swift; sourceTree = "<group>"; };
+		3BD8F52A27E5E72E001049F5 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
+		3BD8F52C27E5EA88001049F5 /* UserPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPageViewController.swift; sourceTree = "<group>"; };
+		3BD8F52E27E5F172001049F5 /* UserGetRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGetRequest.swift; sourceTree = "<group>"; };
+		3BD8F53027E5F1D4001049F5 /* UserArticlesGetRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserArticlesGetRequest.swift; sourceTree = "<group>"; };
 		3BE0B41827E1B187009C3FAD /* LoadingIndicatorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingIndicatorView.xib; sourceTree = "<group>"; };
 		3BE0B41A27E2C8F5009C3FAD /* QiitaAccessToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaAccessToken.swift; sourceTree = "<group>"; };
 		3BE0B41C27E2CB2F009C3FAD /* BaseArticlesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseArticlesViewController.swift; sourceTree = "<group>"; };
@@ -169,6 +185,7 @@
 				3B464DA727DF8EE100AF5BAD /* UserInfoView.swift */,
 				3B464DAB27E02FD600AF5BAD /* PostedArticlesLabel.swift */,
 				3BD8F47C27E41D56001049F5 /* LoadingIndicatorView.swift */,
+				3BD8F49327E4683F001049F5 /* UserCollectionCell.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -182,11 +199,13 @@
 				3BE0B41C27E2CB2F009C3FAD /* BaseArticlesViewController.swift */,
 				3B3529A027BBC13A00497836 /* FeedViewController.swift */,
 				3BBAB2FB27D5D87600DD978E /* TagsViewController.swift */,
-				3B7C609D27DE422E00907C3A /* UserPageViewController.swift */,
+				3B7C609D27DE422E00907C3A /* BaseUserPageViewController.swift */,
 				3B7C609B27DE422000907C3A /* SettingsViewController.swift */,
 				3B0DC8AB27C469BF00204351 /* ArticleViewController.swift */,
 				3BBBB84927D8E0EB009418C9 /* TagDetailsViewController.swift */,
 				3BD8F47327E2FD15001049F5 /* FollowViewController.swift */,
+				3BD8F52A27E5E72E001049F5 /* MyPageViewController.swift */,
+				3BD8F52C27E5EA88001049F5 /* UserPageViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -205,6 +224,7 @@
 				3BECE16427C765C8007AB283 /* TagCollectionCell.xib */,
 				3B464DA527DF8C0A00AF5BAD /* UserInfoView.xib */,
 				3B464DA927E02EC700AF5BAD /* PostedArticlesLabel.xib */,
+				3BD8F49127E46553001049F5 /* UserCollectionCell.xib */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -236,6 +256,7 @@
 				3BBAB2FD27D5DA5800DD978E /* QiitaTag.swift */,
 				3BD8F47127E2F2C2001049F5 /* QiitaToken.swift */,
 				3BD8F47E27E44F85001049F5 /* APIRequest */,
+				3B70AC5927E692A9006CA198 /* FollowMode.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -313,6 +334,9 @@
 				3BD8F48727E450BC001049F5 /* AccessTokenDeactivateRequest.swift */,
 				3BD8F48927E450E3001049F5 /* AuthUserGetRequest.swift */,
 				3BD8F48B27E45104001049F5 /* AuthUserArticlesGetRequest.swift */,
+				3BD8F49527E497F7001049F5 /* FollowUsersGetRequest.swift */,
+				3BD8F52E27E5F172001049F5 /* UserGetRequest.swift */,
+				3BD8F53027E5F1D4001049F5 /* UserArticlesGetRequest.swift */,
 			);
 			path = APIRequest;
 			sourceTree = "<group>";
@@ -401,6 +425,7 @@
 				3B1FD4B827B91AF900D01974 /* Pacifico-Regular.ttf in Resources */,
 				3B39989F27DCCB4100B7ACF9 /* example.env in Resources */,
 				3BB69B6C27AF59A600B2C0F0 /* Assets.xcassets in Resources */,
+				3BD8F49227E46553001049F5 /* UserCollectionCell.xib in Resources */,
 				3BB69B6A27AF59A500B2C0F0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -494,10 +519,12 @@
 				3B464DAC27E02FD600AF5BAD /* PostedArticlesLabel.swift in Sources */,
 				3BB69B6727AF59A400B2C0F0 /* TopLoginViewController.swift in Sources */,
 				3BD8F48427E4504E001049F5 /* ArticlesGetRequest.swift in Sources */,
+				3BD8F53127E5F1D4001049F5 /* UserArticlesGetRequest.swift in Sources */,
+				3BD8F52D27E5EA88001049F5 /* UserPageViewController.swift in Sources */,
 				3BBBB84C27D9628C009418C9 /* UIView+border.swift in Sources */,
 				3BD8F47427E2FD15001049F5 /* FollowViewController.swift in Sources */,
 				3B0DC8AE27C4703100204351 /* UITableView+registerAndDequeue.swift in Sources */,
-				3B7C609E27DE422E00907C3A /* UserPageViewController.swift in Sources */,
+				3B7C609E27DE422E00907C3A /* BaseUserPageViewController.swift in Sources */,
 				3BD8F48627E4507C001049F5 /* TagsGetRequest.swift in Sources */,
 				3BD8F48027E44FD2001049F5 /* QiitaOauthFirstRequest.swift in Sources */,
 				3B0DC8B227C475D400204351 /* NSObjectProtocol+className.swift in Sources */,
@@ -520,16 +547,21 @@
 				3BD8F47027E2F1E1001049F5 /* URL+queryValue.swift in Sources */,
 				3BE0B41D27E2CB2F009C3FAD /* BaseArticlesViewController.swift in Sources */,
 				3B464DB027E03E6900AF5BAD /* UserArticleCell.swift in Sources */,
+				3BD8F49627E497F7001049F5 /* FollowUsersGetRequest.swift in Sources */,
+				3BD8F52F27E5F173001049F5 /* UserGetRequest.swift in Sources */,
 				3BD8F47227E2F2C2001049F5 /* QiitaToken.swift in Sources */,
+				3BD8F49427E4683F001049F5 /* UserCollectionCell.swift in Sources */,
 				3BD8F47727E412D4001049F5 /* UICollectionView+registerAndDequeue.swift in Sources */,
 				3B0DC8AC27C469BF00204351 /* ArticleViewController.swift in Sources */,
 				3BBAB30027D7505400DD978E /* TagCollectionCell.swift in Sources */,
 				3B35299F27BB401700497836 /* StoryboardUI+localization.swift in Sources */,
 				3B6EC12C27B94EB900C02F65 /* SegueHandlerType.swift in Sources */,
 				3BD8F48827E450BC001049F5 /* AccessTokenDeactivateRequest.swift in Sources */,
+				3BD8F52B27E5E72E001049F5 /* MyPageViewController.swift in Sources */,
 				3B0DC89F27C45DCC00204351 /* QiitaAPIRequest.swift in Sources */,
 				3B464DA427DEF33D00AF5BAD /* MainTabBarController.swift in Sources */,
 				3BD8F48C27E45104001049F5 /* AuthUserArticlesGetRequest.swift in Sources */,
+				3B70AC5A27E692A9006CA198 /* FollowMode.swift in Sources */,
 				3BB69B6527AF59A400B2C0F0 /* SceneDelegate.swift in Sources */,
 				3B0DC8AA27C4662300204351 /* UIImageView+cacheImage.swift in Sources */,
 				3BBAB2FC27D5D87600DD978E /* TagsViewController.swift in Sources */,
