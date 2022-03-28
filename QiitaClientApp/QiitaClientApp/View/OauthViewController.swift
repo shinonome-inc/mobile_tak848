@@ -49,7 +49,6 @@ extension OauthViewController: WKNavigationDelegate {
                         qiitaAcceessToken.value = token.token
                         self.delegate?.presentMainTabController()
                     case .failure:
-                        print("error")
                         self.dismiss(animated: true)
                         self.delegate?.removeIndicatorSubView()
                     }

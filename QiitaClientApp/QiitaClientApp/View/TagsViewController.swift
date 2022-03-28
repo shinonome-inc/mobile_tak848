@@ -28,6 +28,9 @@ struct CollectionSize {
 
 class TagsViewController: UIViewController {
     @IBOutlet weak var tagsCollectionView: UICollectionView?
+    var networkErrorView: NetworkErrorView?
+    
+    var displayingNetworkError = false
     
     let refreshControl = UIRefreshControl()
     var tags: [QiitaTag]?
@@ -48,6 +51,8 @@ class TagsViewController: UIViewController {
         setUpCollectionView()
         fetchAndSetTags(refreshAll: true)
         navigationItem.backButtonDisplayMode = .minimal
+        networkErrorView = Bundle.main.loadNibNamed(NetworkErrorView.identifier, owner: self)!.first! as? NetworkErrorView
+        networkErrorView?.delegate = self
     }
 
     func fetchAndSetTags(refreshAll: Bool = false) {
@@ -72,8 +77,10 @@ class TagsViewController: UIViewController {
                     if tags.count < self.tagsPerPage || self.page > self.maxPage {
                         self.paginationFinished = true
                     }
+                    self.removeNetworkErrorSubView()
                 case .failure:
                     self.tags = nil
+                    self.addNetworkErrorSubView()
                 }
                 self.loading = false
                 self.tagsCollectionView?.reloadData()
@@ -99,6 +106,28 @@ class TagsViewController: UIViewController {
                 nextVC.configure(tagId: nextTagId ?? "")
             }
         }
+    }
+    
+    func addNetworkErrorSubView() {
+        guard let networkErrorView = networkErrorView, !displayingNetworkError else {
+            return
+        }
+        displayingNetworkError = true
+        view.addSubview(networkErrorView)
+        networkErrorView.translatesAutoresizingMaskIntoConstraints = false
+        let safeArea = view.safeAreaLayoutGuide
+        safeArea.topAnchor.constraint(equalToSystemSpacingBelow: networkErrorView.topAnchor, multiplier: 0).isActive = true
+        safeArea.leadingAnchor.constraint(equalToSystemSpacingAfter: networkErrorView.leadingAnchor, multiplier: 0).isActive = true
+        safeArea.trailingAnchor.constraint(equalToSystemSpacingAfter: networkErrorView.trailingAnchor, multiplier: 0).isActive = true
+        safeArea.bottomAnchor.constraint(equalToSystemSpacingBelow: networkErrorView.bottomAnchor, multiplier: 0).isActive = true
+    }
+
+    func removeNetworkErrorSubView() {
+        guard let networkErrorView = networkErrorView, displayingNetworkError else {
+            return
+        }
+        networkErrorView.removeFromSuperview()
+        displayingNetworkError = false
     }
 }
 
@@ -160,5 +189,13 @@ extension TagsViewController: UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         CollectionSize.margin
+    }
+}
+
+extension TagsViewController: NetworkErrorViewProtocol {
+    func reloadFromErrorButton() {
+        if !loading {
+            fetchAndSetTags(refreshAll: true)
+        }
     }
 }

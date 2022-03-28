@@ -8,7 +8,9 @@
 
 "-playground-" = "-PlayGround-";
 "login" = "Login";
+"do login" = "Login";
 "logout" = "Logout";
+"do logout" = "Logout";
 "start without login" = "Start without Login";
 
 "feed" = "Feed";
@@ -31,3 +33,11 @@
 "privacy policy" = "Privacy policy";
 "terms of service" = "Terms of service";
 "app version" = "App version";
+
+"reload" = "Reload";
+"network error" = "Network Error";
+"please reload in a place with good network connection" = "Please reload in a place with good network connection";
+"login is required" = "Login is required";
+"login is required to use Mypage" = "Login is required to use Mypage";
+"no articles matching the search word" = "No articles matching the search word";
+"please change the search word and search again" = "Please change the search word and search again";

@@ -8,7 +8,9 @@
 
 "-playground-" = "-PlayGround-";
 "login" = "ログイン";
-"logout" = "ログアウトする";
+"do login" = "ログインする";
+"logout" = "ログアウト";
+"do logout" = "ログアウトする";
 "start without login" = "ログインせずに利用する";
 
 "feed" = "フィード";
@@ -31,3 +33,11 @@
 "privacy policy" = "プライバシーポリシー";
 "terms of service" = "利用規約";
 "app version" = "アプリバージョン";
+
+"reload" = "再読み込みする";
+"network error" = "ネットワークエラー";
+"please reload in a place with good network connection" = "お手数ですが電波の良い場所で再読み込みをお願いします";
+"login is required" = "ログインが必要です";
+"login is required to use Mypage" = "マイページの機能を利用するにはログインを行なっていただく必要があります。";
+"no articles matching the search word" = "検索にマッチする記事はありませんでした";
+"please change the search word and search again" = "検索条件を変えるなどして再度検索をしてください";

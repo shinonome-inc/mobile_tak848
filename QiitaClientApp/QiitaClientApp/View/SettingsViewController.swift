@@ -31,7 +31,7 @@ class SettingsViewController: UIViewController {
         }
     }
 
-    func discardTokenAndMoveToTopOauthPage() {
+    func discardTokenAndMoveToTopPage() {
         QiitaAccessToken().remove()
         if let tabBarController = tabBarController,
            let topLoginViewController = storyboard!.instantiateViewController(with: TopLoginViewController.self)
@@ -41,8 +41,6 @@ class SettingsViewController: UIViewController {
             present(topLoginViewController, animated: true)
         }
     }
-    
-    @IBAction func onTapLogout(_ sender: Any) {}
 }
 
 extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
@@ -139,7 +137,7 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
             switch othersCell {
             case .logoutOrLogin:
                 if QiitaAccessToken().isExist {
-                    discardTokenAndMoveToTopOauthPage()
+                    discardTokenAndMoveToTopPage()
                 } else {
                     moveToTopPage()
                 }
